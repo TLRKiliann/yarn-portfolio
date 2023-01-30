@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
         exit="exitState"
         transition={{
           duration: 0.7,
-          ease: [0.2, 0.2, 0.2, 0.2]
+          ease: "easeInOut"
         }}
         variants={{
           initialState: {
