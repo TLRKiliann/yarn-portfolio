@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export",
-    "scripts": {"vercel-build": "npm run prepare && next build"},
+    "scripts": {"vercel-build": "yarn run prepare && next build"},
     "lint": "next lint"
   },
   "dependencies": {
