@@ -15,8 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         animate="animateState"
         exit="exitState"
         transition={{
-          duration: 0.65,
-          ease: "easeOut",
+          duration: 0.4,
         }}
         variants={{
           initialState: {
