@@ -16,17 +16,16 @@ export default function App({ Component, pageProps }: AppProps) {
         exit="exitState"
         transition={{
           duration: 0.7,
-          ease: "easeInOut"
+          ease: "easeOut"
         }}
         variants={{
           initialState: {
-            opacity: 0.5
+            opacity: 0
           },
           animateState: {
             opacity: 1
           },
           exitState: {
-            opacity: 0.5
           },
         }}
         className="base-page-size"
