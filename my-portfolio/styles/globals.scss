@@ -1,0 +1,17 @@
+/*@use 'fonts';
+@use 'colors';*/
+@import 'fonts.scss';
+@import 'colors.scss';
+
+:root {
+  min-height: 100vh;
+}
+
+li {
+  margin-top: 5px;
+  /*list-style: none;*/
+}
+
+p {
+  font-family: $acme_font;
+}

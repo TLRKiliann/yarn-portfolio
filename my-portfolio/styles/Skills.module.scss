@@ -1,0 +1,220 @@
+@import 'fonts.scss';
+@import 'colors.scss';
+
+@keyframes sectionone-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bgcolor {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  .divbtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    .btntopright {
+      padding: 10px 20px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-radius: 0px 0px 0px 7px;
+      box-shadow: 0px 0px 7px $cyan;
+      color: $cyan;
+      &:hover {
+        background: rgba(0,50,100,0.6);
+        box-shadow: 0px 0px 0px $cyan;
+        color: rgba(0,255,255, 0.8);
+      }
+      &:active {
+        background: rgba(0,255,255, 0.2);
+        box-shadow: 0px 0px 0px $cyan;
+        color: $whitesmoke;
+      }
+    }
+  }
+  .mainclassvideo {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: $custom_purple;
+    z-index: -1;
+    .divvideointro {
+      filter: opacity(30%);
+      opacity: 0.4;
+      object-fit: cover;
+    }
+  }
+  .mainheaderskills {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: $acme_font;
+    font-size: 3.2rem;
+    color: rgba(0,50,200,0.9);
+    text-shadow: 1px 0px 1px $lightgreen,
+    1px 0px 4px $lightgreen;
+  }
+  .sectionone {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    left: 20%;
+    margin: auto;
+    opacity: 1;
+    border-radius: 15px;
+    animation-name: sectionone-animation;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out, linear;
+    .btnhard {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      padding: 7px 20px;
+      font-family: $acme_font;
+      font-size: 1.1rem;
+      background: transparent;
+      border-radius: 7px;
+      border: none;
+      outline: none;
+      box-shadow: 0px 0px 10px $cyan;
+      color: rgba(0,255,255,0.5);
+      &:hover {
+        background: rgba(0,255,255, 0.2);
+        box-shadow: 0px 0px 0px $cyan;
+        color: $whitesmoke;
+      }
+      &:active {
+        background: rgba(0,50,100,0.6);
+        box-shadow: 0px 0px 0px $cyan;
+        color: rgba(0,255,255, 0.8);
+      }
+    }
+    .secondtitle {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      font-family: $akayakanadaka_font;
+      font-size: 2.2rem;
+      color: rgba(0,255,255,0.5);
+      border-bottom: 1px solid rgba(0,255,255,0.5);
+    }
+    .mainblocdiv {
+      height: auto;
+      margin: auto;
+      padding: 20px 0px;
+      display: grid;
+      grid-template-columns: 1Fr 1Fr 1Fr;
+      grid-template-rows: 1Fr 1Fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;      
+      justify-items: center;
+      color: $whitesmoke;
+      .subblockdiv {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 4px $cyan;
+        border-radius: 15px;
+        .h2titlesubblock {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: $akayakanadaka_font;
+          color: rgba(0,255,255,0.5);
+          border-bottom: 1px dashed rgba(0,255,255,0.5);
+        }
+        .blocli {
+          margin-bottom: 10px;
+          .listhard {
+            margin: 5px 0px;
+            padding: 5px 0px;
+            padding-left: 10px;
+            font-family: $akayakanadaka_font;
+            background: rgba(0,50,100, 0.3);
+            color: $whitesmoke;
+            .classa {
+              margin-left: -7px;
+              font-family: $acme_font;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sectiontwo {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    left: 20%;
+    margin: auto;
+    opacity: 1;
+    animation-name: sectionone-animation;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out, linear;
+    .btnsoft {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      padding: 7px 20px;
+      font-family: $acme_font;
+      font-size: 1.1rem;
+      background: transparent;
+      border-radius: 7px;
+      border: none;
+      outline: none;
+      box-shadow: 0px 0px 10px $cyan;
+      color: rgba(0,255,255,0.5);
+      &:hover {
+        background: rgba(0,255,255, 0.2);
+        box-shadow: 0px 0px 0px $cyan;
+        color: $whitesmoke;
+      }
+      &:active {
+        background: rgba(0,50,100,0.6);
+        box-shadow: 0px 0px 0px $cyan;
+        color: rgba(0,255,255, 0.8);
+      }
+    }
+    .secondtitle {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      padding-top: 10px;
+      padding-bottom: 5px;
+
+      font-family: $akayakanadaka_font;
+      font-size: 2.2rem;
+      color: $whitesmoke;
+      border-bottom: 1px solid rgba(255,255,255,0.7);
+    }
+    .listsoft {
+      margin: 5px 0px;
+      color: $whitesmoke;
+      .linka {
+        margin-left: -7px;
+        font-family: $acme_font;
+        font-size: 1.5rem;
+        color: $whitesmoke;
+      }
+    }
+  }
+}

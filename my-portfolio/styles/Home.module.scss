@@ -1,0 +1,215 @@
+@import 'fonts.scss';
+@import 'colors.scss';
+
+@keyframes hollyanimation {
+  0% {
+    opacity: 0;
+    transform: translateY(600px);
+    filter: blur(4px);
+    background: rgba(0,50,100,0);
+    box-shadow: 0px 0px 0px $cyan;
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+    filter: blur(0px);
+    background: rgba(0,50,100,0.1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px $cyan;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0px);
+    filter: blur(0px);
+    background: rgba(0,50,100,0.2);
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px $cyan;
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(0px);
+    filter: blur(2px);
+    background: rgba(0,50,100,0.1);
+    box-shadow: 0px 0px 2px $cyan;  
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+    filter: blur(4px);
+    background: rgba(0,50,100,0);
+    box-shadow: 0px 0px 0px $cyan;
+  }
+}
+
+.main {
+  .maindivanimation {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    font-family: $akayakanadaka_font;
+    color: rgba(0,255,255, 0.5);
+    .firstdivanimation {
+      position: absolute;
+      top: 45%;
+      right: 35%;
+      left: 35%;
+      opacity: 0;
+      animation-name: hollyanimation;
+      animation-delay: 2s;
+      animation-duration: 5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out, linear;
+      .subdivfirstanimation {
+        margin: 10px 20px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .seconddivanimation {
+      position: absolute;
+      top: 45%;
+      right: 35%;
+      left: 35%;
+      opacity: 0;
+      animation-name: hollyanimation;
+      animation-delay: 7s;
+      animation-duration: 5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out, linear;
+      .subdivsecondanimation {
+        margin: 10px 20px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .thirddivanimation {
+      position: absolute;
+      top: 45%;
+      right: 35%;
+      left: 35%;
+      background: $blue;
+      opacity: 0;
+      animation-name: hollyanimation;
+      animation-delay: 12s;
+      animation-duration: 5s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out, linear;
+      .subdivthirdanimation {
+        margin: 10px 20px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .audio {
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    width: 210px;
+    height: 25px;
+    &::-webkit-media-controls-enclosure {
+      background-color: $custom_purple;
+      border-radius: 5px;
+    }
+  } 
+  .mainclassvideo {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: $custom_purple;
+    opacity: 1;
+    z-index: -1;
+    .divvideointro {
+      width: 100vw;
+      height: 100vh;
+      filter: opacity(20%);
+      opacity: 0.8;
+      object-fit: cover;
+    }
+  }
+  .mainheader {
+    position: absolute;
+    bottom: -10px;
+    font-family: $acme_font;
+    color: $custom_purple;
+    text-shadow: 0px 0px 2px $whitesmoke;
+  }
+  .lilink {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 200px;
+  }
+  .secondlilink {
+    position: absolute;
+    width: 150px;
+    top: 30px;
+    right: 40px;
+    font-size: 1.4rem; 
+  }
+  .list {
+    list-style: none;
+    .link {
+      content: "";
+      text-decoration: none;
+      font-family: $akayakanadaka_font;
+      font-size: 20px;
+      filter: blur(1.2px);
+      color: $whitesmoke;
+      transition: 1s;
+      &:hover:after {
+        filter: blur(0px);
+        content: "<--";
+        color: rgba(180,180,180, 1);
+      }
+      &:hover {
+        content: "<--";
+        filter: blur(0px);
+        color: rgba(180,180,180, 1);
+      }
+    }
+    .link2 {
+      text-decoration: none;
+      font-family: $akayakanadaka_font;
+      font-size: 20px;
+      filter: blur(1.2px);
+      color: $whitesmoke;
+      transition: 0.5s;
+      &:hover {
+        filter: blur(0px);
+        color: rgba(180,180,180, 1);
+      }
+    }
+  }
+  .parentverticaltext {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    .verticaltext {
+      padding: 10px 0px;
+      height: 130px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-family: $acme_font;
+      font-size: 18px;
+      color: rgba(255,255,255,0.5);
+    }
+    .verticallongline {
+      position: relative;
+      left: 30px;
+      bottom: 0px;
+      height: calc(100% - 130px);
+      width: 10px;
+      border-left: 1px solid rgba(255,255,255,0.5); 
+    }
+  }
+}
