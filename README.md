@@ -5,8 +5,10 @@ portfolio with nextjs &amp; yarn
 
 └─ $ ▶ yarn add sass
 
-└─ $ ▶ yarn add framer-motion
+└─ $ ▶ yarn add react-icons
 
 └─ $ ▶ yarn add @fontsource/acme
 
 └─ $ ▶ yarn add @fontsource/akaya-kanadaka
+
+└─ $ ▶ yarn add framer-motion
