@@ -11,26 +11,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <AnimatePresence mode='wait'>
       <motion.div
         key={router.route}
-        initial="initialState"
-        animate="animateState"
-        exit="exitState"
-        transition={{
-          duration: 0.7,
-          ease: "easeOut"
-        }}
-        variants={{
-          initialState: {
-            opacity: 0
-          },
-          animateState: {
-            opacity: 1
-          },
-          exitState: {
-          },
-        }}
-        className="base-page-size"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
-        <Component {...pageProps} key={router.route} />
+        <Component {...pageProps} />
       </motion.div>
     </AnimatePresence>
   )
