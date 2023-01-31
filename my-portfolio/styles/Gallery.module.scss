@@ -1,0 +1,100 @@
+@import 'fonts.scss';
+@import 'colors.scss';
+
+.gallery {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: $bg_color;
+  font-family: $akayakanadaka_font;
+  color: rgba(0,255,255, 0.5);
+  .divbtn {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    .btntopright {
+      padding: 10px 20px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-radius: 0px 0px 0px 7px;
+      box-shadow: 0px 0px 7px $cyan;
+      color: $cyan;
+      &:hover {
+        background: rgba(0,50,100,0.6);
+        box-shadow: 0px 0px 0px $cyan;
+        color: rgba(0,255,255, 0.8);
+      }
+      &:active {
+        background: rgba(0,255,255, 0.2);
+        box-shadow: 0px 0px 0px $cyan;
+        color: rgba(180,180,180, 1);
+      }
+    }
+  }
+  .gallerymainheader {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: $acme_font;
+    font-size: 3.2rem;
+    color: rgba(0,50,200,0.9);
+    text-shadow: 1px 0px 1px $lightgreen,
+    1px 0px 4px $lightgreen;
+  }
+  .framerimg {
+    position: absolute;
+    width: 80%;
+    top: 23%;
+    left: 10%;
+    right: 10%;
+
+    border: 1px solid orange;
+    .divimglegendgallery {
+
+
+      display: flex;
+      justify-content: center;
+
+      border: 1px solid lightblue;
+      .img {
+        position: absolute;
+        margin: auto;
+        border: 1px solid whitesmoke;
+        z-index: 1;
+      }
+      .img2 {
+        position: absolute;
+        margin: auto;
+        border: 1px solid whitesmoke;
+        z-index: 2;
+
+      }
+      .img3 {
+        position: absolute;
+        margin: auto;
+        border: 1px solid whitesmoke;
+        z-index: 3;
+
+      }
+      .linkgallery1 {
+        position: absolute;
+        color: $whitesmoke;
+        z-index: 1;
+      }
+      .linkgallery2 {
+        position: absolute;
+        color: $whitesmoke;
+        z-index: 2;
+      }
+      .linkgallery3 {
+        position: absolute;
+        color: $whitesmoke;
+        z-index: 3;
+      }
+    }
+  }
+}
