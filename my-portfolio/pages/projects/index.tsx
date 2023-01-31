@@ -40,7 +40,7 @@ const Projects:React.FC = () => {
   }
 
   return (
-    <>      
+    <div>      
       <div className={styles.bgcolorproject}>
 
         <div className={styles.maindivvideoprojects}>
@@ -180,7 +180,7 @@ const Projects:React.FC = () => {
           <hr className={styles.hr2} />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 export default Projects

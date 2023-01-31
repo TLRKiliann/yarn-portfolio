@@ -6,15 +6,14 @@ import styles from '@/styles/About.module.scss'
 const About:React.FC = () => {
 
   const router = useRouter() as any
-  
+
   const handleBackToHome = () => {
     router.replace("/")
   }
 
   return (
-    <>
+    <div>
       <div className={styles.bgcolorabout}>
-
         <div className={styles.divbtn}>
           <button
             type='button'
@@ -34,7 +33,6 @@ const About:React.FC = () => {
         </div>
 
         <h1 className={styles.mainheaderabout}>About Me</h1>
-
         <article className={styles.article}>
 
           <li className={styles.listabout}>
@@ -111,9 +109,8 @@ const About:React.FC = () => {
           <hr className={styles.hrabout}/>
           <br />
         </article>
-
       </div>
-    </>
+    </div>
   )
 }
 export default About

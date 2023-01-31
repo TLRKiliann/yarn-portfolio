@@ -18,7 +18,7 @@
   right: 0px;
   left: 0px;
   min-height: 100vh;
-  background: $custom_purple;
+  background: $bg_color;
   z-index: -1;
   .maindivvideoprojects {
     position: fixed;
@@ -83,15 +83,15 @@
     width: 800px;
     margin-top: 0px;
     margin-bottom: 40px;
-    border-top: 1px solid lightblue;
-    border-bottom: 1px solid lightblue;
+    border-top: 1px solid rgba(0,255,255,0.6);
+    border-bottom: 1px solid rgba(0,255,255,0.6);
     border-radius: 100%;
   }
   .hr2 {
     width: 800px;
     margin-top: 40px;
-    border-top: 1px solid lightblue;
-    border-bottom: 1px solid lightblue;
+    border-top: 1px solid rgba(0,255,255,0.6);
+    border-bottom: 1px solid rgba(0,255,255,0.6);
     border-radius: 100%;
   }
   .maindivofprojects {
@@ -102,14 +102,10 @@
       margin: auto;
       font-family: $akayakanadaka_font;
       font-size: 1.6rem;
-      color: $whitesmoke;
-      background: rgba(0,50,100,0.4);
-      border-radius: 15px;
-      border: none;
-      outline: none;
+      background: rgba(0,50,100,0.2);
       border: 2mm inset rgba(0,50,200,0.8);
-      /*box-shadow: 0px 0px 3px rgba(0,255,255,0.8);*/
-      box-shadow: 0px 0px 3px rgba(0,40,40,0.8);
+      border-radius: 15px;
+      box-shadow: 0px 0px 3px rgba(0,40,40,0.1);
       .listdisc {
         list-style: disc;
       }
@@ -127,9 +123,9 @@
           margin-left: -7px;
           display: flex;
           text-decoration: none;
-          color: $whitesmoke;
+          color: rgba(255,255,255,0.6);
           opacity: 1;
-          filter: drop-shadow(10px 20px rgba(24, 24, 24, 0.3));
+          filter: drop-shadow(10px 20px rgba(24, 24, 24, 0.5));
           animation-name: filter-shadow;
           animation-delay: 0s;
           animation-duration: 4s;
@@ -139,6 +135,9 @@
           &:hover {
             color: rgba(0,255,255,0.5);
             filter: drop-shadow(10px 20px rgba(24, 24, 24, 0));
+          }
+          &:active {
+            color: rgba(0,255,255,1);
           }
           .realignlogos {
             display: flex;

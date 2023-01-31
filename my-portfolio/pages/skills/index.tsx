@@ -17,7 +17,7 @@ const Skills:React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <div className={styles.bgcolor}>
           
         <div className={styles.divbtn}>
@@ -46,7 +46,7 @@ const Skills:React.FC = () => {
 
         {!switchBtn ? (
           <div>
-            <section className={styles.sectionone}>
+            <div className={styles.sectionone}>
             
               <button type='button'
                 onClick={handleClickBtn}
@@ -233,12 +233,12 @@ const Skills:React.FC = () => {
                 </div>
 
               </div>
-            </section>
+            </div>
           </div>
 
           ) : (
 
-          <section className={styles.sectiontwo}>
+          <div className={styles.sectiontwo}>
             
             <button type='button'
               onClick={handleClickBtn}
@@ -285,13 +285,13 @@ const Skills:React.FC = () => {
               </li>
             </div>
 
-          </section>
+          </div>
 
           )
         }
 
       </div>
-    </>
+    </div>
   )
 }
 export default Skills
