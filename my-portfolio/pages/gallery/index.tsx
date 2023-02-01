@@ -23,67 +23,79 @@ const Gallery:React.FC = () => {
             Back to Home
           </button>
         </div>
+
+        <div className={styles.thanks}>
+          <h2 className={styles.h2thanks}>
+            Thank you for watching !
+          </h2>
+        </div>
+
+
         <div>
           
           <h1 className={styles.gallerymainheader}>Gallery</h1>
           
           <div className={styles.framerimg}>
-            <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
-                <motion.img
-                  src={'/coolnection.jpg'}
-                  width="700"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right: 0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img}  
-                >
-                </motion.img>
-              </AnimatePresence>
-              <Link href="https://www.youtube.com/watch?v=zOFffvevzAQ"
-                className={styles.linkgallery1}>
-                Time-Track
-              </Link>
-            </div>
 
             <div className={styles.divimglegendgallery}>
               <AnimatePresence>
                 <motion.img
-                  src={'/coolnection.jpg'}
+                  src={'/images/bg_1.png'}
                   href="https://www.youtube.com/watch?v=8g789tQ2gyY"
-                  width="700"
-                  height="400"
+                  width="780"
+                  height="500"
                   drag="x" 
-                  dragConstraints={{right: 0, left:-1200}} 
+                  dragConstraints={{right:0, left:-1200}} 
                   dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
                   className={styles.img2}  
                 >
                 </motion.img>
               </AnimatePresence>
-              <Link href="https://www.youtube.com/watch?v=zOFffvevzAQ"
-                className={styles.linkgallery2}>
-                Time-Track 2
-              </Link>
             </div>
 
             <div className={styles.divimglegendgallery}>
               <AnimatePresence>
                 <motion.img
-                  src={'/coolnection.jpg'}
-                  width="700"
-                  height="400"
+                  src={'/images/bg_3.png'}
+                  width="780"
+                  height="500"
                   drag="x" 
-                  dragConstraints={{right: 0, left:-1200}} 
+                  dragConstraints={{right:0, left:-1200}} 
                   dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
                   className={styles.img3}  
                 >
                 </motion.img>
               </AnimatePresence>
-              <Link href="https://www.youtube.com/watch?v=zOFffvevzAQ"
-                className={styles.linkgallery3}>
-                Time-Track 3
-              </Link>
+            </div>
+
+            <div className={styles.divimglegendgallery}>
+              <AnimatePresence>
+                <motion.img
+                  src={'/images/screen3.png'}
+                  width="780"
+                  height="500"
+                  drag="x" 
+                  dragConstraints={{right:0, left:-1200}} 
+                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                  className={styles.img3}  
+                >
+                </motion.img>
+              </AnimatePresence>
+            </div>
+
+            <div className={styles.divimglegendgallery}>
+              <AnimatePresence>
+                <motion.img
+                  src={'/images/screen4.png'}
+                  width="780"
+                  height="500"
+                  drag="x" 
+                  dragConstraints={{right:0, left:-1200}} 
+                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                  className={styles.img3}  
+                >
+                </motion.img>
+              </AnimatePresence>
             </div>
 
           </div>

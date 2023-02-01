@@ -37,62 +37,41 @@
   }
   .gallerymainheader {
     margin-top: 20px;
-    margin-bottom: 10px;
     padding-left: 20px;
     font-family: $acme_font;
     font-size: 3.2rem;
     color: rgba(0,50,200,0.9);
-    text-shadow: 1px 0px 1px $lightgreen,
-    1px 0px 4px $lightgreen;
+    text-shadow: 1px 0px 1px $cyan,
+    1px 0px 4px $cyan;
+  }
+  .thanks {
+    position: absolute;
+    width: 99vw;
+    top: 43%;
+    display: flex;
+    justify-content: center;
+    .h2thanks {
+      font-family: $akayakanadaka_font;
+      font-size: 3rem;
+      text-shadow: 1px 0px 1px $blue,
+      2px 1px 1px $whitesmoke;
+    }
   }
   .framerimg {
     position: absolute;
-    width: 80%;
-    top: 23%;
-    left: 10%;
-    right: 10%;
-
-    border: 1px solid orange;
+    top: 25%;
     .divimglegendgallery {
-
-
+      width: 100vw;
       display: flex;
       justify-content: center;
-
-      border: 1px solid lightblue;
-      .img {
-        position: absolute;
-        margin: auto;
-        border: 1px solid whitesmoke;
-        z-index: 1;
-      }
       .img2 {
         position: absolute;
         margin: auto;
-        border: 1px solid whitesmoke;
         z-index: 2;
-
       }
       .img3 {
         position: absolute;
         margin: auto;
-        border: 1px solid whitesmoke;
-        z-index: 3;
-
-      }
-      .linkgallery1 {
-        position: absolute;
-        color: $whitesmoke;
-        z-index: 1;
-      }
-      .linkgallery2 {
-        position: absolute;
-        color: $whitesmoke;
-        z-index: 2;
-      }
-      .linkgallery3 {
-        position: absolute;
-        color: $whitesmoke;
         z-index: 3;
       }
     }
