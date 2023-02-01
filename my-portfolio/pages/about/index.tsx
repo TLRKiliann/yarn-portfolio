@@ -91,7 +91,7 @@ const About:React.FC = () => {
             </a>
           </li>
           <p className={styles.paragraphabout}>
-            J'ai également appris quelques framework tels que React, Vite, NextJs,
+            J'ai également appris quelques framework tels que React, Vite, Next.js,
             pour faire des applications/sites web en JavaScript avec TypeScript et
             apprendre comment utiliser les divers style systems.
           </p>

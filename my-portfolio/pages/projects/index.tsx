@@ -67,7 +67,7 @@ const Projects:React.FC = () => {
 
         <div className={styles.maindivofprojects}>
         
-          <h2 className={styles.h2}>Some GitHub links</h2>
+          <h2 className={styles.h2}>Quelques liens GitHub</h2>
 
           <hr className={styles.hr} />
 

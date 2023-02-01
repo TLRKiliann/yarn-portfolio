@@ -67,17 +67,18 @@
     font-family: $acme_font;
     font-size: 3.2rem;
     color: rgba(0,50,200,0.9);
-    text-shadow: 1px 0px 1px $lightgreen,
-    1px 0px 4px $lightgreen;
+    text-shadow: 1px 0px 1px $cyan,
+    1px 0px 4px $cyan;
   }
   .h2 {
     width: 800px;
     text-align: left;
     margin: auto;
     margin-bottom: 10px;
-    font-family: $acme_font;
+    font-family: $akayakanadaka_font;
     font-size: 2.2rem;
-    color: rgba(0,255,255,0.5);
+    color: rgba(0,50,200,0.6);
+    text-shadow: 2px 0px 2px $cyan;
   }
   .hr {
     width: 800px;
