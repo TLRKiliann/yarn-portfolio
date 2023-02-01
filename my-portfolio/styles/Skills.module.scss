@@ -10,25 +10,45 @@
   }
 }
 
-.bgcolor {
-  position: fixed;
+@mixin topright(){
+  top: 0px;
+  right: 0px;
+}
+
+@mixin trbl(){
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   z-index: -1;
+}
+
+@mixin skillsframes(){
+  margin-top: 10%;
+  opacity: 1;
+  animation-name: sectionone-animation;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out, linear;
+}
+
+.bgcolor {
+  position: fixed;
+  @include trbl();
   .divbtn {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    @include topright();
     .btntopright {
       padding: 10px 20px;
+      font-family: $akayakanadaka_font;
+      font-size: 1.1rem;
       background: transparent;
       border: none;
       outline: none;
       border-radius: 0px 0px 0px 7px;
       box-shadow: 0px 0px 7px $cyan;
-      color: $cyan;
+      color: rgba(0,255,255,0.8);
       &:hover {
         background: rgba(0,50,100,0.6);
         box-shadow: 0px 0px 0px $cyan;
@@ -43,12 +63,8 @@
   }
   .mainclassvideo {
     position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    @include trbl();
     background: $bg_color;
-    z-index: -1;
     .divvideointro {
       filter: opacity(30%);
       opacity: 0.4;
@@ -67,20 +83,13 @@
   }
   .sectionone {
     position: relative;
-    margin: auto;
-    margin-top: 10%;
     width: 60%;
-    opacity: 1;
+    margin: auto;
+    @include skillsframes();
     border-radius: 15px;
-    animation-name: sectionone-animation;
-    animation-delay: 0s;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out, linear;
     .btnhard {
       position: absolute;
-      top: 0px;
-      right: 0px;
+      @include topright();
       padding: 7px 20px;
       font-family: $acme_font;
       font-size: 1.1rem;
@@ -160,20 +169,12 @@
   }
   .sectiontwo {
     position: absolute;
-    margin: auto;
-    margin-top: 10%;
     right: 20%;
     left: 20%;
-    opacity: 1;
-    animation-name: sectionone-animation;
-    animation-delay: 0s;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out, linear;
+    @include skillsframes();
     .btnsoft {
       position: absolute;
-      top: 0px;
-      right: 0px;
+      @include topright();
       padding: 7px 20px;
       font-family: $acme_font;
       font-size: 1.1rem;
@@ -199,7 +200,6 @@
       margin-bottom: 10px;
       padding-top: 10px;
       padding-bottom: 5px;
-
       font-family: $akayakanadaka_font;
       font-size: 2.2rem;
       color: rgba(255,255,255,0.7);

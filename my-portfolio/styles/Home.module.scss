@@ -41,66 +41,57 @@
   }
 }
 
+@mixin animation(){
+  position: absolute;
+  top: 45%;
+  right: 35%;
+  left: 35%;
+  opacity: 0;
+  animation-name: hollyanimation;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out, linear;
+}
+
+@mixin toprightbottomleft(){
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+@mixin mardisplayjustify(){
+  margin: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .main {
   .maindivanimation {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    @include toprightbottomleft();
     overflow: hidden;
     font-family: $akayakanadaka_font;
     color: rgba(0,255,255, 0.5);
     .firstdivanimation {
-      position: absolute;
-      top: 45%;
-      right: 35%;
-      left: 35%;
-      opacity: 0;
-      animation-name: hollyanimation;
+      @include animation();
       animation-delay: 2s;
-      animation-duration: 5s;
-      animation-iteration-count: 1;
-      animation-timing-function: ease-out, linear;
       .subdivfirstanimation {
-        margin: 10px 20px;
-        display: flex;
-        justify-content: center;
+        @include mardisplayjustify();
       }
     }
     .seconddivanimation {
-      position: absolute;
-      top: 45%;
-      right: 35%;
-      left: 35%;
-      opacity: 0;
-      animation-name: hollyanimation;
+      @include animation();
       animation-delay: 7s;
-      animation-duration: 5s;
-      animation-iteration-count: 1;
-      animation-timing-function: ease-out, linear;
       .subdivsecondanimation {
-        margin: 10px 20px;
-        display: flex;
-        justify-content: center;
+        @include mardisplayjustify();
       }
     }
     .thirddivanimation {
-      position: absolute;
-      top: 45%;
-      right: 35%;
-      left: 35%;
-      background: $blue;
-      opacity: 0;
-      animation-name: hollyanimation;
+      @include animation();      
       animation-delay: 12s;
-      animation-duration: 5s;
-      animation-iteration-count: 1;
-      animation-timing-function: ease-out, linear;
       .subdivthirdanimation {
-        margin: 10px 20px;
-        display: flex;
-        justify-content: center;
+        @include mardisplayjustify();
       }
     }
   }
@@ -121,10 +112,7 @@
   }
   .mainclassvideo {
     position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    @include toprightbottomleft();
     background: $custom_purple;
     opacity: 1;
     z-index: -1;
@@ -210,10 +198,10 @@
     }
     .verticallongline {
       position: relative;
-      left: 30px;
       bottom: 0px;
-      height: calc(100% - 130px);
+      left: 30px;
       width: 10px;
+      height: calc(100% - 130px);
       border-left: 1px solid rgba(255,255,255,0.35); 
     }
   }

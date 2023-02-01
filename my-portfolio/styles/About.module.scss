@@ -1,10 +1,14 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
-.bgcolorabout {
-  position: absolute;
+@mixin topright(){
   top: 0px;
   right: 0px;
+}
+
+.bgcolorabout {
+  position: absolute;
+  @include topright();
   left: 0px;
   min-height: 100vh;
   background: $bg_color;
@@ -19,16 +23,17 @@
   }
   .divbtn {
     position: fixed;
-    top: 0px;
-    right: 0px;
+    @include topright();
     .btntopright {
       padding: 10px 20px;
+      font-family: $akayakanadaka_font;
+      font-size: 1.1rem;
       background: transparent;
       border: none;
       outline: none;
       border-radius: 0px 0px 0px 7px;
       box-shadow: 0px 0px 7px $cyan;
-      color: $cyan;
+      color: rgba(0,255,255,0.8);
       &:hover {
         background: rgba(0,50,100,0.6);
         box-shadow: 0px 0px 0px $cyan;
@@ -37,14 +42,13 @@
       &:active {
         background: rgba(0,255,255, 0.2);
         box-shadow: 0px 0px 0px $cyan;
-        color: rgba(180,180,180, 1);
+        color: $whitesmoke;
       }
     }
   }
   .imgabout {
     position: fixed;
-    top: 0px;
-    right: 0px;
+    @include topright();
     left: 0px;
     opacity: 0.15;
     object-fit: cover;
@@ -64,8 +68,10 @@
     padding: 40px 40px;
     width: 80%;
     margin: auto;
-    background: linear-gradient(70deg, rgba(0,50,140,1), rgba(0,50,140,1),
-      rgba(255,255,255,0.4), rgba(0,50,140,1), rgba(0,50,140,1));
+    background: linear-gradient(70deg,
+      rgba(0,50,140,1), rgba(0,50,140,1),
+      rgba(255,255,255,0.4), rgba(0,50,140,1),
+      rgba(0,50,140,1));
     border-radius: 20px;
     .listabout {
       font-family: $acme_font;
