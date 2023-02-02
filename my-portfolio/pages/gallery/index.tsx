@@ -24,26 +24,39 @@ const Gallery:React.FC = () => {
           </button>
         </div>
 
-        <div className={styles.thanks}>
-          <h2 className={styles.h2thanks}>
-            Thank you for watching !
-          </h2>
-        </div>
-
-
         <div>
-          
           <h1 className={styles.gallerymainheader}>Gallery</h1>
           
           <div className={styles.framerimg}>
+
+            <div className={styles.thanks}>
+              <h2 className={styles.h2thanks}>
+                Thank you for watching !
+              </h2>
+            </div>
 
             <div className={styles.divimglegendgallery}>
               <AnimatePresence>
                 <motion.img
                   src={'/images/bg_1.png'}
                   href="https://www.youtube.com/watch?v=8g789tQ2gyY"
-                  width="780"
-                  height="500"
+                  width="640"
+                  height="400"
+                  drag="x" 
+                  dragConstraints={{right:0, left:-1200}} 
+                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                  className={styles.img1}  
+                >
+                </motion.img>
+              </AnimatePresence>
+            </div>
+
+            <div className={styles.divimglegendgallery}>
+              <AnimatePresence>
+                <motion.img
+                  src={'/images/bg_3.png'}
+                  width="640"
+                  height="400"
                   drag="x" 
                   dragConstraints={{right:0, left:-1200}} 
                   dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
@@ -56,24 +69,9 @@ const Gallery:React.FC = () => {
             <div className={styles.divimglegendgallery}>
               <AnimatePresence>
                 <motion.img
-                  src={'/images/bg_3.png'}
-                  width="780"
-                  height="500"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img3}  
-                >
-                </motion.img>
-              </AnimatePresence>
-            </div>
-
-            <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
-                <motion.img
                   src={'/images/screen3.png'}
-                  width="780"
-                  height="500"
+                  width="640"
+                  height="400"
                   drag="x" 
                   dragConstraints={{right:0, left:-1200}} 
                   dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
@@ -87,20 +85,38 @@ const Gallery:React.FC = () => {
               <AnimatePresence>
                 <motion.img
                   src={'/images/screen4.png'}
-                  width="780"
-                  height="500"
+                  width="640"
+                  height="400"
                   drag="x" 
                   dragConstraints={{right:0, left:-1200}} 
                   dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img3}  
+                  className={styles.img4}  
                 >
                 </motion.img>
               </AnimatePresence>
             </div>
 
+            <div className={styles.divimglegendgallery}>
+              <AnimatePresence>
+                <motion.img
+                  src={'/images/time-track.png'}
+                  width="640"
+                  height="400"
+                  drag="x" 
+                  dragConstraints={{right:0, left:-1200}} 
+                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                  className={styles.img5}
+                >
+                </motion.img>
+              </AnimatePresence>
+            </div>
+            <div className={styles.divdragndrop}>
+              <p className={styles.doublearrow}>↔</p>
+              <h2 className={styles.dragndrop}>👆 Drag'n Drop</h2>
+            </div>
           </div>
-
         </div>
+
       </div>
     </>
   )

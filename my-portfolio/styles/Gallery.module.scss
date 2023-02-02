@@ -1,6 +1,12 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
+@mixin imgsize($level){
+  position: absolute;
+  margin: auto;
+  z-index: $level;
+}
+
 .gallery {
   position: absolute;
   top: 0px;
@@ -46,35 +52,76 @@
     text-shadow: 1px 0px 1px $cyan,
     1px 0px 4px $cyan;
   }
-  .thanks {
-    position: absolute;
-    width: 99vw;
-    top: 43%;
-    display: flex;
-    justify-content: center;
-    .h2thanks {
-      font-family: $akayakanadaka_font;
-      font-size: 3rem;
-      text-shadow: 1px 0px 1px $blue,
-      2px 1px 1px $whitesmoke;
-    }
-  }
   .framerimg {
     position: absolute;
+    padding: 60px 0px;
     top: 25%;
+    bottom: 10%;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    background: rgba(0, 100, 100, 0.4);
+    box-shadow: 0px 0px 10px rgba(0,240,255, 0.6);
+    .thanks {
+      position: absolute;
+      width: 100vw;
+      top: 35%;
+
+      text-align: center;
+      z-index: 1;
+      .h2thanks {
+        font-family: $akayakanadaka_font;
+        font-size: 3rem;
+        text-shadow: 1px 0px 1px $blue,
+        2px 1px 1px $whitesmoke;
+      }
+    }
     .divimglegendgallery {
+      position: absolute;
       width: 100vw;
       display: flex;
       justify-content: center;
+      z-index: 2;
+      .img {
+        @include imgsize(3);
+      }
       .img2 {
-        position: absolute;
-        margin: auto;
-        z-index: 2;
+        @include imgsize(4);
       }
       .img3 {
-        position: absolute;
+        @include imgsize(5);
+      }
+      .img4 {
+        @include imgsize(6);
+      }
+      .img5 {
+        @include imgsize(7);
+      }
+    }
+
+    .divdragndrop {
+      position: absolute;
+      top: 85%;
+      right: 20%;
+      left: 20%;
+      padding: 0px 20px;
+      padding-bottom: 100px;
+      margin: auto;
+      z-index: 10;
+      .doublearrow {
+        position: relative;
+        width: 190px;
+        margin: -20px auto;
+        text-align: left;
+        font-size: 4.2rem;
+        color: $whitesmoke;
+      }
+      .dragndrop {
+        position: relative;
+        width: 400px;
         margin: auto;
-        z-index: 3;
+        text-align: center;
+        color: $whitesmoke;
       }
     }
   }

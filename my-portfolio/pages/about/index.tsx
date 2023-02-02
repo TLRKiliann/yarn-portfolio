@@ -36,21 +36,13 @@ const About:React.FC = () => {
         <article className={styles.article}>
 
           <li className={styles.listabout}>
-            <a className={styles.aboutclassa}>Premier défi !
+            <a className={styles.aboutclassa}>Premier défi, premier exploit !
             </a>
           </li>
           <p className={styles.paragraphabout}>
             Mon premier défi a été de monter mon pc pour pouvoir jouer à un MMO-RPG.
             Après plusieurs heures de jeux, j'ai voulu comprendre le fonctionnement
             de mon ordinateur. Pour ce faire je suis passé de Windows 10 à Linux.
-          </p>
-          <hr className={styles.hrabout}/>
-          <br />
-          <li className={styles.listabout}>
-            <a className={styles.aboutclassa}>Mon premier exploit !
-            </a>
-          </li>
-          <p className={styles.paragraphabout}>
             Ensuite, je me suis demandé comment interagir avec des SI. Pour cela, j'ai 
             compris qu'il me fallait apprendre le code. A partir de ce moment-là, 
             j'ai appris HTML, CSS, PhP, MySQL. J'ai transformé mon raspberry en serveur, 
@@ -106,7 +98,7 @@ const About:React.FC = () => {
             un métier et continuer d'augmenter mes compétences avec des pros au sein d'une
             entreprise.
           </p>
-          <hr className={styles.hrabout}/>
+          <hr className={styles.hrabout} style={{marginBottom: "0px"}} />
           <br />
         </article>
       </div>
