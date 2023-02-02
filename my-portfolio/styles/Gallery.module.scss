@@ -55,7 +55,7 @@
   .framerimg {
     position: absolute;
     padding: 60px 0px;
-    top: 25%;
+    top: 10%;
     bottom: 10%;
     width: 100%;
     height: 400px;
@@ -66,14 +66,15 @@
       position: absolute;
       width: 100vw;
       top: 35%;
-
       text-align: center;
       z-index: 1;
       .h2thanks {
         font-family: $akayakanadaka_font;
         font-size: 3rem;
+        color: $whitesmoke;
         text-shadow: 1px 0px 1px $blue,
         2px 1px 1px $whitesmoke;
+        opacity: 0.7;
       }
     }
     .divimglegendgallery {
@@ -97,8 +98,17 @@
       .img5 {
         @include imgsize(7);
       }
-    }
 
+      .img6 {
+        @include imgsize(8);
+      }
+      .img7 {
+        @include imgsize(9);
+      }
+      .img8 {
+        @include imgsize(10);
+      }
+    }
     .divdragndrop {
       position: absolute;
       top: 85%;
@@ -107,14 +117,15 @@
       padding: 0px 20px;
       padding-bottom: 100px;
       margin: auto;
-      z-index: 10;
+      z-index: 11;
       .doublearrow {
         position: relative;
-        width: 190px;
+        width: 205px;
         margin: -20px auto;
         text-align: left;
         font-size: 4.2rem;
         color: $whitesmoke;
+        opacity: 0.6;
       }
       .dragndrop {
         position: relative;
@@ -122,6 +133,7 @@
         margin: auto;
         text-align: center;
         color: $whitesmoke;
+        opacity: 0.6;
       }
     }
   }

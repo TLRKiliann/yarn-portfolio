@@ -77,35 +77,30 @@
   }
   .mainheaderprojetcs {
     @include margintop(20px);
-    margin-bottom: 10px;
     padding-left: 20px;
+    margin-bottom: 40px;
     font-family: $acme_font;
     font-size: 3.2rem;
     color: rgba(0,50,200,0.9);
     text-shadow: 1px 0px 1px $cyan,
     1px 0px 4px $cyan;
   }
-  .h2 {
-    width: 800px;
-    text-align: left;
-    margin: auto;
-    margin-bottom: 10px;
-    font-family: $akayakanadaka_font;
-    font-size: 2.2rem;
-    color: rgba(0,50,200,0.6);
-    text-shadow: 2px 0px 2px $cyan;
-  }
-  .hr {
-    @include margintop(0px);
-    margin-bottom: 40px;
-    @include borders();
-  }
-  .hr2 {
-    @include margintop(40px);
-    @include borders();
-  }
   .maindivofprojects {
-    margin-top: 5%;
+    .h2 {
+      width: 800px;
+      text-align: left;
+      margin: auto;
+      margin-bottom: 10px;
+      font-family: $akayakanadaka_font;
+      font-size: 2.2rem;
+      color: rgba(0,50,200,0.6);
+      text-shadow: 2px 0px 2px $cyan;
+    }
+    .hr {
+      @include margintop(0px);
+      margin-bottom: 40px;
+      @include borders();
+    }
     .subdivofprojects {
       padding: 20px;
       width: 760px;
@@ -154,6 +149,10 @@
           }
         }
       }
+    }
+    .hr2 {
+      @include margintop(40px);
+      @include borders();
     }
   }
 }

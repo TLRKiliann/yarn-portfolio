@@ -110,9 +110,58 @@ const Gallery:React.FC = () => {
                 </motion.img>
               </AnimatePresence>
             </div>
+
+
+            <div className={styles.divimglegendgallery}>
+              <AnimatePresence>
+                <motion.img
+                  src={'/images/tt-nier3.png'}
+                  width="640"
+                  height="400"
+                  drag="x" 
+                  dragConstraints={{right:0, left:-1200}} 
+                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                  className={styles.img6}
+                >
+                </motion.img>
+              </AnimatePresence>
+            </div>
+
+
+            <div className={styles.divimglegendgallery}>
+              <AnimatePresence>
+                <motion.img
+                  src={'/images/tt-nier2.png'}
+                  width="640"
+                  height="400"
+                  drag="x" 
+                  dragConstraints={{right:0, left:-1200}} 
+                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                  className={styles.img7}
+                >
+                </motion.img>
+              </AnimatePresence>
+            </div>
+
+
+            <div className={styles.divimglegendgallery}>
+              <AnimatePresence>
+                <motion.img
+                  src={'/images/tt-nier1.png'}
+                  width="640"
+                  height="400"
+                  drag="x" 
+                  dragConstraints={{right:0, left:-1200}} 
+                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                  className={styles.img8}
+                >
+                </motion.img>
+              </AnimatePresence>
+            </div>
+
             <div className={styles.divdragndrop}>
               <p className={styles.doublearrow}>↔</p>
-              <h2 className={styles.dragndrop}>👆 Drag'n Drop</h2>
+              <h2 className={styles.dragndrop}>👆 Drag'n Drop !</h2>
             </div>
           </div>
         </div>

@@ -60,7 +60,7 @@ const About:React.FC = () => {
             virtuels sur Virtualbox m'a permis de mieux comprendre le fonctionnement des 
             réseaux. J'ai également une expérience avec Kalilinux sur rootme et hackthebox 
             pour me faire une meilleure représentation de la sécurité. Aussi, j'ai trouvé 
-            amusant de faire mes propres packet internet avec Scapy ou d'observer leur
+            amusant de faire mes propres packet internet avec Scapy et d'observer leur
             contenu avec TCPdump (wireshark), comment déchiffrer un mot de passe, etc.
           </p>
           <hr className={styles.hrabout}/>
@@ -75,6 +75,10 @@ const About:React.FC = () => {
             incorpore des alarmes, agenda, rappel des dates d'arrêt des posologies
             médicamenteuses, signes vitaux, tableau récapitulatifs des maladies 
             transmissbiles, allergies, etc.
+          <br />
+            La réalisation de ce projet, c'est faite grace à une base de données MySQL, et à une connexion SSH 
+            sur Raspberry pi 3b (configuration du firewall serveur-client avec clefs asymétriques et SCP pour
+            SSH).  
           </p>
           <hr className={styles.hrabout}/>
           <br />
@@ -86,6 +90,9 @@ const About:React.FC = () => {
             J'ai également appris quelques framework tels que React, Vite, Next.js,
             pour faire des applications/sites web en JavaScript avec TypeScript et
             apprendre comment utiliser les divers style systems.
+          <br />
+            Ces notions m'ont permis de faire des applications e-commerce, chat avec base de données
+            MySQL, des API avec openWeathermap.com, typicode.com.
           </p>
           <hr className={styles.hrabout}/>
           <br />
@@ -95,7 +102,7 @@ const About:React.FC = () => {
           </li>
           <p className={styles.paragraphabout}>
             Actuellement en reconversion professionnelle, je souhaite faire de ma passion
-            un métier et continuer d'augmenter mes compétences avec des pros au sein d'une
+            un métier et continuer de faire évoluer mes compétences avec des pros au sein d'une
             entreprise.
           </p>
           <hr className={styles.hrabout} style={{marginBottom: "0px"}} />
