@@ -98,6 +98,9 @@ const Home:React.FC = () => {
             <li className={styles.list}>
               <Link href="/gallery" className={styles.link}>🌺 Gallery&nbsp;</Link>
             </li>
+            <li className={styles.list}>
+              <Link href="/contact" className={styles.link}>🌺 Contact&nbsp;</Link>
+            </li>
           </div>
 
           <div className={styles.secondlilink}>
