@@ -39,7 +39,6 @@ const Gallery:React.FC = () => {
               <AnimatePresence>
                 <motion.img
                   src={'/images/bg_1.png'}
-                  href="https://www.youtube.com/watch?v=8g789tQ2gyY"
                   width="640"
                   height="400"
                   drag="x" 

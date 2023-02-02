@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from "../../components/Layout"
 import {useRouter} from 'next/router'
 import Image from 'next/image'
 import styles from '@/styles/About.module.scss'
@@ -12,7 +13,7 @@ const About:React.FC = () => {
   }
 
   return (
-    <div>
+    <Layout>
       <div className={styles.bgcolorabout}>
         <div className={styles.divbtn}>
           <button
@@ -109,7 +110,7 @@ const About:React.FC = () => {
           <br />
         </article>
       </div>
-    </div>
+    </Layout>
   )
 }
 export default About

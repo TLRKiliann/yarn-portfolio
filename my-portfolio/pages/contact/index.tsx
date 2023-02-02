@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Layout from "../../components/Layout"
 import styles from '@/styles/Contact.module.scss'
 
 const Contact:React.FC = () => {
@@ -9,7 +10,7 @@ const Contact:React.FC = () => {
   }
 
   return (
-    <>
+    <Layout>
       <div className={styles.contact}>
         
         <div className={styles.divbtn}>
@@ -43,7 +44,7 @@ const Contact:React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   )
 }
 

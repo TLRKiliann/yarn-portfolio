@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Layout from "../../components/Layout"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TbBrandNextjs } from 'react-icons/tb'
@@ -40,7 +41,7 @@ const Projects:React.FC = () => {
   }
 
   return (
-    <div>      
+    <Layout>      
       <div className={styles.bgcolorproject}>
 
         <div className={styles.maindivvideoprojects}>
@@ -180,7 +181,7 @@ const Projects:React.FC = () => {
           <hr className={styles.hr2} />
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
 export default Projects

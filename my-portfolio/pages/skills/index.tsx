@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from "../../components/Layout"
 import {useRouter} from 'next/router'
 import { useState } from "react"
 import styles from '@/styles/Skills.module.scss'
@@ -17,7 +18,7 @@ const Skills:React.FC = () => {
   }
 
   return (
-    <div>
+    <Layout>
       <div className={styles.bgcolor}>
           
         <div className={styles.divbtn}>
@@ -302,7 +303,7 @@ const Skills:React.FC = () => {
         }
 
       </div>
-    </div>
+    </Layout>
   )
 }
 export default Skills
