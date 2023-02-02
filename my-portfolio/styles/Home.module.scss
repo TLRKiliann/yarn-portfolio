@@ -108,6 +108,9 @@
         background-color: transparent;
         border-radius: 5px;
       }
+      &::-webkit-media-controls-panel {
+        background-color: transparent;
+      }
     }
   }
   .mainclassvideo {
@@ -119,8 +122,8 @@
     .divvideointro {
       width: 100vw;
       height: 100vh;
-      filter: opacity(25%);
-      opacity: 0.9;
+      filter: opacity(22%);
+      opacity: 0.8;
       object-fit: cover;
     }
   }
