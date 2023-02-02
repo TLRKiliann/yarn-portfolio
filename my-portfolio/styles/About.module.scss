@@ -12,15 +12,9 @@
   left: 0px;
   min-height: 100vh;
   background: $bg_color;
-  overflow-y: hidden;
   z-index: -1;
-  .bgcolorabout::-webkit-scrollbar {
-    display: none;
-  }
-  .bgcolorabout {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   .divbtn {
     position: fixed;
     @include topright();

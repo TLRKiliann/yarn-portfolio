@@ -9,6 +9,12 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   return (
     <AnimatePresence mode='wait' initial={false}>
+        <Component {...pageProps} key={router.asPath}/>
+    </AnimatePresence>
+  )
+}
+
+/*
       <motion.div
         
         key={router.route}
@@ -18,8 +24,5 @@ export default function App({ Component, pageProps }: AppProps) {
         exit={{ opacity: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <Component {...pageProps} key={router.asPath}/>
       </motion.div>
-    </AnimatePresence>
-  )
-}
+*/

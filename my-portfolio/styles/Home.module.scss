@@ -67,12 +67,15 @@
 }
 
 .main {
+  position: absolute;
+  @include toprightbottomleft();
+  overflow: hidden;
   .maindivanimation {
     position: absolute;
     @include toprightbottomleft();
-    overflow: hidden;
     font-family: $akayakanadaka_font;
     color: rgba(0,255,255, 0.5);
+    overflow-y: hidden;
     .firstdivanimation {
       @include animation();
       animation-delay: 2s;

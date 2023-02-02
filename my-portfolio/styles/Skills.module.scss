@@ -20,7 +20,6 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  z-index: -1;
 }
 
 @mixin skillsframes(){
@@ -34,8 +33,10 @@
 }
 
 .bgcolor {
-  position: fixed;
+  position: absolute;
+  overflow: hidden;
   @include trbl();
+  z-index: 1;
   .divbtn {
     position: absolute;
     @include topright();
@@ -64,6 +65,7 @@
   .mainclassvideo {
     position: fixed;
     @include trbl();
+    z-index: -1;
     background: $bg_color;
     .divvideointro {
       filter: opacity(30%);
