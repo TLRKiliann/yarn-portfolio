@@ -3,7 +3,7 @@ import Layout from "../../components/Layout"
 import styles from '@/styles/Contact.module.scss'
 
 const Contact:React.FC = () => {
-  const router = useRouter()
+  const router = useRouter() as any
 
   const handleBackToHome = () => {
     router.replace("/")
@@ -13,6 +13,16 @@ const Contact:React.FC = () => {
     <Layout>
       <div className={styles.contact}>
         
+        <div className={styles.maindivvideocontact}>
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className={styles.divvideocontact}>
+            <source src={"./videos/space.mp4"} type="video/mp4"/>
+          </video>
+        </div>
+
         <div className={styles.divbtn}>
           <button
             type='button'
@@ -22,7 +32,6 @@ const Contact:React.FC = () => {
             Back to Home
           </button>
         </div>
-
 
         <h1 className={styles.maintitlecontact}>Contact</h1>
 
@@ -42,6 +51,7 @@ const Contact:React.FC = () => {
           <div className={styles.divh3fifth}>
             <h3 className={styles.h3}>Lausanne (Switzerland)</h3>
           </div>
+
         </div>
       </div>
     </Layout>

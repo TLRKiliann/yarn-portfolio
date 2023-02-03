@@ -1,17 +1,18 @@
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion"
+import Layout from "../../components/Layout"
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '@/styles/Gallery.module.scss'
 
 const Gallery:React.FC = () => {
-  const router = useRouter()
+  const router = useRouter() as any
 
   const handleRoute = () => {
     router.replace('/')
   }
   return (
-    <>
+    <Layout>
       <div className={styles.gallery}>
 
         <div className={styles.divbtn}>
@@ -36,7 +37,7 @@ const Gallery:React.FC = () => {
             </div>
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/bg_1.png'}
                   width="640"
@@ -47,11 +48,11 @@ const Gallery:React.FC = () => {
                   className={styles.img1}  
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/bg_3.png'}
                   width="640"
@@ -62,11 +63,11 @@ const Gallery:React.FC = () => {
                   className={styles.img2}  
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/screen3.png'}
                   width="640"
@@ -77,11 +78,11 @@ const Gallery:React.FC = () => {
                   className={styles.img3}  
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/screen4.png'}
                   width="640"
@@ -92,11 +93,11 @@ const Gallery:React.FC = () => {
                   className={styles.img4}  
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/time-track.png'}
                   width="640"
@@ -107,12 +108,12 @@ const Gallery:React.FC = () => {
                   className={styles.img5}
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/tt-nier3.png'}
                   width="640"
@@ -123,12 +124,12 @@ const Gallery:React.FC = () => {
                   className={styles.img6}
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/tt-nier2.png'}
                   width="640"
@@ -139,12 +140,12 @@ const Gallery:React.FC = () => {
                   className={styles.img7}
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
 
             <div className={styles.divimglegendgallery}>
-              <AnimatePresence>
+
                 <motion.img
                   src={'/images/tt-nier1.png'}
                   width="640"
@@ -155,7 +156,7 @@ const Gallery:React.FC = () => {
                   className={styles.img8}
                 >
                 </motion.img>
-              </AnimatePresence>
+
             </div>
 
             <div className={styles.divdragndrop}>
@@ -166,7 +167,7 @@ const Gallery:React.FC = () => {
         </div>
 
       </div>
-    </>
+    </Layout>
   )
 }
 

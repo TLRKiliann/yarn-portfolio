@@ -34,6 +34,7 @@
   @include toprightleft();
   min-height: 100vh;
   background: $bg_color;
+  overflow: hidden;
   z-index: -1;
   .maindivvideoprojects {
     position: fixed;
@@ -135,7 +136,7 @@
           animation-delay: 0s;
           animation-duration: 4s;
           animation-iteration-count: 1;
-          animation-timing-function: ease-in-out, linear;
+          animation-timing-function: ease-out, linear;
           transform: scale(1.0);
           &:hover {
             color: rgba(0,255,255,0.5);

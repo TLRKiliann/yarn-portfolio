@@ -44,8 +44,8 @@
 @mixin animation(){
   position: absolute;
   top: 45%;
-  right: 35%;
-  left: 35%;
+  width: 360px;
+  margin: auto;
   opacity: 0;
   animation-name: hollyanimation;
   animation-duration: 5s;
@@ -72,6 +72,8 @@
   overflow: hidden;
   .maindivanimation {
     position: absolute;
+    display: flex;
+    justify-content: center;
     @include toprightbottomleft();
     font-family: $akayakanadaka_font;
     color: rgba(0,255,255, 0.5);

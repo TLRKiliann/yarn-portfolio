@@ -32,11 +32,9 @@
   animation-timing-function: ease-out, linear;
 }
 
-.bgcolor {
+.skills {
   position: absolute;
-  overflow: hidden;
   @include trbl();
-  z-index: 1;
   .divbtn {
     position: absolute;
     @include topright();
@@ -65,10 +63,10 @@
   .mainclassvideo {
     position: fixed;
     @include trbl();
-    z-index: -1;
     background: $bg_color;
+    z-index: -1;
     .divvideointro {
-      filter: opacity(30%);
+      filter: opacity(80%);
       opacity: 0.4;
       object-fit: cover;
     }
@@ -219,6 +217,53 @@
           font-family: $acme_font;
           font-size: 1.5rem;
           color: rgba(0,255,255,0.5);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .skills {
+    .divbtn {
+      .btntopright {
+      }
+    }
+    .mainclassvideo {
+      .divvideointro {
+      }
+    }
+    .mainheaderskills {
+    }
+    .sectionone {
+      margin-top: 5%;
+      .btnhard {
+      }
+      .secondtitle {
+      }
+      .mainblocdiv {
+        .subblockdiv {
+          .h2titlesubblock {
+          }
+          .blocli {
+            .listhard {
+              .classa {
+              }
+            }
+          }
+        }
+      }
+    }
+    .sectiontwo {
+      margin-top: 5%;
+      .btnsoft {
+      }
+      .secondtitle {
+      }
+      .divlist {
+        .listsoft {
+          .linka {
+          }
         }
       }
     }

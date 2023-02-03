@@ -14,13 +14,13 @@ const Skills:React.FC = () => {
 
   const handleClickBtn = () => {
     console.log("clicked")
-    setSwitchBtn(!switchBtn)
+    setSwitchBtn(switchBtn => !switchBtn)
   }
 
   return (
     <Layout>
-      <div className={styles.bgcolor}>
-          
+      <div className={styles.skills}>
+
         <div className={styles.divbtn}>
           <button
             type='button'

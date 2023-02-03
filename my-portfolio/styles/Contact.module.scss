@@ -37,6 +37,13 @@
   }
 }
 
+@mixin trbl(){
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 @mixin divforh3(){
   margin: 10px 0px;
   color: rgba(24,24,24, 0.4);
@@ -76,13 +83,22 @@
 
 .contact {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  @include trbl();
   min-height: 100vh;
-  background: $bg_color;
-  z-index: -1;
+  .maindivvideocontact {
+    position: fixed;
+    @include trbl();
+    bottom: 0px;
+    background: $custom_purple;
+    z-index: -1;
+    .divvideocontact {
+      width: 100vw;
+      height: 100vh;
+      filter: opacity(50%);
+      opacity: 0.8;
+      object-fit: cover;
+    }
+  }
   .divbtn {
     position: absolute;
     top: 0px;
@@ -110,8 +126,9 @@
     }
   }
   .maintitlecontact {
-    padding-left: 20px;
+    margin-top: 20px;
     margin-bottom: 40px;
+    padding-left: 20px;
     font-family: $acme_font;
     font-size: 3.2rem;
     color: rgba(0,50,200,0.9);
@@ -123,8 +140,8 @@
     padding: 20px 30px;
     margin: auto;
     margin-top: 12%;
-    background: #242424;
     border-radius: 20px;
+    background: rgba(24,24,24, 0.2);
     box-shadow: 0px 0px 10px cyan;
     font-family: $akayakanadaka_font;
     font-size: 2rem;
@@ -132,7 +149,7 @@
     opacity: 1;
 
     animation-name: mainbgopacity;
-    animation-delay: 0s;
+    animation-delay: 0  s;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
