@@ -1,29 +1,17 @@
 import { motion } from "framer-motion";
 
-const Layout = ({ children }: any) => (
+const Layout = ({ children, router }: any) => (
   <motion.div
-    initial={{ x: 600, opacity: 0, backgroundColor: "#193dbb" }}
-    animate={{ x: 0, opacity: 1, backgroundColor: "#193dbb" }}
-    exit={{ x: -600, opacity: 0 }}
+    key={router}
+    initial={{ opacity: 0.5, y: 200, scale: 0 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    exit={{ opacity: 0.5, y: 200, scale: 0 }}
     transition={{
-      stiffness: 600,
-      damping: 28,
-      ease: [0,0,0.5,1],
+      duration: 0.8,
+      ease: "easeOut",
     }}
   >
     {children}
   </motion.div>
 );
 export default Layout;
-
-/*
-    initial={{ x: 600, opacity: 0, scale: 0.5, rotate: 180 }}
-    animate={{ x: 0, opacity: 1, scale: 1, rotate: 0 }}
-    exit={{ x: -600, opacity: 0, scale: 1.5, rotate: -180 }}
-    transition={{
-      type: "tween",
-      stiffness: 600,
-      damping: 28,
-      duration: 1,
-      ease: "easeOut",
-*/

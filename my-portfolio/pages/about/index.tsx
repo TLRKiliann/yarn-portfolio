@@ -28,9 +28,11 @@ const About:React.FC = () => {
         <div className={styles.imgabout}>
           <Image
             src={'/coolnection.jpg'}
-            width="1900"
+            width="1640"
             height="1200"
-            alt="img about" />
+            alt="img about"
+            className={styles.img}
+          />
         </div>
 
         <h1 className={styles.mainheaderabout}>About Me</h1>
