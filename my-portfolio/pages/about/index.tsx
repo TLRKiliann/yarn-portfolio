@@ -36,9 +36,9 @@ const About:React.FC = () => {
         </div>
 
         <h1 className={styles.mainheaderabout}>About Me</h1>
-        <article className={styles.article}>
 
-          <li className={styles.listabout}>
+        <article className={styles.article}>
+          <li className={styles.listhead}>
             <a className={styles.aboutclassa}>Premier défi, premier exploit !
             </a>
           </li>
@@ -79,9 +79,9 @@ const About:React.FC = () => {
             médicamenteuses, signes vitaux, tableau récapitulatifs des maladies 
             transmissbiles, allergies, etc.
           <br />
-            La réalisation de ce projet, c'est faite grace à une base de données MySQL, et à une connexion SSH 
-            sur Raspberry pi 3b (configuration du firewall serveur-client avec clefs asymétriques et SCP pour
-            SSH).  
+            La réalisation de ce projet, c'est faite grace à une base de données MySQL,
+            et à une connexion SSH sur Raspberry pi 3b (configuration du firewall
+            serveur-client avec clefs asymétriques et SCP pour SSH).  
           </p>
           <hr className={styles.hrabout}/>
           <br />
@@ -92,10 +92,10 @@ const About:React.FC = () => {
           <p className={styles.paragraphabout}>
             J'ai également appris quelques framework tels que React, Vite, Next.js,
             pour faire des applications/sites web en JavaScript avec TypeScript et
-            apprendre comment utiliser les divers style systems.
+            apprendre comment utiliser les divers styles systems.
           <br />
-            Ces notions m'ont permis de faire des applications e-commerce, chat avec base de données
-            MySQL, des API avec openWeathermap.com, typicode.com.
+            Ces notions m'ont permis de faire des applications e-commerce, chat avec base
+            de données MySQL, des API avec openWeathermap, typicode, unsplash.
           </p>
           <hr className={styles.hrabout}/>
           <br />
@@ -105,12 +105,13 @@ const About:React.FC = () => {
           </li>
           <p className={styles.paragraphabout}>
             Actuellement en reconversion professionnelle, je souhaite faire de ma passion
-            un métier et continuer de faire évoluer mes compétences avec des pros au sein d'une
-            entreprise.
+            un métier et continuer de faire évoluer mes compétences avec des pros au sein
+            d'une entreprise.
           </p>
           <hr className={styles.hrabout} style={{marginBottom: "0px"}} />
           <br />
         </article>
+
       </div>
     </Layout>
   )

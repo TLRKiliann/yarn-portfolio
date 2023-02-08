@@ -30,12 +30,6 @@
 }
 
 .bgcolorproject {
-  position: absolute;
-  @include toprightleft();
-  min-height: 100vh;
-  background: $bg_color;
-  overflow: hidden;
-  z-index: -1;
   .maindivvideoprojects {
     position: fixed;
     @include toprightleft();

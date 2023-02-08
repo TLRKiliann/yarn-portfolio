@@ -82,8 +82,6 @@
 }
 
 .contact {
-  position: absolute;
-  @include trbl();
   min-height: 100vh;
   .maindivvideocontact {
     position: fixed;

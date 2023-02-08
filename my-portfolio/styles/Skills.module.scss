@@ -33,8 +33,6 @@
 }
 
 .skills {
-  position: absolute;
-  @include trbl();
   .divbtn {
     position: absolute;
     @include topright();

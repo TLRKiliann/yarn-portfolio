@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import Head from 'next/head'
 import Link from 'next/link'
 import { GiKoala } from 'react-icons/gi'
+import { GoInfo } from 'react-icons/go'
 import styles from '@/styles/Home.module.scss'
 
 type MyurlsProps = {
@@ -87,20 +88,30 @@ const Home:React.FC = () => {
 
           <div className={styles.lilink}>
             <li className={styles.list}>
-              <Link href="/about" className={styles.link}>🌺 About Me&nbsp;</Link>
+              <Link href="/about" className={styles.link}>
+                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> About Me&nbsp;
+              </Link>
             </li>
 
             <li className={styles.list}>
-              <Link href="/skills" className={styles.link}>🌺 My skills&nbsp;</Link>
+              <Link href="/skills" className={styles.link}>
+                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> My skills&nbsp;
+              </Link>
             </li>
             <li className={styles.list}>
-              <Link href="/projects" className={styles.link}>🌺 My projects&nbsp;</Link>
+              <Link href="/projects" className={styles.link}>
+                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> My projects&nbsp;
+              </Link>
             </li>
             <li className={styles.list}>
-              <Link href="/gallery" className={styles.link}>🌺 Gallery&nbsp;</Link>
+              <Link href="/gallery" className={styles.link}>
+                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> Gallery&nbsp;
+              </Link>
             </li>
             <li className={styles.list}>
-              <Link href="/contact" className={styles.link}>🌺 Contact&nbsp;</Link>
+              <Link href="/contact" className={styles.link}>
+                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> Contact&nbsp;
+              </Link>
             </li>
           </div>
 
