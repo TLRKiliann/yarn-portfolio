@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/abhaya-libre": "^4.5.9",
     "@fontsource/acme": "^4.5.10",
     "@fontsource/akaya-kanadaka": "^4.5.8",
     "@next/font": "13.1.6",
