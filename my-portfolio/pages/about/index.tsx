@@ -127,6 +127,19 @@ const About:React.FC = () => {
                   phpython-server
                 </Link>
               </li>
+
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://www.youtube.com/watch?v=O70eptxwP3I">
+                  ICMP transmission between 3 VM (one router)
+                </Link>
+              </li>
+
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://www.youtube.com/watch?v=zaWTRN0kmYw">
+                  Convert a VM to a router (Debian 10)
+                </Link>
+              </li>
+
             </div>
             ) : null
           }
@@ -222,6 +235,25 @@ const About:React.FC = () => {
                   mernstack-api (vite-react-typescript-mysql)
                 </Link>
               </li>
+
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://www.youtube.com/watch?v=8g789tQ2gyY">
+                  site de boulangerie
+                </Link>
+              </li>
+
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://www.youtube.com/watch?v=ggG2bOggCZU">
+                  Vite-React-TS-Tailwind & Sass
+                </Link>
+              </li>
+
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://www.youtube.com/watch?v=sdoP_y_PftQ">
+                  Advanced chat-app (vite react ts scss mariadb) in LAN
+                </Link>
+              </li>
+
               <li className={styles.li}>
                 <Link className={styles.link} href="https://github.com/TLRKiliann/nextjs-api">
                   Next.js api
