@@ -12,6 +12,7 @@ const About:React.FC = () => {
   const [second, setSecond] = useState<boolean>(false)
   const [third, setThird] = useState<boolean>(false)
   const [four, setFour] = useState<boolean>(false)
+  const [five, setFive] = useState<boolean>(false)
 
   const handleBackToHome = () => {
     router.replace("/")
@@ -33,6 +34,10 @@ const About:React.FC = () => {
     setFour(four => !four)
   }
 
+  const handleFive = () => {
+    setFive(five => !five)
+  }
+
   return (
     <Layout>
       <div className={styles.bgcolorabout}>
@@ -49,7 +54,7 @@ const About:React.FC = () => {
         <div className={styles.imgabout}>
           <Image
             src={'/coolnection.jpg'}
-            width="1640"
+            width="1680"
             height="1200"
             alt="img about"
             className={styles.img}
@@ -127,19 +132,16 @@ const About:React.FC = () => {
                   phpython-server
                 </Link>
               </li>
-
               <li className={styles.li}>
                 <Link className={styles.link} href="https://www.youtube.com/watch?v=O70eptxwP3I">
                   ICMP transmission between 3 VM (one router)
                 </Link>
               </li>
-
               <li className={styles.li}>
                 <Link className={styles.link} href="https://www.youtube.com/watch?v=zaWTRN0kmYw">
                   Convert a VM to a router (Debian 10)
                 </Link>
               </li>
-
             </div>
             ) : null
           }
@@ -235,25 +237,21 @@ const About:React.FC = () => {
                   mernstack-api (vite-react-typescript-mysql)
                 </Link>
               </li>
-
               <li className={styles.li}>
                 <Link className={styles.link} href="https://www.youtube.com/watch?v=8g789tQ2gyY">
                   site de boulangerie
                 </Link>
               </li>
-
               <li className={styles.li}>
                 <Link className={styles.link} href="https://www.youtube.com/watch?v=ggG2bOggCZU">
                   Vite-React-TS-Tailwind & Sass
                 </Link>
               </li>
-
               <li className={styles.li}>
                 <Link className={styles.link} href="https://www.youtube.com/watch?v=sdoP_y_PftQ">
                   Advanced chat-app (vite react ts scss mariadb) in LAN
                 </Link>
               </li>
-
               <li className={styles.li}>
                 <Link className={styles.link} href="https://github.com/TLRKiliann/nextjs-api">
                   Next.js api
@@ -267,15 +265,32 @@ const About:React.FC = () => {
           <br />
           
           <div className={styles.listabout}>
+
+            {five === false ? (
+              <button type='button' onClick={handleFive} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
+              </button>
+              ) : (
+              <button type='button' onClick={handleFive} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.rotationlogo} size={24}/>
+              </button>
+              )
+            }
+
             <a className={styles.aboutclassa}>
               2023 
             </a>
           </div>
-          <div className={styles.paragraphabout}>
-            Actuellement en reconversion professionnelle, je souhaite faire de ma passion
-            un métier et continuer de faire évoluer mes compétences avec des pros au sein
-            d'une entreprise.
-          </div>
+          
+          {five === true ? (
+            <div className={styles.paragraphaboutfirst}>
+              Actuellement en reconversion professionnelle, je souhaite faire de ma passion
+              un métier et continuer de faire évoluer mes compétences avec des pros au sein
+              d'une entreprise.
+            </div>
+            ) : null
+          }
+
           <hr className={styles.hrabout} style={{marginBottom: "0px"}} />
           <br />
         </article>
