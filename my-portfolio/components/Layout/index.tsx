@@ -6,12 +6,16 @@ const Layout = ({ children }:any) => (
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
     transition={{
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
+      duration: 1,
     }}
   >
     {children}
   </motion.div>
 );
 export default Layout;
+
+/*
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+*/
