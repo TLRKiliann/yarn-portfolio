@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from "../../components/Layout"
 import {useRouter} from 'next/router'
+import Link from 'next/link'
+import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import Image from 'next/image'
 import styles from '@/styles/About.module.scss'
 
 const About:React.FC = () => {
-
   const router = useRouter() as any
+  const [first, setFirst] = useState<boolean>(false)
+  const [second, setSecond] = useState<boolean>(false)
+  const [third, setThird] = useState<boolean>(false)
+  const [four, setFour] = useState<boolean>(false)
 
   const handleBackToHome = () => {
     router.replace("/")
+  }
+
+  const handleFirst = () => {
+    setFirst(first => !first)
+  }
+
+  const handleSecond = () => {
+    setSecond(second => !second)
+  }
+
+  const handleThird = () => {
+    setThird(third => !third)
+  }
+
+  const handleFour = () => {
+    setFour(four => !four)
   }
 
   return (
@@ -38,76 +59,191 @@ const About:React.FC = () => {
         <h1 className={styles.mainheaderabout}>About Me</h1>
 
         <article className={styles.article}>
-          <li className={styles.listhead}>
-            <a className={styles.aboutclassa}>Premier défi, premier exploit !
+          
+          <div className={styles.listabout}>
+
+            {first === false ? (
+              <button type='button' onClick={handleFirst} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
+              </button>
+              ) : (
+              <button type='button' onClick={handleFirst} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.rotationlogo} size={24}/>
+              </button>
+              )
+            }
+            <a className={styles.aboutclassa}>
+              2017-2018
             </a>
-          </li>
-          <p className={styles.paragraphabout}>
-            Mon premier défi a été de monter mon pc pour pouvoir jouer à un MMO-RPG.
-            Après plusieurs heures de jeux, j'ai voulu comprendre le fonctionnement
-            de mon ordinateur. Pour ce faire je suis passé de Windows 10 à Linux.
-            Ensuite, je me suis demandé comment interagir avec des SI. Pour cela, j'ai 
-            compris qu'il me fallait apprendre le code. A partir de ce moment-là, 
-            j'ai appris HTML, CSS, PhP, MySQL. J'ai transformé mon raspberry en serveur, 
-            grâce à Apache2 afin de rendre mon site accessible en WAN avec HTTPS.
-          </p>
+          </div>
+
+          {first === true ? (
+            <div className={styles.paragraphaboutfirst}>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/server-PHP-MySQL">
+                  Premier site en HTML, CSS, PhP, MySQL avec server Apache2 
+                  raspberry (WAN) HTTPS
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/apache2_conf_raspberry">
+                  Configuration https apache2-ssl
+                </Link>
+              </li>
+            </div>
+            ) : null
+          }
+
           <hr className={styles.hrabout}/>
           <br />
-          <li className={styles.listabout}>
-            <a className={styles.aboutclassa}>Sécurité des SI et réseaux internet
+
+          <div className={styles.listabout}>
+
+            {second === false ? (
+              <button type='button' onClick={handleSecond} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
+              </button>
+              ) : (
+              <button type='button' onClick={handleSecond} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.rotationlogo} size={24}/>
+              </button>
+              )
+            }
+
+            <a className={styles.aboutclassa}>
+              2019-2020
             </a>
-          </li>
-          <p className={styles.paragraphabout}>
-            Je me suis également intéressé aux réseaux internet. J'ai donc suivi des 
-            cours sur openclassroom. La création de machines virtuelles avec réseaux 
-            virtuels sur Virtualbox m'a permis de mieux comprendre le fonctionnement des 
-            réseaux. J'ai également une expérience avec Kalilinux sur rootme et hackthebox 
-            pour me faire une meilleure représentation de la sécurité. Aussi, j'ai trouvé 
-            amusant de faire mes propres packet internet avec Scapy et d'observer leur
-            contenu avec TCPdump (wireshark), comment déchiffrer un mot de passe, etc.
-          </p>
+          </div>
+
+          {second === true ? (
+            <div className={styles.paragraphaboutfirst}>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/BMI">
+                  BMI (python3-tkinter)
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/phpython-server">
+                  phpython-server
+                </Link>
+              </li>
+            </div>
+            ) : null
+          }
+
           <hr className={styles.hrabout}/>
           <br />
-          <li className={styles.listabout}>
-            <a className={styles.aboutclassa}>Web App sans framework
+          
+          <div className={styles.listabout}>
+
+            {third === false ? (
+              <button type='button' onClick={handleThird} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
+              </button>
+              ) : (
+              <button type='button' onClick={handleThird} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.rotationlogo} size={24}/>
+              </button>
+              )
+            }
+
+            <a className={styles.aboutclassa}>
+              2020-2021
             </a>
-          </li>
-          <p className={styles.paragraphabout}>
-            J'ai également voulu faire une Web App sans framework avec python3 et tkinter.
-            L'idée était de faire une application améliorée pour le personnel soignant qui
-            incorpore des alarmes, agenda, rappel des dates d'arrêt des posologies
-            médicamenteuses, signes vitaux, tableau récapitulatifs des maladies 
-            transmissbiles, allergies, etc.
-          <br />
-            La réalisation de ce projet, c'est faite grace à une base de données MySQL,
-            et à une connexion SSH sur Raspberry pi 3b (configuration du firewall
-            serveur-client avec clefs asymétriques et SCP pour SSH).  
-          </p>
+          </div>
+
+          {third === true ? (
+            <div className={styles.paragraphaboutfirst}>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/tor-proxy">
+                  tor proxy on linux and raspberry pi 400
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/anxious_scale">
+                  anxious_scale (stand-alone) échelle d'évaluation des angoisse (psychatrie)
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/psychotabs">
+                  psychotabs (stand-alone)
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/interactions">
+                  interactions python3-tkinter (stand-alone)
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/timetrack">
+                  timetrack (application soins infirmiers) python3-tkinter ssh
+                  scp mysql
+                </Link>
+              </li>
+            </div>
+            ) : null
+          }
+
           <hr className={styles.hrabout}/>
           <br />
-          <li className={styles.listabout}>
-            <a className={styles.aboutclassa}>JavaScript
+          
+          <div className={styles.listabout}>
+
+            {four === false ? (
+              <button type='button' onClick={handleFour} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
+              </button>
+              ) : (
+              <button type='button' onClick={handleFour} className={styles.button}>
+                <BsFillArrowRightCircleFill className={styles.rotationlogo} size={24}/>
+              </button>
+              )
+            }
+
+            <a className={styles.aboutclassa}>
+              2021-2023
             </a>
-          </li>
-          <p className={styles.paragraphabout}>
-            J'ai également appris quelques framework tels que React, Vite, Next.js,
-            pour faire des applications/sites web en JavaScript avec TypeScript et
-            apprendre comment utiliser les divers styles systems.
-          <br />
-            Ces notions m'ont permis de faire des applications e-commerce, chat avec base
-            de données MySQL, des API avec openWeathermap, typicode, unsplash.
-          </p>
+          </div>
+
+          {four === true ? (
+            <div className={styles.paragraphaboutfirst}>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/Contacts-React">
+                  Phone contact with React (Contacts-React)
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/typescript-e-commerce">
+                  typescript-e-commerce
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/mernstack-api">
+                  mernstack-api (vite-react-typescript-mysql)
+                </Link>
+              </li>
+              <li className={styles.li}>
+                <Link className={styles.link} href="https://github.com/TLRKiliann/nextjs-api">
+                  Next.js api
+                </Link>
+              </li>
+            </div>
+            ) : null
+          }
+
           <hr className={styles.hrabout}/>
           <br />
-          <li className={styles.listabout}>
-            <a className={styles.aboutclassa}>Et la suite... 
+          
+          <div className={styles.listabout}>
+            <a className={styles.aboutclassa}>
+              2023 
             </a>
-          </li>
-          <p className={styles.paragraphabout}>
+          </div>
+          <div className={styles.paragraphabout}>
             Actuellement en reconversion professionnelle, je souhaite faire de ma passion
             un métier et continuer de faire évoluer mes compétences avec des pros au sein
             d'une entreprise.
-          </p>
+          </div>
           <hr className={styles.hrabout} style={{marginBottom: "0px"}} />
           <br />
         </article>

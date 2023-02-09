@@ -1,9 +1,51 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
+@keyframes first-link {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 @mixin topright(){
   top: 0px;
   right: 0px;
+}
+
+@mixin rotationlogostyle(){
+  margin-bottom: -3px;
+  color: rgba(255,255,255,0.7);
+}
+
+@mixin logohover(){
+  cursor: pointer;
+  color: rgba(255,255,255, 0.3);
+}
+
+@mixin transitionparagraph(){
+  width: 76%;
+  margin: auto;
+  margin-top: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: justify;
+  font-family: $abhaya_font;
+  font-size: 1.4rem;
+  color: rgba(16, 51, 128, 1);
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  box-shadow: 0px 0px 3px rgba(255,255,255,0.5);
+}
+
+@mixin linkstyle(){
+  margin-left: -14px;
+  text-decoration: none;
+  color: rgba(16, 51, 128, 1);
 }
 
 .bgcolorabout {
@@ -53,60 +95,85 @@
     padding-left: 20px;
     font-family: $abhaya_font;
     font-size: 3.2rem;
-    /*color: rgba(0,50,240,1);*/
-    color: whitesmoke;
+    color: $whitesmoke;
     text-shadow:
-      0px 0px 1px rgba(24,24,24, 1),
-      0px 0px 5px rgba(180,180,180, 1),
-      3px 8px 7px rgba(0,0,0, 0.3),
-      3px 8px 5px rgba(0,0,0, 0.1),
+      0px 0px 1px $lightgrey_24,
+      0px 0px 2px rgba(180,180,180, 1);
   }
   .article {
-    position: absolute;
-    top: 0px;
-    right: 100px;
-    left: 100px;
-    padding: 10px 60px;
-    margin-bottom: 40px;
-    background: linear-gradient(90deg,
-      rgba(255,255,255,0), rgba(0,50,140,1),
-      rgba(0,50,140,1), rgba(255,255,255,0));
+    margin-top: 20px;
+    margin-bottom: 30px;
     border-radius: 20px;
-    .listhead {
-      margin-top: 100px;
-      font-family: $abhaya_font;
-      font-size: 2rem;
-      list-style: none;
-      color: $whitesmoke;
-      text-shadow: 0px 0px 2px blue;
+    .button {
+      background: transparent;
+      border: none;
+      outline: none;
+      .logoreact {
+        @include rotationlogostyle();
+        &:hover {
+          @include logohover();
+        }
+      }
+    }
+    .rotationlogo {
+      @include rotationlogostyle();
+      transform: rotateZ(90deg);
+      &:hover {
+        @include logohover();
+      }
     }
     .listabout {
+      width: 80%;
+      margin: auto;
+      position: relative;
+      padding: 10px 20px;
+      list-style: none;
       font-family: $abhaya_font;
       font-size: 2rem;
-      list-style: none;
-
-        color: $whitesmoke;
-        text-shadow: 0px 0px 2px blue;
+      color: $whitesmoke;
+      text-shadow: 0px 0px 2px blue;
+      background: $bg_color;
+      z-index: 2;
       .aboutclassa {
         padding: 3px 10px;
       }
     }
-    .paragraphabout {
-      padding: 20px 40px;
-      text-align: justify;
-      text-indent: 20px;
-      font-family: $abhaya_font;
-      font-size: 1.4rem;
-      color: rgba(180,180,180, 1);
-      background: transparent;
+    .paragraphaboutfirst {
+      position: relative;
+      @include transitionparagraph();
+      opacity: 1;
+      z-index: 1;
 
-      box-shadow: 0px 0px 5px rgba(255,255,255,0.5);
-      border-radius: 15px;
+      animation-name: first-link;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      transform: translateY(0px);
+      .li {
+        color: rgba(16, 51, 128, 1);
+        &:hover {
+          color: dodgerblue;
+        }
+        .link {
+          @include linkstyle();
+          &:hover {
+            color: dodgerblue;
+          }
+        }
+      }
+    }
+    .paragraphabout {
+      @include transitionparagraph();
+      .li {
+        color: rgba(16, 51, 128, 1);
+        .link {
+          @include linkstyle();
+        }
+      }
     }
     .hrabout {
       width: 50%;
-      margin-top: 60px;
-      margin-bottom: 40px;
+      margin-top: 30px;
+      margin-bottom: 0px;
       border-radius: 50%;
       border-top: 1px solid rgba(255,255,255,0.4);
       border-bottom: 1px solid rgba(255,255,255,0.4);
