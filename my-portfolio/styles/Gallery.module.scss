@@ -1,7 +1,7 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
-@mixin imgsize($level){
+@mixin imglvl($level){
   position: absolute;
   margin: auto;
   z-index: $level;
@@ -58,30 +58,35 @@
       display: flex;
       justify-content: center;
       z-index: 2;
-      .img {
-        @include imgsize(3);
+      .img1 {
+        @include imglvl(3);
       }
       .img2 {
-        @include imgsize(4);
+        @include imglvl(4);
       }
       .img3 {
-        @include imgsize(5);
+        @include imglvl(5);
       }
       .img4 {
-        @include imgsize(6);
+        @include imglvl(6);
       }
       .img5 {
-        @include imgsize(7);
+        @include imglvl(7);
       }
-
       .img6 {
-        @include imgsize(8);
+        @include imglvl(8);
       }
       .img7 {
-        @include imgsize(9);
+        @include imglvl(9);
       }
       .img8 {
-        @include imgsize(10);
+        @include imglvl(10);
+      }
+      .img9 {
+        @include imglvl(11);
+      }
+      .img10 {
+        @include imglvl(12);
       }
     }
     .divdragndrop {

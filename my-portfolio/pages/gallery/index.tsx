@@ -30,126 +30,133 @@ const Gallery:React.FC = () => {
             </div>
 
             <div className={styles.divimglegendgallery}>
-
-                <motion.img
-                  src={'/images/bg_1.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img1}  
-                >
-                </motion.img>
-
+              <motion.img
+                src={'/images/routerip.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img1}  
+              >
+              </motion.img>
             </div>
 
             <div className={styles.divimglegendgallery}>
-
-                <motion.img
-                  src={'/images/bg_3.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img2}  
-                >
-                </motion.img>
-
+              <motion.img
+                src={'/images/vmrouter.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img2}  
+              >
+              </motion.img>
             </div>
 
             <div className={styles.divimglegendgallery}>
-
-                <motion.img
-                  src={'/images/screen3.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img3}  
-                >
-                </motion.img>
-
+              <motion.img
+                src={'/images/ping.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img3}  
+              >
+              </motion.img>
             </div>
 
             <div className={styles.divimglegendgallery}>
-
-                <motion.img
-                  src={'/images/screen4.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img4}  
-                >
-                </motion.img>
-
+              <motion.img
+                src={'/images/bg_1.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img4}  
+              >
+              </motion.img>
             </div>
 
             <div className={styles.divimglegendgallery}>
-
-                <motion.img
-                  src={'/images/time-track.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img5}
-                >
-                </motion.img>
-
+              <motion.img
+                src={'/images/screen3.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img5}  
+              >
+              </motion.img>
             </div>
 
-
             <div className={styles.divimglegendgallery}>
-
-                <motion.img
-                  src={'/images/tt-nier3.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img6}
-                >
-                </motion.img>
-
+              <motion.img
+                src={'/images/screen4.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img6}  
+              >
+              </motion.img>
             </div>
 
-
             <div className={styles.divimglegendgallery}>
-
-                <motion.img
-                  src={'/images/tt-nier2.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img7}
-                >
-                </motion.img>
-
+              <motion.img
+                src={'/images/time-track.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img7}
+              >
+              </motion.img>
             </div>
 
+            <div className={styles.divimglegendgallery}>
+              <motion.img
+                src={'/images/tt-nier3.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img8}
+              >
+              </motion.img>
+            </div>
 
             <div className={styles.divimglegendgallery}>
+              <motion.img
+                src={'/images/tt-nier2.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img9}
+              >
+              </motion.img>
+            </div>
 
-                <motion.img
-                  src={'/images/tt-nier1.png'}
-                  width="640"
-                  height="400"
-                  drag="x" 
-                  dragConstraints={{right:0, left:-1200}} 
-                  dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
-                  className={styles.img8}
-                >
-                </motion.img>
-
+            <div className={styles.divimglegendgallery}>
+              <motion.img
+                src={'/images/tt-nier1.png'}
+                width="640"
+                height="400"
+                drag="x" 
+                dragConstraints={{right:0, left:-1200}} 
+                dragTransition={{ bounceStiffness: 600, bounceDamping: 8 }}
+                className={styles.img10}
+              >
+              </motion.img>
             </div>
 
             <div className={styles.divdragndrop}>
