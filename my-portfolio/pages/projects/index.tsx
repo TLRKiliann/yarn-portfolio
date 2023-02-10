@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Layout from "../../components/Layout"
 import { useRouter } from 'next/router'
+import Layout from "../../components/Layout"
 import Link from 'next/link'
 import ButtonGoHome from "../../components/ButtonGoHome"
 import { myprojects } from "../../data/myprojects"
@@ -22,8 +22,8 @@ interface MyProjectsItemsProps {
 interface MyProjectsProps extends Array<MyProjectsItemsProps>{}
 
 const Projects:React.FC = () => {
-  const [myprojectsCall] = useState<MyProjectsItemsProps[]>(myprojects)
   const router = useRouter() as any
+  const [myprojectsCall] = useState<MyProjectsItemsProps[]>(myprojects)
 
   const handleBackToHome = () => {
     router.replace("/")
@@ -67,7 +67,7 @@ const Projects:React.FC = () => {
                       {myproject.name}
 
                       {myproject.id === 1 
-                      ? <TbBrandNextjs
+                        ? <TbBrandNextjs
                           size={32}
                           style={{
                             marginBottom: '-7px',

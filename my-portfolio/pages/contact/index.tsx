@@ -29,7 +29,6 @@ const Contact:React.FC = () => {
         <h1 className={styles.maintitlecontact}>Contact</h1>
 
         <div className={styles.divcontact}>
-        
           <div className={styles.divh3first}>
             <h3 className={styles.h3}>Cédric Kuchen</h3>
           </div>
@@ -45,8 +44,8 @@ const Contact:React.FC = () => {
           <div className={styles.divh3fifth}>
             <h3 className={styles.h3}>Lausanne (Switzerland)</h3>
           </div>
-
         </div>
+
       </div>
     </Layout>
   )
