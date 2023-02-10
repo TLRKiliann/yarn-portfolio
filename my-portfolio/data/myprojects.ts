@@ -1,4 +1,12 @@
-export const myprojects = [
+interface MyProjectsItemsProps {
+  id: number | null
+  name: string
+  url: string
+}
+
+interface MyProjectsProps extends Array<MyProjectsItemsProps>{}
+
+export const myprojects: MyProjectsItemsProps[] = [
   {
     id: 1,
     name: "NextJS API (Restfull)",

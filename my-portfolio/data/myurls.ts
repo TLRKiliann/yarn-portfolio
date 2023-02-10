@@ -1,4 +1,12 @@
-export const myurls = [
+interface MyurlsItemsProps {
+  id: number | null
+  name: string
+  url: string
+}
+
+interface MyurlsProps extends Array<MyurlsItemsProps>{}
+
+export const myurls: MyurlsItemsProps[] = [
   {
     id: 1,
     name: "@github",
