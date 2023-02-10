@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 import Layout from "../components/Layout"
 import AnimationIntro from "../components/AnimationIntro"
 import VerticalText from "../components/VerticalText"
 import { myurls } from "../data/myurls"
-import { leftItems } from "../data/leftItems"
-import Head from 'next/head'
-import Link from 'next/link'
+import { leftitems } from "../data/leftitems"
 import { GoInfo } from 'react-icons/go'
 import styles from '@/styles/Home.module.scss'
 
@@ -18,17 +18,16 @@ interface MyurlsItemsProps {
 interface MyurlsProps extends Array<MyurlsItemsProps>{}
 
 interface MyLeftItemsProps {
-  id: number | any
+  id: number | null
   address: string
   name: string
 }
 
 interface MyLeftProps extends Array<MyLeftItemsProps>{}
 
-
 const Home:React.FC = () => {
   const [myurlsCall] = useState<MyurlsItemsProps[]>(myurls)
-  const [leftItemsCall] = useState<MyLeftItemsProps[]>(leftItems)
+  const [leftItemsCall] = useState<MyLeftItemsProps[]>(leftitems)
   return (
     <Layout>
       <Head>
@@ -70,7 +69,7 @@ const Home:React.FC = () => {
 
           <div className={styles.lilink}>
             {leftItemsCall.map((leftItem: any) => (
-              <li id={leftItem.id} className={styles.list}>
+              <li key={leftItem.id} className={styles.list}>
                 <Link href={leftItem.address} className={styles.link}>
                   <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} />
                   {leftItem.name}&nbsp;
@@ -102,27 +101,3 @@ const Home:React.FC = () => {
   )
 }
 export default Home
-
-/*
-
-            <li className={styles.list}>
-              <Link href="/skills" className={styles.link}>
-                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> My skills&nbsp;
-              </Link>
-            </li>
-            <li className={styles.list}>
-              <Link href="/projects" className={styles.link}>
-                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> My projects&nbsp;
-              </Link>
-            </li>
-            <li className={styles.list}>
-              <Link href="/gallery" className={styles.link}>
-                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> Gallery&nbsp;
-              </Link>
-            </li>
-            <li className={styles.list}>
-              <Link href="/contact" className={styles.link}>
-                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> Contact&nbsp;
-              </Link>
-            </li>
-*/

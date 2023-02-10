@@ -1,4 +1,3 @@
-
 import { useState } from "react"
 import Layout from "../../components/Layout"
 import ButtonGoHome from "../../components/ButtonGoHome"
@@ -32,7 +31,9 @@ const Skills:React.FC = () => {
           </video>
         </div>
 
-        <h1 className={styles.mainheaderskills}>Skills</h1>
+        <h1 className={styles.mainheaderskills}>
+          Skills
+        </h1>
 
         {!switchBtn ? (
           <HardSkills
