@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Layout from "../../components/Layout"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import ButtonGoHome from "../../components/ButtonGoHome"
+import { myprojects } from "../../data/myprojects"
 import { TbBrandNextjs } from 'react-icons/tb'
 import { GrReactjs } from 'react-icons/gr'
 import { FaPython } from 'react-icons/fa'
@@ -11,30 +13,17 @@ import { SiVite } from 'react-icons/si'
 import { SiMysql } from 'react-icons/si'
 import styles from '@/styles/Projects.module.scss'
 
-type MyProjectsProps = {
-  id: number
-  myprojects: {
-    map: any
-    find: any
-    id: number
-    name: string
-    url: string
-  }
+interface MyProjectsItemsProps {
+  id: number | null
+  name: string
+  url: string
 }
 
-const Projects:React.FC = () => {
-  const [myprojects, setMyProjects] = useState<MyProjectsProps[]>([])
-  const router = useRouter() as any
+interface MyProjectsProps extends Array<MyProjectsItemsProps>{}
 
-  useEffect(() => {
-    const handleProjects = async () => {
-      const response = await fetch("/api/myprojects")
-      const data: MyProjectsProps[] = await response.json()
-      setMyProjects(data)
-    }
-    handleProjects()
-    return () => console.log("useEffect clean-up !")
-  }, [])
+const Projects:React.FC = () => {
+  const [myprojectsCall] = useState<MyProjectsItemsProps[]>(myprojects)
+  const router = useRouter() as any
 
   const handleBackToHome = () => {
     router.replace("/")
@@ -54,15 +43,7 @@ const Projects:React.FC = () => {
           </video>
         </div>
 
-        <div className={styles.divbtn}>
-          <button
-            type='button'
-            onClick={handleBackToHome}
-            className={styles.btntopright}
-          >
-            Back to Home
-          </button>
-        </div>
+        <ButtonGoHome />
 
         <h1 className={styles.mainheaderprojetcs}>My Projects</h1>
 
@@ -74,7 +55,7 @@ const Projects:React.FC = () => {
 
             <div className={styles.subdivofprojects}>
 
-              {myprojects.map((myproject: any) => (
+              {myprojectsCall.map((myproject: any) => (
                 <li key={myproject.id} className={styles.liprojects}>
                   <Link
                     target="_blank"

@@ -1,33 +1,34 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Layout from "../components/Layout"
+import AnimationIntro from "../components/AnimationIntro"
+import VerticalText from "../components/VerticalText"
+import { myurls } from "../data/myurls"
+import { leftItems } from "../data/leftItems"
 import Head from 'next/head'
 import Link from 'next/link'
-import { GiKoala } from 'react-icons/gi'
 import { GoInfo } from 'react-icons/go'
 import styles from '@/styles/Home.module.scss'
 
-type MyurlsProps = {
-  myurls: {
-    map: any
-    id: number | null
-    name: string
-    url: string
-  }
+interface MyurlsItemsProps {
+  id: number | null
+  name: string
+  url: string
 }
 
-const Home:React.FC = () => {
-  const [myurls, setMyUrls] = useState<MyurlsProps[]>([])
-  //console.log(myurls, "it is myurls")
-  useEffect(() => {
-    const handleComments = async () => {
-      const response = await fetch("/api/myurls")
-      const data: MyurlsProps[] = await response.json()
-      setMyUrls(data)
-    }
-    handleComments()
-    return () => console.log("useEffect clean-up !")
-  }, [])
+interface MyurlsProps extends Array<MyurlsItemsProps>{}
 
+interface MyLeftItemsProps {
+  id: number | any
+  address: string
+  name: string
+}
+
+interface MyLeftProps extends Array<MyLeftItemsProps>{}
+
+
+const Home:React.FC = () => {
+  const [myurlsCall] = useState<MyurlsItemsProps[]>(myurls)
+  const [leftItemsCall] = useState<MyLeftItemsProps[]>(leftItems)
   return (
     <Layout>
       <Head>
@@ -40,26 +41,7 @@ const Home:React.FC = () => {
       <div>
         <main className={styles.main}>
           
-          <div className={styles.maindivanimation}>
-
-            <div className={styles.firstdivanimation}>
-              <div className={styles.subdivfirstanimation}>
-                <h2>Wellcome to my portfolio !</h2>
-              </div>
-            </div>
-
-            <div className={styles.seconddivanimation}>
-              <div className={styles.subdivsecondanimation}>
-                <h2>I'm a web developer.</h2>
-              </div>
-            </div>
-
-            <div className={styles.thirddivanimation}>
-              <div className={styles.subdivthirdanimation}>
-                <h2>Enjoy this visit !</h2>
-              </div>
-            </div>
-          </div>
+          <AnimationIntro />
 
           <div className={styles.divaudio}>
             <audio
@@ -87,11 +69,41 @@ const Home:React.FC = () => {
           <h2 className={styles.mainheader}>Next.js Portfolio</h2>
 
           <div className={styles.lilink}>
-            <li className={styles.list}>
-              <Link href="/about" className={styles.link}>
-                <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> About Me&nbsp;
-              </Link>
-            </li>
+            {leftItemsCall.map((leftItem: any) => (
+              <li id={leftItem.id} className={styles.list}>
+                <Link href={leftItem.address} className={styles.link}>
+                  <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} />
+                  {leftItem.name}&nbsp;
+                </Link>
+              </li>
+            ))}
+          </div>
+
+          <div className={styles.secondlilink}>
+            {myurlsCall.map((myurl: any) => (
+              <li key={myurl.id} className={styles.list}>
+                <Link
+                  target="_blank" 
+                  href={`${myurl.url}`}
+                  rel="noopener noreferrer"
+                  className={styles.link2}
+                >
+                  {myurl.name}
+                </Link>
+              </li>
+            ))}
+          </div>
+
+          <VerticalText />
+
+        </main>
+      </div>
+    </Layout>
+  )
+}
+export default Home
+
+/*
 
             <li className={styles.list}>
               <Link href="/skills" className={styles.link}>
@@ -113,32 +125,4 @@ const Home:React.FC = () => {
                 <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} /> Contact&nbsp;
               </Link>
             </li>
-          </div>
-
-          <div className={styles.secondlilink}>
-            {myurls.map((myurl: any) => (
-              <li key={myurl.id} className={styles.list}>
-                <Link
-                  target="_blank" 
-                  href={`${myurl.url}`}
-                  rel="noopener noreferrer"
-                  className={styles.link2}
-                >
-                  {myurl.name}
-                </Link>
-              </li>
-            ))}
-          </div>
-
-          <div className={styles.parentverticaltext}> 
-            <p className={styles.verticaltext}>ko@l@tr33-2023</p>
-            <div className={styles.verticallongline}>
-            </div>
-          </div>
-
-        </main>
-      </div>
-    </Layout>
-  )
-}
-export default Home
+*/

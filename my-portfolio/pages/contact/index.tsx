@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Layout from "../../components/Layout"
+import ButtonGoHome from "../../components/ButtonGoHome"
 import styles from '@/styles/Contact.module.scss'
 
 const Contact:React.FC = () => {
@@ -23,15 +24,7 @@ const Contact:React.FC = () => {
           </video>
         </div>
 
-        <div className={styles.divbtn}>
-          <button
-            type='button'
-            onClick={handleBackToHome}
-            className={styles.btntopright}
-          >
-            Back to Home
-          </button>
-        </div>
+        <ButtonGoHome />
 
         <h1 className={styles.maintitlecontact}>Contact</h1>
 

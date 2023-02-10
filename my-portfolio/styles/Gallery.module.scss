@@ -16,32 +16,6 @@
   overflow: hidden;
   background-color: $bg_color;
   color: rgba(0,255,255, 0.5);
-  .divbtn {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    .btntopright {
-      padding: 10px 20px;
-      font-family: $akayakanadaka_font;
-      font-size: 1.1rem;
-      background: transparent;
-      border: none;
-      outline: none;
-      border-radius: 0px 0px 0px 7px;
-      box-shadow: 0px 0px 7px $cyan;
-      color: rgba(0,255,255,0.8);
-      &:hover {
-        background: rgba(0,50,100,0.6);
-        box-shadow: 0px 0px 0px $cyan;
-        color: rgba(0,255,255, 0.8);
-      }
-      &:active {
-        background: rgba(0,255,255, 0.2);
-        box-shadow: 0px 0px 0px $cyan;
-        color: $whitesmoke;
-      }
-    }
-  }
   .gallerymainheader {
     margin-top: 20px;
     margin-bottom: 10px;

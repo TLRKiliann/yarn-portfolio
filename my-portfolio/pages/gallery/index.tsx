@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion"
-import Layout from "../../components/Layout"
 import Link from 'next/link'
 import Image from 'next/image'
+import Layout from "../../components/Layout"
+import ButtonGoHome from "../../components/ButtonGoHome"
 import styles from '@/styles/Gallery.module.scss'
 
 const Gallery:React.FC = () => {
@@ -15,15 +16,7 @@ const Gallery:React.FC = () => {
     <Layout>
       <div className={styles.gallery}>
 
-        <div className={styles.divbtn}>
-          <button
-            type='button'
-            onClick={handleRoute}
-            className={styles.btntopright}
-          >
-            Back to Home
-          </button>
-        </div>
+        <ButtonGoHome />
 
         <div>
           <h1 className={styles.gallerymainheader}>Gallery</h1>

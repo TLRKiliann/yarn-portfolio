@@ -1,7 +1,8 @@
 import React from 'react'
-import Layout from "../../components/Layout"
 import {useRouter} from 'next/router'
 import { useState } from "react"
+import Layout from "../../components/Layout"
+import ButtonGoHome from "../../components/ButtonGoHome"
 import styles from '@/styles/Skills.module.scss'
 
 const Skills:React.FC = () => {
@@ -21,15 +22,7 @@ const Skills:React.FC = () => {
     <Layout>
       <div className={styles.skills}>
 
-        <div className={styles.divbtn}>
-          <button
-            type='button'
-            onClick={handleBackToHome}
-            className={styles.btntopright}
-          >
-            Back to Home
-          </button>
-        </div>
+        <ButtonGoHome />
 
         <div className={styles.mainclassvideo}>
           <video 

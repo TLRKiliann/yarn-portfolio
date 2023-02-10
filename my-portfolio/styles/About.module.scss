@@ -30,7 +30,6 @@
 @mixin transitionparagraph(){
   width: 76%;
   margin: auto;
-  margin-top: 5px;
   padding: 10px 20px;
   text-decoration: none;
   text-align: justify;
@@ -38,7 +37,7 @@
   font-size: 1.4rem;
   color: rgba(16, 51, 128, 1);
   background: rgba(255,255,255,0.7);
-  border-radius: 12px;
+  border-radius: 0px 0px 12px 12px;
   box-shadow: 0px 0px 3px rgba(255,255,255,0.5);
 }
 
@@ -55,31 +54,6 @@
   min-height: 100%;
   background: $bg_color;
   z-index: -1;
-  .divbtn {
-    position: fixed;
-    @include topright();
-    .btntopright {
-      padding: 10px 20px;
-      font-family: $akayakanadaka_font;
-      font-size: 1.1rem;
-      background: transparent;
-      border: none;
-      outline: none;
-      border-radius: 0px 0px 0px 7px;
-      box-shadow: 0px 0px 7px $cyan;
-      color: rgba(0,255,255,0.8);
-      &:hover {
-        background: rgba(0,50,100,0.6);
-        box-shadow: 0px 0px 0px $cyan;
-        color: rgba(0,255,255, 0.8);
-      }
-      &:active {
-        background: rgba(0,255,255, 0.2);
-        box-shadow: 0px 0px 0px $cyan;
-        color: $whitesmoke;
-      }
-    }
-  }
   .imgabout {
     position: fixed;
     opacity: 0.2;
@@ -120,9 +94,9 @@
       }
     }
     .listabout {
+      position: relative;
       width: 80%;
       margin: auto;
-      position: relative;
       padding: 10px 20px;
       list-style: none;
       font-family: $abhaya_font;

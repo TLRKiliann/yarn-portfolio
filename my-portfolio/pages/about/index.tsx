@@ -1,55 +1,54 @@
 import React, { useState } from 'react'
 import Layout from "../../components/Layout"
-import {useRouter} from 'next/router'
+import ButtonGoHome from "../../components/ButtonGoHome"
 import Link from 'next/link'
 import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 import Image from 'next/image'
 import styles from '@/styles/About.module.scss'
 
-const About:React.FC = () => {
-  const router = useRouter() as any
-  const [first, setFirst] = useState<boolean>(false)
-  const [second, setSecond] = useState<boolean>(false)
-  const [third, setThird] = useState<boolean>(false)
-  const [four, setFour] = useState<boolean>(false)
-  const [five, setFive] = useState<boolean>(false)
+type transitionTxtProps = {
+  first: boolean
+  second: boolean
+  third: boolean
+  four: boolean
+  five: boolean
+}
 
-  const handleBackToHome = () => {
-    router.replace("/")
-  }
+const About:React.FC = () => {
+
+  const [transitionTxt, setTransitionTxt] = useState<transitionTxtProps>({
+    first: false,
+    second: false,
+    third: false,
+    four: false,
+    five: false
+  })
 
   const handleFirst = () => {
-    setFirst(first => !first)
+    setTransitionTxt({...transitionTxt, first: !transitionTxt.first})
   }
 
   const handleSecond = () => {
-    setSecond(second => !second)
+    setTransitionTxt({...transitionTxt, second: !transitionTxt.second})
   }
 
   const handleThird = () => {
-    setThird(third => !third)
+    setTransitionTxt({...transitionTxt, third: !transitionTxt.third})
   }
 
   const handleFour = () => {
-    setFour(four => !four)
+    setTransitionTxt({...transitionTxt, four: !transitionTxt.four})
   }
 
   const handleFive = () => {
-    setFive(five => !five)
+    setTransitionTxt({...transitionTxt, five: !transitionTxt.five})
   }
 
   return (
     <Layout>
       <div className={styles.bgcolorabout}>
-        <div className={styles.divbtn}>
-          <button
-            type='button'
-            onClick={handleBackToHome}
-            className={styles.btntopright}
-          >
-            Back to Home
-          </button>
-        </div>
+
+        <ButtonGoHome />
 
         <div className={styles.imgabout}>
           <Image
@@ -67,7 +66,7 @@ const About:React.FC = () => {
           
           <div className={styles.listabout}>
 
-            {first === false ? (
+            {transitionTxt.first === false ? (
               <button type='button' onClick={handleFirst} className={styles.button}>
                 <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
               </button>
@@ -82,7 +81,7 @@ const About:React.FC = () => {
             </a>
           </div>
 
-          {first === true ? (
+          {transitionTxt.first === true ? (
             <div className={styles.paragraphaboutfirst}>
               <li className={styles.li}>
                 <Link className={styles.link} href="https://github.com/TLRKiliann/server-PHP-MySQL">
@@ -104,7 +103,7 @@ const About:React.FC = () => {
 
           <div className={styles.listabout}>
 
-            {second === false ? (
+            {transitionTxt.second === false ? (
               <button type='button' onClick={handleSecond} className={styles.button}>
                 <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
               </button>
@@ -120,7 +119,7 @@ const About:React.FC = () => {
             </a>
           </div>
 
-          {second === true ? (
+          {transitionTxt.second === true ? (
             <div className={styles.paragraphaboutfirst}>
               <li className={styles.li}>
                 <Link className={styles.link} href="https://github.com/TLRKiliann/BMI">
@@ -151,7 +150,7 @@ const About:React.FC = () => {
           
           <div className={styles.listabout}>
 
-            {third === false ? (
+            {transitionTxt.third === false ? (
               <button type='button' onClick={handleThird} className={styles.button}>
                 <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
               </button>
@@ -167,7 +166,7 @@ const About:React.FC = () => {
             </a>
           </div>
 
-          {third === true ? (
+          {transitionTxt.third === true ? (
             <div className={styles.paragraphaboutfirst}>
               <li className={styles.li}>
                 <Link className={styles.link} href="https://github.com/TLRKiliann/tor-proxy">
@@ -204,7 +203,7 @@ const About:React.FC = () => {
           
           <div className={styles.listabout}>
 
-            {four === false ? (
+            {transitionTxt.four === false ? (
               <button type='button' onClick={handleFour} className={styles.button}>
                 <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
               </button>
@@ -220,7 +219,7 @@ const About:React.FC = () => {
             </a>
           </div>
 
-          {four === true ? (
+          {transitionTxt.four === true ? (
             <div className={styles.paragraphaboutfirst}>
               <li className={styles.li}>
                 <Link className={styles.link} href="https://github.com/TLRKiliann/Contacts-React">
@@ -229,7 +228,7 @@ const About:React.FC = () => {
               </li>
               <li className={styles.li}>
                 <Link className={styles.link} href="https://github.com/TLRKiliann/typescript-e-commerce">
-                  typescript-e-commerce
+                  site e-commerce avec typescript
                 </Link>
               </li>
               <li className={styles.li}>
@@ -266,7 +265,7 @@ const About:React.FC = () => {
           
           <div className={styles.listabout}>
 
-            {five === false ? (
+            {transitionTxt.five === false ? (
               <button type='button' onClick={handleFive} className={styles.button}>
                 <BsFillArrowRightCircleFill className={styles.logoreact} size={24}/>
               </button>
@@ -282,7 +281,7 @@ const About:React.FC = () => {
             </a>
           </div>
           
-          {five === true ? (
+          {transitionTxt.five === true ? (
             <div className={styles.paragraphaboutfirst}>
               Actuellement en reconversion professionnelle, je souhaite faire de ma passion
               un métier et continuer de faire évoluer mes compétences avec des pros au sein
