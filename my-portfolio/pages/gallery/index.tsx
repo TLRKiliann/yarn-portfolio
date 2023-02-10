@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion"
 import Link from 'next/link'
@@ -12,6 +13,7 @@ const Gallery:React.FC = () => {
   const handleRoute = () => {
     router.replace('/')
   }
+
   return (
     <Layout>
       <div className={styles.gallery}>
@@ -19,10 +21,11 @@ const Gallery:React.FC = () => {
         <ButtonGoHome />
 
         <div>
-          <h1 className={styles.gallerymainheader}>Gallery</h1>
+          <h1 className={styles.gallerymainheader}>
+            Gallery
+          </h1>
           
           <div className={styles.framerimg}>
-
             <div className={styles.thanks}>
               <h2 className={styles.h2thanks}>
                 Thank you for watching !
@@ -172,4 +175,3 @@ const Gallery:React.FC = () => {
 }
 
 export default Gallery
-
