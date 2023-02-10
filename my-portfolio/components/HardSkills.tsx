@@ -1,10 +1,59 @@
+import { useState } from "react"
+import { hardskillscode } from "../data/hardskillscode"
+import { hardskillsstyles } from "../data/hardskillsstyles"
+import { hardskillsdatabase } from "../data/hardskillsdatabase"
+import { hardskillstesting } from "../data/hardskillstesting"
+import { frameworks } from "../data/frameworks"
+import { hardskillssecurity } from "../data/hardskillssecurity"
 import styles from '@/styles/Skills.module.scss'
 
-type HardSkillsProps = {
+interface HardSkillsProps {
+  id: number | null
+  hardcode: string
+}
+interface HardSkillsCodeProps extends Array<HardSkillsProps>{}
+
+interface SkillStylesProps {
+  id: number | null
+  style: string
+}
+interface SkillsStylesProps extends Array<SkillStylesProps>{}
+
+interface HardDatabaseItemsProps {
+  id: number | null
+  db: string
+}
+interface HardSkillsDatabaseProps extends Array<HardDatabaseItemsProps>{}
+
+interface FrameworksItemsProps {
+  id: number | null
+  framework: string
+}
+interface FrameworksProps extends Array<FrameworksItemsProps>{}
+
+interface HardSkillsTestingItemsProps {
+  id: number | null
+  tester: string
+}
+interface HardSkillsTestingProps extends Array<HardSkillsTestingItemsProps>{}
+
+interface SecurityItemsProps {
+  id: number | null
+  security: string
+}
+interface SecurityProps extends Array<SecurityItemsProps>{}
+
+interface handleClickBtnProps {
   handleClickBtn: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const HardSkills = ({handleClickBtn}: HardSkillsProps) => {
+const HardSkills = ({ handleClickBtn }: handleClickBtnProps) => {
+  const [hardSkills] = useState<HardSkillsProps[]>(hardskillscode)
+  const [stylesSkills] = useState<SkillStylesProps[]>(hardskillsstyles)
+  const [hardSkillsDb] = useState<HardDatabaseItemsProps[]>(hardskillsdatabase)
+  const [newFrameWorks] = useState<FrameworksItemsProps[]>(frameworks)
+  const [hardSkillsTesting] = useState<HardSkillsTestingItemsProps[]>(hardskillstesting)
+  const [hardSkillsSecurtity] = useState<SecurityItemsProps[]>(hardskillssecurity)
   return (
     <div>
       <div className={styles.sectionone}>
@@ -23,61 +72,39 @@ const HardSkills = ({handleClickBtn}: HardSkillsProps) => {
         <div className={styles.mainblocdiv}>
 
           <div className={styles.subblockdiv}>
+          
             <h2 className={styles.h2titlesubblock}>
               Code :
             </h2>
 
             <div className={styles.blocli}>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Python3
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  HTML
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  JavaScript
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  TypeScript
-                </a>
-              </li>
+              {hardSkills.map((newHardSkill: any) => (
+                <li key={newHardSkill.id} 
+                  className={styles.listhard}>
+                  <a className={styles.classa}>
+                    {newHardSkill.hardcode}
+                  </a>
+                </li>
+                )
+              )}
             </div>
           </div>
 
           <div className={styles.subblockdiv}>
+
             <h2 className={styles.h2titlesubblock}>
               Styles :
             </h2>
 
             <div className={styles.blocli}>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  CSS
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Sass
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Bootstrap
-                </a>
-              </li>
-
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Tailwind (-)
-                </a>
-              </li>
+              {stylesSkills.map((styleSkill: any) => (
+                <li key={styleSkill.id} className={styles.listhard}>
+                  <a className={styles.classa}>
+                    {styleSkill.style}
+                  </a>
+                </li>
+                )
+              )}
             </div>
           </div>
 
@@ -87,26 +114,14 @@ const HardSkills = ({handleClickBtn}: HardSkillsProps) => {
             </h2>
 
             <div className={styles.blocli}>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  MySQL
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Mongoose
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Json-server
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  API REST + RESTFull
-                </a>
-              </li>
+              {hardSkillsDb.map((hardSkillDb: any) => (
+                <li className={styles.listhard}>
+                  <a className={styles.classa}>
+                    {hardSkillDb.db}
+                  </a>
+                </li>
+                )
+              )}
             </div>
           </div>
 
@@ -116,26 +131,14 @@ const HardSkills = ({handleClickBtn}: HardSkillsProps) => {
             </h2>
 
             <div className={styles.blocli}>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  React
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Vite
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Next.js
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Angular (-)
-                </a>
-              </li>
+              {newFrameWorks.map((frame: any) => (
+                <li key={frame.id} className={styles.listhard}>
+                  <a className={styles.classa}>
+                    {frame.framework}
+                  </a>
+                </li>
+                )
+              )}
             </div>
           </div>
 
@@ -145,26 +148,14 @@ const HardSkills = ({handleClickBtn}: HardSkillsProps) => {
             </h2>
 
             <div className={styles.blocli}>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  React testing library
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Jest
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Vitest
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Cypress
-                </a>
-              </li>
+              {hardSkillsTesting.map((hardSkillTest: any) => (
+                <li key={hardSkillTest.id} className={styles.listhard}>
+                  <a className={styles.classa}>
+                    {hardSkillTest.tester}
+                  </a>
+                </li>
+                )
+              )}
             </div>
           </div>
 
@@ -174,24 +165,17 @@ const HardSkills = ({handleClickBtn}: HardSkillsProps) => {
             </h2>
 
             <div className={styles.blocli}>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Attestation ANSSI
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Kalilinux
-                </a>
-              </li>
-              <li className={styles.listhard}>
-                <a className={styles.classa}>
-                  Les bonnes pratiques
-                </a>
-              </li>
+              {hardSkillsSecurtity.map((skillsSecurity: any) => (
+                <li key={skillsSecurity.id} className={styles.listhard}>
+                  <a className={styles.classa}>
+                    {skillsSecurity.security}
+                  </a>
+                </li>
+                )
+              )}
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
