@@ -114,10 +114,10 @@ const HardSkills = ({ handleClickBtn }: handleClickBtnProps) => {
             </h2>
 
             <div className={styles.blocli}>
-              {hardSkillsDb.map((hardSkillDb: any) => (
-                <li key={hardSkillDb.id} className={styles.listhard}>
+              {hardSkillsDb.map((hsDatabase: any) => (
+                <li key={hsDatabase.id} className={styles.listhard}>
                   <a className={styles.classa}>
-                    {hardSkillDb.db}
+                    {hsDatabase.db}
                   </a>
                 </li>
                 )

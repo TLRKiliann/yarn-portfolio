@@ -18,8 +18,15 @@ const BtnArrow = ({ boolChange, handleChangeFunc }: handleChangeFuncProps) => {
   
   return (
     <>
-      <button type='button' onClick={handleChangeFunc} className={styles.button}>
-        <BsFillArrowRightCircleFill className={changeLogo()} size={24} />
+      <button 
+        type='button' 
+        onClick={handleChangeFunc}
+        className={styles.button}
+      >
+        <BsFillArrowRightCircleFill
+          className={changeLogo()}
+          size={24}
+        />
       </button>
     </>
   )

@@ -30,107 +30,107 @@ const ProjectsLinks = () => {
     <div className={styles.subdivofprojects}>
 
       {myprojectsCall.map((myproject: any) => (
-        <li key={myproject.id} className={styles.liprojects}>
-          <Link
-            target="_blank"
-            href={`${myproject.url}`}
-            rel="noopener noreferrer"
-            className={styles.linkprojects}
-          >
-            <div className={styles.realignlogos}>
-              {myproject.name}
+        <div 
+          key={myproject.id} 
+          className={styles.hollyitemslink}>
 
-              {myproject.id === 1 
-                ? <TbBrandNextjs
-                  size={32}
-                  style={{
-                    marginBottom: '-7px',
-                    marginLeft: '10px',
-                    color: "cyan",
-                    opacity: 0.5,
+          <li className={styles.liprojects}>
+            <Link
+              target="_blank"
+              href={`${myproject.url}`}
+              rel="noopener noreferrer"
+              className={styles.linkprojects}
+            >
+              <div className={styles.realignlogos}>
+                {myproject.name}
 
-                }} /> 
-                : null
-              }
-              {myproject.id === 2 
-                ? <SiVite
-                  size={32}
-                  style={{
-                    marginBottom: '-7px',
-                    marginLeft: '10px',
-                    color: "cyan",
-                    opacity: 0.5,
-                  }} />
-                : null
-              }
-              {myproject.id === 3 
-                ? <div><GrReactjs
-                  size={32}
-                  style={{
-                    marginBottom: '-7px',
-                    marginLeft: '10px',
-                    color: "cyan",
-                    opacity: 0.5,
-                  }} /> <SiMongodb 
-                  size={32}
-                  style={{
-                    marginBottom: '-6px',
-                    marginLeft: '0px',
-                    color: "cyan",
-                    opacity: 0.5,                      
-                  }}/> </div>
-                : null
-              }
-              {myproject.id === 4 
-                ? <FaPython
-                  size={32}
-                  style={{
-                    marginBottom: '-7px',
-                    marginLeft: '10px',
-                    color: "cyan",
-                    opacity: 0.5,
-                  }} />
-                : null
-              }
-              {myproject.id === 5 
-                ? <div><FaPython
-                  size={32}
-                  style={{
-                    marginBottom: '-7px',
-                    marginLeft: '10px',
-                    color: "cyan",
-                    opacity: 0.5,
-                  }} /> <SiMysql
-                  size={32}
-                  style={{
-                    marginBottom: '-7px',
-                    marginLeft: '10px',
-                    color: "cyan",
-                    opacity: 0.5,                      
-                  }}/> </div> 
-                : null
-              }
-              {myproject.id === 6 
-                ? <div style={{width: "100px"}}><SiPhp
-                  size={38}
-                  style={{
-                    marginBottom: '-2px',
-                    marginLeft: '10px',
-                    color: "cyan",
-                    opacity: 0.5,
-                  }} /> <SiMysql
+                {myproject.id === 1 
+                  ? <TbBrandNextjs
                     size={32}
                     style={{
-                      marginBottom: '2px',
+                      marginBottom: '5px',
+                      marginLeft: '10px',
+                      color: "cyan",
+                      opacity: 0.5,
+
+                  }} /> 
+                  : null
+                }
+                {myproject.id === 2 
+                  ? <SiVite
+                    size={32}
+                    style={{
+                      marginBottom: '5px',
+                      marginLeft: '10px',
+                      color: "cyan",
+                      opacity: 0.5,
+                    }} />
+                  : null
+                }
+                {myproject.id === 3 
+                  ? <div><GrReactjs
+                    size={32}
+                    style={{
+                      marginLeft: '10px',
+                      color: "cyan",
+                      opacity: 0.5,
+                    }} /> <SiMongodb 
+                    size={32}
+                    style={{
+                      marginLeft: '0px',
+                      color: "cyan",
+                      opacity: 0.5,                      
+                    }}/> </div>
+                  : null
+                }
+                {myproject.id === 4 
+                  ? <FaPython
+                    size={32}
+                    style={{
+                      marginBottom: '10px',
+                      marginLeft: '10px',
+                      color: "cyan",
+                      opacity: 0.5,
+                    }} />
+                  : null
+                }
+                {myproject.id === 5 
+                  ? <div><FaPython
+                    size={32}
+                    style={{
+                      marginLeft: '10px',
+                      color: "cyan",
+                      opacity: 0.5,
+                    }} /> <SiMysql
+                    size={32}
+                    style={{
                       marginLeft: '10px',
                       color: "cyan",
                       opacity: 0.5,                      
                     }}/> </div> 
-                : null
-              }
-            </div>
-          </Link>
-        </li>
+                  : null
+                }
+                {myproject.id === 6 
+                  ? <div style={{width: "100px"}}><SiPhp
+                    size={38}
+                    style={{
+                      marginBottom: '-10px',
+                      marginLeft: '10px',
+                      color: "cyan",
+                      opacity: 0.5,
+                    }} /> <SiMysql
+                      size={32}
+                      style={{
+                        marginLeft: '10px',
+                        color: "cyan",
+                        opacity: 0.5,                      
+                      }}/> </div> 
+                  : null
+                }
+              </div>
+            </Link>
+          </li>
+        </div>
       ))}
     </div>
   )
