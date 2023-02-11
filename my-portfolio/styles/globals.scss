@@ -3,6 +3,10 @@
 
 :root {
   min-height: 100vh;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 li {
