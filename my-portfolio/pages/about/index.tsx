@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+//import Link from 'next/link'
+import Image from 'next/image'
 import Layout from "../../components/Layout"
 import ButtonGoHome from "../../components/ButtonGoHome"
 import AboutFirstParagraph from "../../components/AboutComponent/AboutFirstParagraph"
@@ -7,9 +9,7 @@ import AboutThirdParagraph from "../../components/AboutComponent/AboutThirdParag
 import AboutFourthParagraph from "../../components/AboutComponent/AboutFourthParagraph"
 import AboutFifthParagraph from "../../components/AboutComponent/AboutFifthParagraph"
 import BtnArrow from "../../components/AboutComponent/BtnArrow"
-import Link from 'next/link'
-import {BsFillArrowRightCircleFill} from 'react-icons/bs'
-import Image from 'next/image'
+import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import styles from '@/styles/About.module.scss'
 
 const About:React.FC = () => {
@@ -60,7 +60,8 @@ const About:React.FC = () => {
 
         <article className={styles.article}>
           
-          <div className={styles.listabout}>
+
+            <div className={styles.listabout}>
 
             {first === false ? (
               <BtnArrow boolChange={first} handleChangeFunc={handleFirst} />
@@ -80,6 +81,7 @@ const About:React.FC = () => {
             <AboutFirstParagraph boolStyles={first}/>
             )
           }
+
 
           <hr className={styles.hrabout}/>
           <br />
@@ -178,7 +180,9 @@ const About:React.FC = () => {
             )
           }
 
-          <hr className={styles.hrabout} style={{marginBottom: "0px"}} />
+          <hr
+            className={styles.hrabout}
+            style={{marginBottom: "0px"}} />
           <br />
         </article>
 
