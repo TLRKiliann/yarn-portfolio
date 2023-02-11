@@ -115,7 +115,7 @@ const HardSkills = ({ handleClickBtn }: handleClickBtnProps) => {
 
             <div className={styles.blocli}>
               {hardSkillsDb.map((hardSkillDb: any) => (
-                <li className={styles.listhard}>
+                <li key={hardSkillDb.id} className={styles.listhard}>
                   <a className={styles.classa}>
                     {hardSkillDb.db}
                   </a>
