@@ -133,7 +133,7 @@
       .aboutclassa {
         padding: 3px 10px;
       }
-    }
+    }  
     .paragraphaboutfirst {
       position: relative;
       @include transitionparagraph();
@@ -141,7 +141,9 @@
       z-index: 1;
       
       animation-name: first-link;
+      animation-delay: 0s;
       animation-duration: 2s;
+      animation-iteration-count: 1;
       animation-timing-function: ease;
       transform: translateY(0px);
       .li {
@@ -164,10 +166,11 @@
       @include transitionparagraph();
       opacity: 0;
       z-index: 1;
-      visibility:hidden;
       
       animation-name: revert-tohdide;
+      animation-delay: 0s;
       animation-duration: 1s;
+      animation-iteration-count: 1;
       animation-timing-function: ease;
       transform: translateY(0px);
       .li {
