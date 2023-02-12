@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from '@/styles/About.module.scss'
 
 interface boolStylesProps {
@@ -6,7 +5,7 @@ interface boolStylesProps {
 }
 
 const AboutFirstParagraph = ({ boolStyles }: boolStylesProps) => {
-  
+
   const handleChangeTransition = () => {
     if (boolStyles === true) {
       return `${styles.paragraphaboutfirst}`
@@ -19,19 +18,25 @@ const AboutFirstParagraph = ({ boolStyles }: boolStylesProps) => {
     <>
       <div className={handleChangeTransition()}>
         <li className={styles.li}>
-          <Link
+          <a
+            href="https://github.com/TLRKiliann/server-PHP-MySQL"
+            rel="noopener noreferrer"
+            target="_blank"
             className={styles.link}
-            href="https://github.com/TLRKiliann/server-PHP-MySQL">
+          >
             Premier site en HTML, CSS, PhP, MySQL avec server Apache2 
             raspberry (WAN) HTTPS
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link
+          <a
+            href="https://github.com/TLRKiliann/apache2_conf_raspberry"
+            rel="noopener noreferrer"
+            target="_blank"
             className={styles.link}
-            href="https://github.com/TLRKiliann/apache2_conf_raspberry">
+          >
             Configuration https apache2-ssl
-          </Link>
+          </a>
         </li>
       </div>
     </>

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from '@/styles/About.module.scss'
 
 interface boolStylesProps {
@@ -19,30 +18,55 @@ const AboutThirdParagraph = ({ boolStyles }: boolStylesProps) => {
     <>
       <div className={handleChangeTransition()}>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://github.com/TLRKiliann/tor-proxy">
+          <a 
+            href="https://github.com/TLRKiliann/tor-proxy"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             tor proxy on linux and raspberry pi 400
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://github.com/TLRKiliann/anxious_scale">
+          <a 
+            href="https://github.com/TLRKiliann/anxious_scale"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             anxious_scale (stand-alone) échelle d'évaluation des angoisse (psychatrie)
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://github.com/TLRKiliann/psychotabs">
+          <a 
+            href="https://github.com/TLRKiliann/psychotabs"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             psychotabs (stand-alone)
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://github.com/TLRKiliann/interactions">
+          <a 
+            href="https://github.com/TLRKiliann/interactions"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             interactions python3-tkinter (stand-alone)
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://github.com/TLRKiliann/timetrack">
+          <a 
+            href="https://github.com/TLRKiliann/timetrack"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             timetrack (application soins infirmiers) python3-tkinter ssh
             scp mysql
-          </Link>
+          </a>
         </li>
       </div>
     </>

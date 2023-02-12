@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from '@/styles/About.module.scss'
 
 interface boolStylesProps {
@@ -19,24 +18,44 @@ const AboutSecondParagraph = ({ boolStyles }: boolStylesProps) => {
     <>
       <div className={handleChangeTransition()}>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://github.com/TLRKiliann/BMI">
+          <a
+            href="https://github.com/TLRKiliann/BMI"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             BMI (python3-tkinter)
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://github.com/TLRKiliann/phpython-server">
+          <a
+            href="https://github.com/TLRKiliann/phpython-server"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             phpython-server
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://www.youtube.com/watch?v=O70eptxwP3I">
+          <a
+            href="https://www.youtube.com/watch?v=O70eptxwP3I"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             ICMP transmission between 3 VM (one router)
-          </Link>
+          </a>
         </li>
         <li className={styles.li}>
-          <Link className={styles.link} href="https://www.youtube.com/watch?v=zaWTRN0kmYw">
+          <a
+            href="https://www.youtube.com/watch?v=zaWTRN0kmYw"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={styles.link}
+          >
             Convert a VM to a router (Debian 10)
-          </Link>
+          </a>
         </li>
       </div>
     </>

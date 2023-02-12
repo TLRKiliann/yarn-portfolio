@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import { myprojects } from "../data/myprojects"
 import { TbBrandNextjs } from 'react-icons/tb'
 import { GrReactjs } from 'react-icons/gr'
@@ -35,9 +34,9 @@ const ProjectsLinks = () => {
           className={styles.hollyitemslink}>
 
           <li className={styles.liprojects}>
-            <Link
-              target="_blank"
+            <a
               href={`${myproject.url}`}
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.linkprojects}
             >
@@ -128,7 +127,7 @@ const ProjectsLinks = () => {
                   : null
                 }
               </div>
-            </Link>
+            </a>
           </li>
         </div>
       ))}
