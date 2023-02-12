@@ -61,7 +61,9 @@ const Home:React.FC = () => {
               muted 
               loop 
               className={styles.divvideointro}>
-              <source src={"./videos/spider-web.mp4"} type="video/mp4"/>
+              <source
+                src={"./videos/spider-web.mp4"}
+                type="video/mp4"/>
             </video>
           </div>
 
@@ -70,8 +72,12 @@ const Home:React.FC = () => {
           <div className={styles.lilink}>
             {leftItemsCall.map((leftItem: any) => (
               <li key={leftItem.id} className={styles.list}>
-                <Link href={leftItem.address} className={styles.link}>
-                  <GoInfo size={18} style={{marginRight: "5px", padding: "4px"}} />
+                <Link
+                  href={leftItem.address}
+                  className={styles.link}>
+                  <GoInfo
+                    size={18}
+                    style={{marginRight: "5px", padding: "4px"}} />
                   {leftItem.name}&nbsp;
                 </Link>
               </li>
@@ -81,14 +87,14 @@ const Home:React.FC = () => {
           <div className={styles.secondlilink}>
             {myurlsCall.map((myurl: any) => (
               <li key={myurl.id} className={styles.list}>
-                <Link
-                  target="_blank" 
+                <a
                   href={`${myurl.url}`}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={styles.link2}
                 >
                   {myurl.name}
-                </Link>
+                </a>
               </li>
             ))}
           </div>

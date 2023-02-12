@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion"
-import Link from 'next/link'
 import Image from 'next/image'
 import Layout from "../../components/Layout"
 import ButtonGoHome from "../../components/ButtonGoHome"

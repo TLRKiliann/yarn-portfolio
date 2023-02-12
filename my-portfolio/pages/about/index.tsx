@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-//import Link from 'next/link'
+import { useState } from 'react'
 import Image from 'next/image'
 import Layout from "../../components/Layout"
 import ButtonGoHome from "../../components/ButtonGoHome"
@@ -14,12 +13,12 @@ import styles from '@/styles/About.module.scss'
 
 const About:React.FC = () => {
 
-  const [first, setFirst] = useState<boolean>(false)
-  const [second, setSecond] = useState<boolean>(false)
-  const [third, setThird] = useState<boolean>(false)
-  const [four, setFour] = useState<boolean>(false)
-  const [five, setFive] = useState<boolean>(false)
-  
+  const [first, setFirst] = useState<boolean>(true)
+  const [second, setSecond] = useState<boolean>(true)
+  const [third, setThird] = useState<boolean>(true)
+  const [four, setFour] = useState<boolean>(true)
+  const [five, setFive] = useState<boolean>(true)
+
   const handleFirst = () => {
     setFirst(first => !first)
   }
