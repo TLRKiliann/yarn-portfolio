@@ -1,3 +1,4 @@
+import { handleChangeTransition } from '../../functions/handleChangeTransition'
 import styles from '@/styles/About.module.scss'
 
 interface boolStylesProps {
@@ -5,18 +6,12 @@ interface boolStylesProps {
 }
 
 const AboutThirdParagraph = ({ boolStyles }: boolStylesProps) => {
-  
-  const handleChangeTransition = () => {
-    if (boolStyles === true) {
-      return `${styles.paragraphaboutfirst}`
-    } else {
-      return `${styles.paragraphaboutrevert}`
-    }
-  }
 
+  const newFunction = handleChangeTransition({boolStyles})
+  
   return (
     <>
-      <div className={handleChangeTransition()}>
+      <div className={newFunction}>
         <li className={styles.li}>
           <a 
             href="https://github.com/TLRKiliann/tor-proxy"

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { handleChangeTransition } from '../../functions/handleChangeTransition'
 import styles from '@/styles/About.module.scss'
 
 interface boolStylesProps {
@@ -7,20 +7,14 @@ interface boolStylesProps {
 
 const AboutFifthParagraph = ({ boolStyles }: boolStylesProps) => {
   
-  const handleChangeTransition = () => {
-    if (boolStyles === true) {
-      return `${styles.paragraphaboutfirst}`
-    } else {
-      return `${styles.paragraphaboutrevert}`
-    }
-  }
+  const newFunction = handleChangeTransition({boolStyles})
 
   return (
     <>
-      <div className={handleChangeTransition()}>
-        Actuellement en reconversion professionnelle, je souhaite faire de ma passion
-        un métier et continuer de faire évoluer mes compétences avec des pros au sein
-        d'une entreprise.
+      <div className={newFunction}>
+        Actuellement en reconversion professionnelle, je souhaite
+        faire de ma passion un métier et continuer de faire évoluer
+        mes compétences avec des pros au sein d'une entreprise.
       </div>
     </>
   )
