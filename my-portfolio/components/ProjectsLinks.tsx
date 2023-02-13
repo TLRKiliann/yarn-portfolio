@@ -47,38 +47,46 @@ const ProjectsLinks = () => {
                   ? <TbBrandNextjs
                     size={32}
                     style={{
-                      marginBottom: '5px',
+                      marginTop: '-3px',
                       marginLeft: '10px',
                       color: "cyan",
-                      opacity: 0.5,
-
-                  }} /> 
+                      opacity: 0.7,
+                    }} /> 
                   : null
                 }
                 {myproject.id === 2 
-                  ? <SiVite
+                  ? <div><SiVite
                     size={32}
                     style={{
-                      marginBottom: '5px',
+                      marginTop: '-5px',
                       marginLeft: '10px',
                       color: "cyan",
-                      opacity: 0.5,
-                    }} />
+                      opacity: 0.7,
+                    }} /> <SiMysql
+                      size={34}
+                      style={{
+                        marginTop: '-5px',
+                        marginLeft: '10px',
+                        color: "cyan",
+                        opacity: 0.7,
+                      }}/> </div>
                   : null
                 }
                 {myproject.id === 3 
                   ? <div><GrReactjs
                     size={32}
                     style={{
+                      marginTop: '-5px',
                       marginLeft: '10px',
                       color: "cyan",
-                      opacity: 0.5,
+                      opacity: 0.7,
                     }} /> <SiMongodb 
                     size={32}
                     style={{
+                      marginTop: '-5px',
                       marginLeft: '0px',
                       color: "cyan",
-                      opacity: 0.5,                      
+                      opacity: 0.7,
                     }}/> </div>
                   : null
                 }
@@ -86,10 +94,10 @@ const ProjectsLinks = () => {
                   ? <FaPython
                     size={32}
                     style={{
-                      marginBottom: '10px',
+                      marginBottom: '5px',
                       marginLeft: '10px',
                       color: "cyan",
-                      opacity: 0.5,
+                      opacity: 0.7,
                     }} />
                   : null
                 }
@@ -97,15 +105,17 @@ const ProjectsLinks = () => {
                   ? <div><FaPython
                     size={32}
                     style={{
+                      marginTop: '-5px',
                       marginLeft: '10px',
                       color: "cyan",
-                      opacity: 0.5,
+                      opacity: 0.7,
                     }} /> <SiMysql
-                    size={32}
+                    size={34}
                     style={{
+                      marginTop: '-5px',
                       marginLeft: '10px',
                       color: "cyan",
-                      opacity: 0.5,                      
+                      opacity: 0.7,
                     }}/> </div> 
                   : null
                 }
@@ -113,16 +123,17 @@ const ProjectsLinks = () => {
                   ? <div style={{width: "100px"}}><SiPhp
                     size={38}
                     style={{
-                      marginBottom: '-10px',
+                      marginTop: '-5px',
                       marginLeft: '10px',
                       color: "cyan",
-                      opacity: 0.5,
+                      opacity: 0.7,
                     }} /> <SiMysql
-                      size={32}
+                      size={34}
                       style={{
+                        marginTop: '-5px',
                         marginLeft: '10px',
                         color: "cyan",
-                        opacity: 0.5,                      
+                        opacity: 0.7,
                       }}/> </div> 
                   : null
                 }

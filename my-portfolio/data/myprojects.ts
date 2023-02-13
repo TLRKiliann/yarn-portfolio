@@ -14,7 +14,7 @@ export const myprojects: MyProjectsItemsProps[] = [
   },
   {
     id: 2,
-    name: "MERN-stack Chat application (Vite)",
+    name: "MERN-stack Chat application (Vite-React-TS + MySQL)",
     url: 'https://github.com/TLRKiliann/mernstack-api'
   },
   {
@@ -24,13 +24,13 @@ export const myprojects: MyProjectsItemsProps[] = [
   },
   {
     id: 4,
-    name: "Anxious-Scale Psychiatry Evaluation (Python3 standalone en + fr)",
-    url: 'https://github.com/TLRKiliann/anxious_scale'
+    name: "TimeTrack (Web App Python3 SSH SCP MySQL)",
+    url: 'https://github.com/TLRKiliann/timetrack'
   },
   {
     id: 5,
-    name: "TimeTrack (Web App Python3 SSH SCP MySQL)",
-    url: 'https://github.com/TLRKiliann/timetrack'
+    name: "Anxious-Scale Psychiatry Evaluation (Python3 stand-alone)",
+    url: 'https://github.com/TLRKiliann/anxious_scale'
   },
   {
     id: 6,

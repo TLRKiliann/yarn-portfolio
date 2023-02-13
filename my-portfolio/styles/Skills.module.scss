@@ -117,7 +117,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: $akayakanadaka_font;
+          font-family: $abhaya_font;
+          font-weight: bold;
           color: rgba(0,255,255,0.5);
           border-bottom: 1px dashed rgba(0,255,255,0.5);
         }
@@ -127,7 +128,8 @@
             margin: 5px 0px;
             padding: 5px 0px;
             padding-left: 10px;
-            font-family: $akayakanadaka_font;
+            font-family: $abhaya_font;
+            font-size: 1.2rem;
             background: rgba(0,50,100, 0.3);
             color: rgba(255,255,255,0.7);
             .classa {
