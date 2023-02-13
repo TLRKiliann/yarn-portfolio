@@ -38,7 +38,7 @@ const Home:React.FC = () => {
       </Head>
 
       <div>
-        <main className={styles.main}>
+        <main data-testid="firsttesthome" className={styles.main}>
           
           <AnimationIntro />
 
