@@ -1,14 +1,26 @@
 # yarn-portfolio
-portfolio with nextjs &amp; yarn
 
-└─ $ ▶ yarn create next-app --typescript
+Mon dernier portfolio avec Next.js. J'ai cherché à faire un site un peu design avec des animations et quelques effets.
 
-└─ $ ▶ yarn add sass
+---
 
-└─ $ ▶ yarn add react-icons
+Installation:
 
-└─ $ ▶ yarn add @fontsource/acme
+J'utilisais yarn, mais je suis passé à pnpm, car c'est le package manager le plus recommandé par les développeur.
+Les installations pour mon portfolio.
 
-└─ $ ▶ yarn add @fontsource/akaya-kanadaka
+└─ $ ▶ pnpm create next-app --typescript
 
-└─ $ ▶ yarn add framer-motion
+└─ $ ▶ pnpm add sass
+
+└─ $ ▶ pnpm add react-icons
+
+└─ $ ▶ pnpm add @fontsource/acme
+
+└─ $ ▶ pnpm add @fontsource/akaya-kanadaka
+
+└─ $ ▶ pnpm add framer-motion
+
+Projet déployé sur Vercel.
+
+Enjoy it ! :koala:
