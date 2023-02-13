@@ -4,10 +4,11 @@ Mon dernier portfolio avec Next.js. J'ai cherché à faire un site un peu design
 
 ---
 
-Installation:
+## Installation:
 
-J'utilisais yarn, mais je suis passé à pnpm, car c'est le package manager le plus recommandé par les développeur.
-Les installations pour mon portfolio.
+Jusqu'à présent, j'utilisais yarn, mais je suis passé à pnpm, car c'est le package manager le plus recommandé par les développeurs.
+
+J'ai effectué les installations suivantes:
 
 └─ $ ▶ pnpm create next-app --typescript
 
