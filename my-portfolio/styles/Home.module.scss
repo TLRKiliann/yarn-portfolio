@@ -1,53 +1,61 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
+/*@mixin anim-style(){
+
+}*/
+
 @keyframes hollyanimation {
   0% {
     opacity: 0;
     transform: translateY(600px);
     filter: blur(4px);
-    background: rgba(0,50,100,0);
-    box-shadow: 0px 0px 0px $cyan;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px rgba(0, 255, 255, 0);
+    color: rgba(0, 255, 255, 0);
   }
-  70% {
+  50% {
     opacity: 1;
     transform: translateY(0px);
     filter: blur(0px);
-    background: rgba(0,50,100,0.1);
     border-radius: 15px;
-    box-shadow: 0px 0px 3px $cyan;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+    color: dodgerblue;
   }
-  80% {
+  60% {
     opacity: 1;
     transform: translateY(0px);
     filter: blur(0px);
-    background: rgba(0,50,100,0.2);
     border-radius: 15px;
-    box-shadow: 0px 0px 3px $cyan;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+    color: dodgerblue;
   }
   90% {
     opacity: 0;
-    transform: translateY(0px);
-    filter: blur(2px);
-    background: rgba(0,50,100,0.1);
-    box-shadow: 0px 0px 2px $cyan;  
+    transform: translateY(-600px);
+    filter: blur(4px);
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px rgba(0, 255, 255, 0);
+    color: rgba(0, 255, 255, 0);
   }
   100% {
     opacity: 0;
-    transform: translateY(0px);
-    filter: blur(4px);
-    background: rgba(0,50,100,0);
-    box-shadow: 0px 0px 0px $cyan;
+    transform: translateY(-600px);
+    filter: blur(0px);
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px rgba(0, 255, 255, 0);
+    color: rgba(0, 255, 255, 0);
   }
 }
 
-@mixin animation(){
+@mixin animation($second){
   position: absolute;
   top: 45%;
   width: 360px;
   margin: auto;
   opacity: 0;
   animation-name: hollyanimation;
+  animation-delay: $second;
   animation-duration: 5s;
   animation-iteration-count: 1;
   animation-timing-function: ease-out, linear;
@@ -76,22 +84,19 @@
     color: rgba(0,255,255, 0.5);
     overflow-y: hidden;
     .firstdivanimation {
-      @include animation();
-      animation-delay: 2s;
+      @include animation(1s);
       .subdivfirstanimation {
         @include mardisplayjustify();
       }
     }
     .seconddivanimation {
-      @include animation();
-      animation-delay: 7s;
+      @include animation(4s);
       .subdivsecondanimation {
         @include mardisplayjustify();
       }
     }
     .thirddivanimation {
-      @include animation();      
-      animation-delay: 12s;
+      @include animation(7s);      
       .subdivthirdanimation {
         @include mardisplayjustify();
       }
