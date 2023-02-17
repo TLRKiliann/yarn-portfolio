@@ -46,7 +46,7 @@ const Home:React.FC = () => {
             <audio
               controls
               loop
-              src="./drums.mp3"
+              src="/drums.mp3"
               preload="auto"
               className={styles.audio}
             >
@@ -62,7 +62,7 @@ const Home:React.FC = () => {
               loop 
               className={styles.divvideointro}>
               <source
-                src={"./videos/spider-web.mp4"}
+                src={"/videos/spider-web.mp4"}
                 type="video/mp4"/>
             </video>
           </div>
