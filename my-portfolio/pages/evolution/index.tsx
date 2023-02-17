@@ -30,7 +30,7 @@ const Evolution:React.FC = () => {
             muted 
             loop 
             className={styles.divvideointro}>
-            <source src={"./videos/abstract.mp4"} type="video/mp4"/>
+            <source src={"/videos/abstract.mp4"} type="video/mp4"/>
           </video>
         </div>
 
@@ -85,17 +85,14 @@ const Evolution:React.FC = () => {
             </div>
 
             <h2 className={styles.h2}>Skills</h2>
-            <p style={{fontSize: "1.4rem", color: 'dodgerblue'}}>
-              Click !
-            </p>
             <div className={styles.lilink}>
               <li className={styles.li}>
-                <Link href="/skills" className={styles.link}>
+                <Link href="/skills" className={styles.linksoft}>
                   Soft Skills
                 </Link>
               </li>
               <li className={styles.li}>
-                <Link href="/skills" className={styles.link}>
+                <Link href="/skills" className={styles.linkhard}>
                   Hard Skills
                 </Link>
               </li>

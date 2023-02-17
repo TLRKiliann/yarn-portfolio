@@ -23,7 +23,7 @@ const Projects:React.FC = () => {
             muted 
             loop 
             className={styles.divvideoproject}>
-            <source src={"./videos/wave-beam.mp4"} type="video/mp4"/>
+            <source src={"/videos/wave-beam.mp4"} type="video/mp4"/>
           </video>
         </div>
 

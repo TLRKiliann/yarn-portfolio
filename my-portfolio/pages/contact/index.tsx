@@ -22,7 +22,7 @@ const Contact:React.FC = () => {
             muted 
             loop 
             className={styles.divvideocontact}>
-            <source src={"./videos/space.mp4"} type="video/mp4"/>
+            <source src={"/videos/space.mp4"} type="video/mp4"/>
           </video>
         </div>
 

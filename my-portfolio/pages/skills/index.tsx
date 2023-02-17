@@ -36,7 +36,7 @@ const Skills:React.FC = () => {
             muted 
             loop 
             className={styles.divvideointro}>
-            <source src={"./videos/lightning.mp4"} type="video/mp4"/>
+            <source src={"/videos/lightning.mp4"} type="video/mp4"/>
           </video>
         </div>
 
