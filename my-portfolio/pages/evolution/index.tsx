@@ -21,6 +21,34 @@ const Evolution:React.FC = () => {
 
         <ButtonGoHome />
 
+        <div className={styles.articlecontainer}>
+          <div className={styles.article}>
+            <h3>History</h3>
+            <p>blabla</p>
+          </div>
+          <div className={styles.article}>
+            <h3>Motivation</h3>
+            <p>blabla</p>
+          </div>
+          <div className={styles.article}>
+            <h3>art 3</h3>
+            <p>blabla</p>
+          </div>
+          <div className={styles.article}>
+            <h3>Skills</h3>
+            <p>blabla</p>
+          </div>
+          <div className={styles.article}>
+            <h3>Objectifs</h3>
+            <p>blabla</p>
+          </div>
+          <div className={styles.article}>
+            <h3>Valeurs</h3>
+            <p>blabla</p>
+          </div>
+        </div>
+
+
       </div>
 
 
