@@ -1,6 +1,104 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
+@mixin topbottom-article($opacity, $valueY){
+  opacity: $opacity;
+  transform: translateY($valueY);
+}
+
+@mixin side-article($opacity, $valueX){
+  opacity: $opacity;
+  transform: translateX($valueX);
+}
+
+@keyframes article-1 {
+  0% {
+    @include topbottom-article(0, -200px);
+  }
+  100% {
+    @include topbottom-article(1, 0px);
+  }
+}
+
+@keyframes article-2 {
+  0% {
+    @include topbottom-article(0, -200px);
+  }
+  100% {
+    @include topbottom-article(1, 0px);
+  }
+}
+
+@keyframes article-3 {
+  0% {
+    @include side-article(0, -200px);
+  }
+  100% {
+    @include side-article(1, 0px);
+  }
+}
+
+@keyframes article-4 {
+  0% {
+    @include side-article(0, 200px);
+  }
+  100% {
+    @include side-article(1, 0px);
+  }
+}
+
+@keyframes article-5 {
+  0% {
+    @include topbottom-article(0, 200px);
+  }
+  100% {
+    @include topbottom-article(1, 0px);
+  }
+}
+
+@keyframes article-6 {
+  0% {
+    @include topbottom-article(0, 200px);
+  }
+  100% {
+    @include topbottom-article(1, 0px);
+  }
+}
+
+@mixin article(){
+  height: auto;
+  padding: 10px 40px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: $abhaya_font;
+  font-size: 1.2rem;
+  color: #0b7deb;
+  opacity: 1;
+
+  background: linear-gradient(30deg, 
+    rgba(255, 255, 255, 0.1), rgba(42, 42, 42, 1),
+    rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
+    rgba(42, 42, 42, 1), rgba(255, 255, 255, 0.1));
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@mixin animation($name){
+  animation-name: $name;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  .h2 {
+    color: $slategrey;
+  }
+  .p {
+    font-family: $abhaya_font;
+    font-size: 1.4rem;
+  }
+}
+
 .evolution {
   position: absolute;
   top: 0px;
@@ -22,105 +120,80 @@
   .articlecontainer {
     width: 90%;
     margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 10px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: 1Fr 1Fr;
     grid-template-rows: 1Fr 1Fr 1Fr;
-    grid-column-gap: 80px;
+    grid-column-gap: 40px;
     grid-row-gap: 40px;
-    color: $cyan;
-    /*border: 1px solid $whitesmoke;*/
 
     .article {
-      height: 190px;
-      padding: 10px 40px;
-      text-align: justify;
-      text-justify: inter-word;
-      color: $cyan;
-
-      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
-        rgba(140,140,140, 1));
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+      margin-top: 40px;
+      margin-bottom: 40px;
+      @include article();
+      transform: translateY(0px);
+      @include animation(article-1);
     }
     .article2 {
-      height: 190px;
-      padding: 10px 40px;
-      text-align: justify;
-      text-justify: inter-word;
-      color: $cyan;
-
-      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
-        rgba(140,140,140, 1));
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+      margin-top: 40px;
+      margin-bottom: 50px;
+      @include article();
+      transform: translateY(0px);
+      @include animation(article-2);
     }
     .article3 {
-      height: 200px;
-      padding: 10px 40px;
-      text-align: justify;
-      text-justify: inter-word;
-      color: $cyan;
-
-      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
-        rgba(140,140,140, 1));
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+      margin-top: 40px;
+      margin-bottom: 60px;
+      @include article();
+      transform: translateX(0px);
+      @include animation(article-3);
     }
     .article4 {
-      height: 200px;
-      padding: 10px 40px;
-      text-align: justify;
-      text-justify: inter-word;
-      color: $cyan;
-
-      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
-        rgba(140,140,140, 1));
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+      margin-top: 10px;
+      @include article();
+      display: flex;
+      flex-direction: column;
+      transform: translateX(0px);
+      @include animation(article-4);
+      .lilink {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        .li {
+          width: 100%;
+          display: flex;
+        }
+        .link {
+          margin-top: -40px;
+          margin-left: 20px;
+          text-decoration: none;
+          font-family: $abhaya_font;
+          font-size: 2.4rem;
+          font-weight: bold;
+          color: $cyan;
+          transform: rotateZ(-30deg);
+          &:hover {
+            color: $slategrey;
+          }
+          &:active {
+            color: $cyan;
+          }
+        }
+      }
     }
     .article5 {
-      height: 140px;
-      padding: 10px 40px;
-      text-align: justify;
-      text-justify: inter-word;
-      color: $cyan;
-
-      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
-        rgba(140,140,140, 1));
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+      margin-top: 40px;
+      margin-bottom: 60px;
+      @include article();
+      transform: translateY(0px);
+      @include animation(article-5);
     }
     .article6 {
-      height: 245px;
-      padding: 10px 40px;
-      text-align: justify;
-      text-justify: inter-word;
-      color: $cyan;
-
-      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
-        rgba(140,140,140, 1));
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+      @include article();
+      transform: translateY(0px);
+      @include animation(article-6);
     }
   }
 }
