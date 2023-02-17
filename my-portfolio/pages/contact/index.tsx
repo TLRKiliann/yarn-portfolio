@@ -1,16 +1,9 @@
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Layout from "../../components/Layout"
 import ButtonGoHome from "../../components/ButtonGoHome"
 import styles from '@/styles/Contact.module.scss'
 
 const Contact:React.FC = () => {
-  const router = useRouter() as any
-
-  const handleBackToHome = () => {
-    router.replace("/")
-  }
-
   return (
     <Layout>
 

@@ -1,19 +1,11 @@
-import { useState } from 'react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from "framer-motion"
-import Image from 'next/image'
+//import Image from 'next/image'
 import Layout from "../../components/Layout"
 import ButtonGoHome from "../../components/ButtonGoHome"
 import styles from '@/styles/Gallery.module.scss'
 
 const Gallery:React.FC = () => {
-  const router = useRouter() as any
-
-  const handleRoute = () => {
-    router.replace('/')
-  }
-
   return (
     <Layout>
 

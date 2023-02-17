@@ -86,7 +86,6 @@
   .maindivvideocontact {
     position: fixed;
     @include trbl();
-    bottom: 0px;
     background: $custom_purple;
     z-index: -1;
     .divvideocontact {
