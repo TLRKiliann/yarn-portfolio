@@ -31,5 +31,10 @@ export const myurls: MyurlsItemsProps[] = [
     id: 5,
     name: "@openclassroom",
     url: 'https://openclassrooms.com/fr/members/p4h3cxlsd5g1'
+  },
+  {
+    id: 6,
+    name: "@linkedin",
+    url: 'https://www.linkedin.com/in/cedric-kuchen-dev/'
   }
 ]
