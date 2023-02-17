@@ -72,16 +72,44 @@
   text-align: justify;
   text-justify: inter-word;
   font-family: $abhaya_font;
-  font-size: 1.2rem;
-  color: #0b7deb;
   opacity: 1;
-  background: linear-gradient(30deg, 
-    rgba(0, 50, 100, 0.1), rgba(42, 42, 42, 1),
-    rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-    rgba(42, 42, 42, 1), rgba(0, 50, 100, 0.1));
-
+  background: $lightgrey_20;
+  border-radius: 5px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
     0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+  .h2 {
+    font-size: 2.0rem;
+    color: #4283bd;
+  }
+  .p {
+    font-size: 1.2rem;
+    color: #2e73af;
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
+      0px 0px 0px 0px rgba(0, 0, 0, 0.19);
+  }
+}
+
+@mixin link-style($deg){
+  position: relative;
+  text-decoration: none;
+  font-family: $abhaya_font;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: $lightgrey_24;
+  text-shadow: 0px 0px 3px $cyan;
+  transform: rotateZ($deg);
+  z-index: 2;
+  &:hover {
+    color: yellow;
+    text-shadow: 0px 0px 0px $cyan;
+  }
+  &:active {
+    color: $cyan;
+  }
 }
 
 @mixin animation($name){
@@ -90,13 +118,6 @@
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-timing-function: ease;
-  .h2 {
-    color: $slategrey;
-  }
-  .p {
-    font-family: $abhaya_font;
-    font-size: 1.4rem;
-  }
 }
 
 .evolution {
@@ -156,22 +177,26 @@
     }
     .article4 {
       @include article(35%);
-      display: flex;
-      flex-direction: column;
+      
       transform: translateX(0px);
       @include animation(article-4);
-      
       .imgevolution {
-        position: fixed;
-        top: 0px;
-        right: 0px;
+        position: absolute;
         bottom: 0px;
-        left: 0px;
+        margin-left: -40px;
+        display: flex;
+        justify-content: center;
         opacity: 0.1;
-        z-index: -2;
+        transition: 1s;
+        z-index: 1;
+        &:hover {
+          transform: scale(2) translateY(-30px);
+          opacity: 1;
+          z-index: 3;
+        }
         .img {
-          width: 100%;
-          height: 100%;
+          width: 30%;
+          height: 20%;
           object-fit: cover;
         }
       }
@@ -181,23 +206,15 @@
         display: flex;
         align-items: center;
         .li {
+          margin-top: -40px;
           width: 100%;
           display: flex;
-        }
-        .link {
-          margin-top: -40px;
-          margin-left: 20px;
-          text-decoration: none;
-          font-family: $abhaya_font;
-          font-size: 2.3rem;
-          font-weight: bold;
-          color: $cyan;
-          transform: rotateZ(-30deg);
-          &:hover {
-            color: $slategrey;
+          justify-content: center;
+          .linksoft {
+            @include link-style(-45deg);
           }
-          &:active {
-            color: $cyan;
+          .linkhard {
+            @include link-style(45deg);
           }
         }
       }

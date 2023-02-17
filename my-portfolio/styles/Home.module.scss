@@ -60,6 +60,15 @@
   justify-content: center;
 }
 
+@mixin side-text(){
+  text-decoration: none;
+  font-family: $akayakanadaka_font;
+  font-size: 20px;
+  filter: blur(1.4px);
+  color: $whitesmoke;
+  transition: 1s;
+}
+
 .main {
   .maindivanimation {
     position: absolute;
@@ -145,12 +154,7 @@
       display: flex;
       align-items: center;
       content: "";
-      text-decoration: none;
-      font-family: $akayakanadaka_font;
-      font-size: 20px;
-      filter: blur(1.2px);
-      color: $whitesmoke;
-      transition: 1s;
+      @include side-text();
       &:hover:after {
         filter: blur(0px);
         content: "👈";
@@ -163,12 +167,7 @@
       }
     }
     .link2 {
-      text-decoration: none;
-      font-family: $akayakanadaka_font;
-      font-size: 20px;
-      filter: blur(1.2px);
-      color: $whitesmoke;
-      transition: 1s;
+      @include side-text();
       &:hover {
         filter: blur(0px);
         color: rgba(180,180,180, 1);
