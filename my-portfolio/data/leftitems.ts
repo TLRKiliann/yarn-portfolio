@@ -14,21 +14,26 @@ export const leftitems: MyLeftItemsProps[] = [
   },
   {
     id: 2,
+    address: "/evolution",
+    name: "Evolution"
+  },
+  {
+    id: 3,
     address: "/skills",
     name: "Skills"
   },
   {
-    id: 3,
+    id: 4,
     address: "/projects",
     name: "Projects"
   },
   {
-    id: 4,
+    id: 5,
     address: "/gallery",
     name: "Gallery"
   },
   {
-    id: 5,
+    id: 6,
     address: "/contact",
     name: "Contact"
   }
