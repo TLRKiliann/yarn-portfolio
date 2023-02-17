@@ -65,7 +65,8 @@
   }
 }
 
-@mixin article(){
+@mixin article($width){
+  width: $width;
   height: auto;
   padding: 10px 40px;
   text-align: justify;
@@ -74,14 +75,13 @@
   font-size: 1.2rem;
   color: #0b7deb;
   opacity: 1;
-
   background: linear-gradient(30deg, 
-    rgba(255, 255, 255, 0.1), rgba(42, 42, 42, 1),
+    rgba(0, 50, 100, 0.1), rgba(42, 42, 42, 1),
     rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
-    rgba(42, 42, 42, 1), rgba(255, 255, 255, 0.1));
+    rgba(42, 42, 42, 1), rgba(0, 50, 100, 0.1));
 
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
+    0px 6px 20px 0px rgba(0, 0, 0, 0.19);
 }
 
 @mixin animation($name){
@@ -105,10 +105,23 @@
   right: 0px;
   left: 0px;
   min-height: 100vh;
-  background-color: $bg_color;
+  .mainclassvideo {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: $bg_color;
+    z-index: -1;
+    .divvideointro {
+      filter: opacity(60%);
+      opacity: 0.4;
+      object-fit: cover;
+    }
+  }
   .evolutionmaintitle {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     padding-left: 20px;
     font-family: $abhaya_font;
     font-size: 3.2rem;
@@ -120,45 +133,51 @@
   .articlecontainer {
     width: 90%;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 40px;
     margin-bottom: 40px;
-    display: grid;
-    grid-template-columns: 1Fr 1Fr;
-    grid-template-rows: 1Fr 1Fr 1Fr;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     .article {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      @include article();
+      @include article(35%);
       transform: translateY(0px);
       @include animation(article-1);
     }
     .article2 {
-      margin-top: 40px;
-      margin-bottom: 50px;
-      @include article();
+      @include article(45%);
       transform: translateY(0px);
       @include animation(article-2);
     }
     .article3 {
-      margin-top: 40px;
-      margin-bottom: 60px;
-      @include article();
+      @include article(45%);
       transform: translateX(0px);
       @include animation(article-3);
     }
     .article4 {
-      margin-top: 10px;
-      @include article();
+      @include article(35%);
       display: flex;
       flex-direction: column;
       transform: translateX(0px);
       @include animation(article-4);
+      
+      .imgevolution {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.1;
+        z-index: -2;
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
       .lilink {
         width: 100%;
-        height: 200px;
+        height: 120px;
         display: flex;
         align-items: center;
         .li {
@@ -170,7 +189,7 @@
           margin-left: 20px;
           text-decoration: none;
           font-family: $abhaya_font;
-          font-size: 2.4rem;
+          font-size: 2.3rem;
           font-weight: bold;
           color: $cyan;
           transform: rotateZ(-30deg);
@@ -184,14 +203,12 @@
       }
     }
     .article5 {
-      margin-top: 40px;
-      margin-bottom: 60px;
-      @include article();
+      @include article(35%);
       transform: translateY(0px);
       @include animation(article-5);
     }
     .article6 {
-      @include article();
+      @include article(45%);
       transform: translateY(0px);
       @include animation(article-6);
     }
