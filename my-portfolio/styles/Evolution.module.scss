@@ -2,7 +2,7 @@
 @import 'colors.scss';
 
 .evolution {
-  position: fixed;
+  position: absolute;
   top: 0px;
   right: 0px;
   left: 0px;
@@ -20,23 +20,107 @@
       0px 0px 2px rgba(180,180,180, 1);
   }
   .articlecontainer {
-
     width: 90%;
     margin: auto;
     margin-top: 5%;
+    margin-bottom: 5%;
     display: grid;
     grid-template-columns: 1Fr 1Fr;
     grid-template-rows: 1Fr 1Fr 1Fr;
-    grid-column-gap: 100px;
-    grid-row-gap: 100px;
-    color: $whitesmoke;
-    border: 1px solid $whitesmoke;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
+    color: $cyan;
+    /*border: 1px solid $whitesmoke;*/
 
     .article {
-      padding: 10px 20px;
-      color: $whitesmoke;
-      background: rgba(24, 24, 24, 1);
-      border: 1px solid $whitesmoke;
+      height: 190px;
+      padding: 10px 40px;
+      text-align: justify;
+      text-justify: inter-word;
+      color: $cyan;
+
+      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
+        rgba(140,140,140, 1));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .article2 {
+      height: 190px;
+      padding: 10px 40px;
+      text-align: justify;
+      text-justify: inter-word;
+      color: $cyan;
+
+      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
+        rgba(140,140,140, 1));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .article3 {
+      height: 200px;
+      padding: 10px 40px;
+      text-align: justify;
+      text-justify: inter-word;
+      color: $cyan;
+
+      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
+        rgba(140,140,140, 1));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .article4 {
+      height: 200px;
+      padding: 10px 40px;
+      text-align: justify;
+      text-justify: inter-word;
+      color: $cyan;
+
+      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
+        rgba(140,140,140, 1));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .article5 {
+      height: 140px;
+      padding: 10px 40px;
+      text-align: justify;
+      text-justify: inter-word;
+      color: $cyan;
+
+      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
+        rgba(140,140,140, 1));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+    .article6 {
+      height: 245px;
+      padding: 10px 40px;
+      text-align: justify;
+      text-justify: inter-word;
+      color: $cyan;
+
+      background: linear-gradient(30deg, rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(42, 42, 42, 1),
+        rgba(42, 42, 42, 1), rgba(80,80,80, 1),
+        rgba(140,140,140, 1));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     }
   }
 }

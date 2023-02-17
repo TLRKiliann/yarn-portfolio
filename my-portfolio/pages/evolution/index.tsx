@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 //import Image from 'next/image'
 import Layout from "../../components/Layout"
 import ButtonGoHome from "../../components/ButtonGoHome"
@@ -23,34 +24,82 @@ const Evolution:React.FC = () => {
 
         <div className={styles.articlecontainer}>
           <div className={styles.article}>
-            <h3>History</h3>
-            <p>blabla</p>
+            <h2 className={styles.h2}>History</h2>
+            <p>
+              Mon premier OS était un mac book G3. Seulement, l'information n'était pas aussi
+              accessible qu'aujourd'hui. Je me souviens encore des pages internet sans mise
+              en forme ni couleurs. J'étais très frustré de ne pas comprendre comment fonctionnait
+              mon ordinateur de l'époque.
+            </p>
           </div>
-          <div className={styles.article}>
-            <h3>Motivation</h3>
-            <p>blabla</p>
+          <div className={styles.article2}>
+            <h2 className={styles.h2}>Motivation</h2>
+            <p>
+              Au fil du temps, j'ai vu ma motivation croître pour l'informatique,
+              raison pour laquelle, je souhaiterais faire de ma passion un métier.
+            </p>
+            <p>
+              J'aime comprendre le fonctionnement des applications, des SI et des 
+              communcations internet.
+            </p>
           </div>
-          <div className={styles.article}>
-            <h3>art 3</h3>
-            <p>blabla</p>
+          <div className={styles.article3}>
+            <h2 className={styles.h2}>Personnalité</h2>
+            <p>
+              Je suis quelqu'un de rigoureux, structuré et curieux. J'aime me tenir informé
+              sur les nouvelles technologies, celles qui sont les meilleures ainsi que sur
+              les bonnes pratiques.
+            </p>
+            <p>
+              La sécurité occupe également une place importante, surtout au jour d'aujourd'hui.
+            </p>
           </div>
-          <div className={styles.article}>
-            <h3>Skills</h3>
-            <p>blabla</p>
+          
+          <div className={styles.article4}>
+            
+            <h2 className={styles.h2}>Skills</h2>
+            
+            <div>
+              <li>
+                <Link href="/skills">
+                  Soft Skills
+                </Link>
+              </li>
+              <li>
+                <Link href="/skills">
+                  Hard Skills
+                </Link>
+              </li>
+            </div>
+          
           </div>
-          <div className={styles.article}>
-            <h3>Objectifs</h3>
-            <p>blabla</p>
+          
+          <div className={styles.article5}>
+            <h2 className={styles.h2}>Objectifs</h2>
+            <p>
+              Devenir un excellent développeur et travailler avec des pros serait pour moi l'idéal.
+              Plusieurs cerveaux valent toujours mieux qu'un ! Aussi, je pense que pour construire et
+              s'enrichir 
+            </p>
           </div>
-          <div className={styles.article}>
-            <h3>Valeurs</h3>
-            <p>blabla</p>
+          <div className={styles.article6}>
+            <h2 className={styles.h2}>Valeurs</h2>
+            <p>
+              Identifier l'origine du problème et faire des liens pour trouver des solutions,
+              est une valeur importante que l'on retrouve aussi dans les soins. Je pense que
+              c'est une valeur importante également en informatique. 
+
+              J'aime trouver des solutions et paramétrer les situations. Réfléchir 
+              avant, pendant et après l'action. La remise en question et les remarques 
+              sont pour moi essentiel pour s'amélioration et évoluer.
+              J'aime apprendre découvrir des nouvelles choses.
+
+              J'aime créer, innover et contribuer.
+            </p>
           </div>
         </div>
 
-
       </div>
-
 
     </Layout>
   )
