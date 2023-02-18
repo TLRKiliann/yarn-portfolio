@@ -4,6 +4,7 @@ specifiers:
   '@fontsource/abhaya-libre': ^4.5.9
   '@fontsource/acme': ^4.5.10
   '@fontsource/akaya-kanadaka': ^4.5.8
+  '@fontsource/noto-sans-newa': ^4.5.8
   '@next/font': 13.1.6
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^13.4.0
@@ -27,6 +28,7 @@ dependencies:
   '@fontsource/abhaya-libre': 4.5.9
   '@fontsource/acme': 4.5.10
   '@fontsource/akaya-kanadaka': 4.5.8
+  '@fontsource/noto-sans-newa': 4.5.8
   '@next/font': 13.1.6
   '@types/node': 18.11.18
   '@types/react': 18.0.27
@@ -440,6 +442,10 @@ packages:
 
   /@fontsource/akaya-kanadaka/4.5.8:
     resolution: {integrity: sha512-hQF0cKfRCeIKmsq0rDHxLYxmQNCIAVCFbH7gCGGLfI/2bnsKTEW/5JPaJW+pNJsx5o/X0rVoRajl+ba8RhwoLQ==}
+    dev: false
+
+  /@fontsource/noto-sans-newa/4.5.8:
+    resolution: {integrity: sha512-/HjLBb242kQlYeiwkNrsISH9C6EafjYSisgN39/ZFFHhWfmcy/Aeiy0HKzO/0qybccSsJaQ32cPGqU+hU3QJmQ==}
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:

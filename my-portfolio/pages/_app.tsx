@@ -1,6 +1,7 @@
 import "@fontsource/acme"
 import "@fontsource/akaya-kanadaka"
 import "@fontsource/abhaya-libre"
+import "@fontsource/noto-sans-newa"
 import { AnimatePresence, motion } from 'framer-motion'
 import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
