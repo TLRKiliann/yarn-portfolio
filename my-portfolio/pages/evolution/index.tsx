@@ -53,7 +53,7 @@ const Evolution:React.FC = () => {
             </p>
             <p className={styles.p}>
               J'aime comprendre le fonctionnement des applications, des SI et des 
-              communcations internet.
+              communcations internet serveur-client.
             </p>
           </div>
         </div>
@@ -63,12 +63,8 @@ const Evolution:React.FC = () => {
             <h2 className={styles.h2}>Personnalité</h2>
             <p className={styles.p}>
               Je suis quelqu'un de rigoureux, structuré et curieux. J'aime me tenir 
-              informé sur les nouvelles technologies, celles qui sont les meilleures 
-              ainsi que sur les bonnes pratiques.
-            </p>
-            <p className={styles.p}>
-              La sécurité occupe également une place importante, surtout au jour
-              d'aujourd'hui.
+              informé sur les nouvelles technologies, la sécurité ainsi que sur les 
+              bonnes pratiques.
             </p>
           </div>
           
@@ -113,17 +109,46 @@ const Evolution:React.FC = () => {
           <div className={styles.article6}>
             <h2 className={styles.h2}>Valeurs</h2>
             <p className={styles.p}>
-              Identifier l'origine du problème et faire des liens pour trouver des 
-              solutions, est une valeur importante que l'on retrouve aussi dans les 
-              soins. Je pense que c'est une valeur importante également en informatique. 
+              Les métiers d'informaticien et d'infirmier ne sont pas si éloignés... 
+              Leur point commun: la science. L'une traite des divers systèmes du corps humain,
+              l'autre des différents systèmes des système informatique.
             </p>
             <p className={styles.p}>
-              J'aime trouver des solutions et paramétrer les situations. Réfléchir 
-              avant, pendant et après l'action. La remise en question et les remarques 
-              sont pour moi essentiels pour s'amélioration et évoluer.
-              J'aime apprendre découvrir des nouvelles choses.
-              J'aime créer, innover et contribuer.
+              Le domaine des soins m'a appris à réfléchir avant, pendant et après l'action.
+              Par conséquent, la remise en question fait partie intégrante de ma personne.
+              Paramétrer et trouver des solutions sont 2 points essentiels à mes yeux.
             </p>
+            <p className={styles.p}>
+              Les soins m'ont également permis d'exercer cela. Le fait d'identifier une
+              problématique et faire des liens pour résoudre.
+            </p>
+          </div>
+        </div>
+
+        <hr className={styles.hr} />
+
+        <div className={styles.fieldcontainer}>
+          <div className={styles.bgfieldset}>
+            <fieldset className={styles.field}>
+              <legend className={styles.legend}>
+                Mon Mojo !
+              </legend>
+              <label>
+                <p className={styles.label}>
+                  Le code, les fonctionnalités et apprendre.
+                </p>
+              </label>
+            </fieldset>
+          </div>
+
+          <div className={styles.imgevolution}>
+            <Image
+              src={'/images/super.png'}
+              width="200"
+              height="200"
+              alt="img about"
+              className={styles.img}
+            />
           </div>
         </div>
 
