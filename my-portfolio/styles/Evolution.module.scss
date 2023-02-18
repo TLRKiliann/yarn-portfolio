@@ -73,12 +73,11 @@
   text-justify: inter-word;
   font-family: $abhaya_font;
   opacity: 1;
-  /*background: $lightgrey_20;*/
   background: rgba(255,255,255, 0.1);
   border-radius: 5px;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
     0px 6px 20px 0px rgba(0, 0, 0, 0.19);
-  transition: 0.5s;
+  transition: ease-in-out 0.35s;
   color: #2e73af;
   .h2 {
     font-size: 2.0rem;
@@ -86,20 +85,20 @@
   }
   .p {
     font-size: 1.2rem;
-    color: rgba(255,255,255, 0.1);
+    color: rgba(255,255,255, 0.2);
   }
   &:hover {
     transform: scale(1.1);
+    background: rgba(255,255,255, 0.2);
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
       0px 0px 0px 0px rgba(0, 0, 0, 0.19);
-    color: #2e73af;
     .h2 {
       font-size: 2.0rem;
-      color: #4283bd;
+      color: rgba(255,255,255, 0.3);
     }
     .p {
       font-size: 1.2rem;
-      color: rgba(255,255,255, 0.3);
+      color: rgba(255,255,255, 0.5);
     }
   }
 }
@@ -143,11 +142,12 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background: $bg_color;
+    /*background: $bg_color;*/
+    background: $custom_purple;
     z-index: -1;
     .divvideointro {
-      filter: opacity(60%);
-      opacity: 0.4;
+      filter: opacity(20%);
+      opacity: 1;
       object-fit: cover;
     }
   }
@@ -266,18 +266,18 @@
         font-size: 1.4rem;
         padding: 20px 20px;
         color: #2e73af;
-        border: 1px solid lightgreen;
+        border: 1px solid rgba(255, 255, 255, 0.5);
         .legend {
           font-size: 1.8rem;
           font-weight: bold;
-          color: lightgreen;
+          color: rgba(255, 255, 255, 0.5);
         }
         .label {
           display: flex;
           text-align: justify;
           text-justify: inter-word;
           font-size: 1.2rem;
-          color: lightgreen;
+          color: rgba(255, 255, 255, 0.5);
         }
       }
     }

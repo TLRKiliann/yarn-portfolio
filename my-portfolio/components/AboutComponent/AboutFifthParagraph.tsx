@@ -11,7 +11,10 @@ const AboutFifthParagraph = ({ boolStyles }: boolStylesProps) => {
 
   return (
     <>
-      <div className={newFunction}>
+      <div 
+        className={newFunction}
+        style={{color: "rgba(255, 255, 255, 0.6)"}}
+      >
         Actuellement en reconversion professionnelle, je souhaite
         faire de ma passion un métier et continuer de faire évoluer
         mes compétences avec des pros au sein d'une entreprise.

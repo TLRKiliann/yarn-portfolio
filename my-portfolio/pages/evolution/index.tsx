@@ -45,6 +45,7 @@ const Evolution:React.FC = () => {
               ne pas comprendre comment fonctionnait mon ordinateur de l'époque.
             </p>
           </div>
+
           <div className={styles.article2}>
             <h2 className={styles.h2}>Motivation</h2>
             <p className={styles.p}>
