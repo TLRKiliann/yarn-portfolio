@@ -65,13 +65,27 @@
   }
 }
 
+@mixin width-margin($width){
+  width: $width;
+  margin: auto;
+}
+
+@mixin margin-topbottom($top){
+  margin-top: $top;
+  margin-bottom: 40px;
+}
+
+@mixin top-right(){
+  top: 0px;
+  right: 0px;
+}
+
 @mixin article($width){
   width: $width;
   height: auto;
   padding: 10px 40px;
   text-align: justify;
   text-justify: inter-word;
-  font-family: $abhaya_font;
   opacity: 1;
   background: rgba(255,255,255, 0.1);
   border-radius: 5px;
@@ -84,7 +98,8 @@
     color: #4283bd;
   }
   .p {
-    font-size: 1.2rem;
+    font-family: $notonewa_font;
+    font-size: 1.0rem;
     color: rgba(255,255,255, 0.2);
   }
   &:hover {
@@ -97,7 +112,7 @@
       color: rgba(255,255,255, 0.3);
     }
     .p {
-      font-size: 1.2rem;
+      font-size: 1.0rem;
       color: rgba(255,255,255, 0.5);
     }
   }
@@ -114,7 +129,7 @@
   transform: rotateZ($deg);
   z-index: 2;
   &:hover {
-    color: yellow;
+    color: $yellow;
     text-shadow: 0px 0px 0px $cyan;
   }
   &:active {
@@ -132,17 +147,14 @@
 
 .evolution {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  @include top-right();
   left: 0px;
   min-height: 100vh;
   .mainclassvideo {
     position: fixed;
-    top: 0px;
-    right: 0px;
+    @include top-right();
     bottom: 0px;
     left: 0px;
-    /*background: $bg_color;*/
     background: $custom_purple;
     z-index: -1;
     .divvideointro {
@@ -152,8 +164,7 @@
     }
   }
   .evolutionmaintitle {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    @include margin-topbottom(20px);
     padding-left: 20px;
     font-family: $abhaya_font;
     font-size: 3.2rem;
@@ -163,10 +174,8 @@
       0px 0px 2px rgba(180,180,180, 1);
   }
   .articlecontainer {
-    width: 90%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    @include width-margin(90%);
+    @include margin-topbottom(40px);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -188,6 +197,7 @@
     }
     .article4 {
       @include article(35%);
+      height: 160px;
       transform: translateX(0px);
       @include animation(article-4);
       .imgevolution {
@@ -199,20 +209,17 @@
         opacity: 0.1;
         transition: 1s;
         z-index: 1;
-        &:hover {
-          transform: scale(1.2) translateY(-30px);
-          opacity: 1;
-          z-index: 3;
-        }
+
+        boder: 1px solid white;
         .img {
-          width: 30%;
-          height: 20%;
+          width: 40%;
+          height: 30%;
           object-fit: cover;
         }
       }
       .lilink {
         width: 100%;
-        height: 120px;
+        height: auto;
         display: flex;
         align-items: center;
         .li {
@@ -241,45 +248,88 @@
     }
   }
   .hr {
-    width: 80%;
-    margin: auto;
+    @include width-margin(80%);
+    margin-top: 40px;
     border-radius: 50% 50%;
     border-top: 1px solid rgba(0, 200, 200, 0.5);
     border-bottom: 1px solid rgba(0, 200, 200, 0.5);
   }
   .fieldcontainer {
-    width: 60%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    @include width-margin(600px);
+    @include margin-topbottom(40px);
     display: flex;
     justify-content: center;
-    border: 1px solid black;
+    background: rgba(255,255,255, 0.1);
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
+      0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+    transform: scale(1.0);
+    transition: 0.75s;
+    &:hover {
+      transform: scale(1.1);
+      color: rgba(255,255,255, 0.8);
+      background: rgba(255,255,255, 0.15);
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
+        0px 0px 0px 0px rgba(0, 0, 0, 0.19);
+    }
     .bgfieldset{
-      width: 360px;
+      width: 100%;
       padding: 30px 40px;
       display: flex;
-      background: rgba(255,255,255, 0.1);
-      border-radius: 5px 0px 0px 5px;
       .field {
         display: flex;
         font-size: 1.4rem;
         padding: 20px 20px;
         color: #2e73af;
-        border: 1px solid rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         .legend {
           font-size: 1.8rem;
           font-weight: bold;
-          color: rgba(255, 255, 255, 0.5);
+          color: rgba(255,255,255, 0.2);
         }
         .label {
           display: flex;
           text-align: justify;
           text-justify: inter-word;
-          font-size: 1.2rem;
-          color: rgba(255, 255, 255, 0.5);
+          font-family: $notonewa_font;
+          font-size: 1.0rem;
+          color: rgba(255,255,255, 0.2);
+        }
+      }
+    }
+    .imgself {
+      position: relative;
+      @include top-right();
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.25;
+      transition: 1s;
+      .img2 {
+        width: 150px;
+        height: 260px;
+        object-fit: cover;
+      }
+    }
+    &:hover {
+      .field {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        .legend {
+          color: rgba(255,255,255, 0.3);
+        }
+        .label {
+          color: rgba(255,255,255, 0.5);
+        }
+      }
+      .imgself {
+        opacity: 1;
+        .img2 {
+          width: 150px;
+          height: 260px;
+          object-fit: cover;
         }
       }
     }
   }
 }
+

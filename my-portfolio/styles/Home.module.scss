@@ -1,11 +1,11 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
-@mixin anim-style($opacity, $valueY, $blur, $background, $box, $color){
+@mixin anim-style($opacity, $valueY, $blur, $box, $color){
   opacity: $opacity;
   transform: translateY($valueY);
   filter: blur($blur);
-  background: $background;
+  background: transparent;
   border-radius: 15px;
   box-shadow: $box;
   color: $color;
@@ -13,24 +13,29 @@
 
 @keyframes hollyanimation {
   0% {
-    @include anim-style(0, 600px, 4px, rgba(0, 50, 100, 0.2),
-      0px 0px 0px rgba(0, 255, 255, 0), rgba(0, 255, 255, 0));
+    @include anim-style(0, 600px, 4px,
+      0px 0px 0px rgba(0, 255, 255, 0),
+      rgba(0, 255, 255, 0));
   }
   50% {
-    @include anim-style(1, 0px, 0px, rgba(255, 255, 255, 0),
-      0px 0px 10px rgba(0, 255, 255, 0.5), $dodgerblue);
+    @include anim-style(1, 0px, 0px,
+      0px 0px 10px rgba(0, 255, 255, 0.5),
+      $dodgerblue);
   }
   60% {
-    @include anim-style(1, 0px, 0px, rgba(255, 255, 255, 0.1),
-      0px 0px 10px rgba(0, 255, 255, 0), rgba(255, 255, 255, 0));
+    @include anim-style(1, 0px, 0px,
+      0px 0px 10px rgba(0, 255, 255, 0.5),
+      $dodgerblue);
   }
   90% {
-    @include anim-style(0, -600px, 4px, rgba(255, 255, 255, 0),
-      0px 0px 10px rgba(0, 255, 255, 0), rgba(255, 255, 255, 0));
+    @include anim-style(0, 0px, 4px,
+      0px 0px 10px rgba(0, 255, 255, 0),
+      rgba(255, 255, 255, 0));
   }
   100% {
-    @include anim-style(0, -600px, 0px, rgba(255, 255, 255, 0),
-      0px 0px 0px rgba(0, 255, 255, 0), rgba(255, 255, 255, 0));
+    @include anim-style(0, -600px, 0px,
+      0px 0px 0px rgba(0, 255, 255, 0),
+      rgba(255, 255, 255, 0));
   }
 }
 

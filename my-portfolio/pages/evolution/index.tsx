@@ -39,22 +39,28 @@ const Evolution:React.FC = () => {
           <div className={styles.article}>
             <h2 className={styles.h2}>Story</h2>
             <p className={styles.p}>
-              Mon premier ordinateur était un mac book G3. Seulement, l'information
-              n'était pas aussi accessible qu'aujourd'hui. Je me souviens encore des
-              pages internet sans mise en forme ni couleurs. J'étais très frustré de
-              ne pas comprendre comment fonctionnait mon ordinateur de l'époque.
+              Depuis 7 ans et au fil de mes réalisations, j'ai vu ma motivation
+              croître pour l'informatique. En parallèle, j'ai vu ma motivation décliner
+              pour les soins. A mes débuts, je me suis amusé à concevoir un site internet
+              sur la neurologie et la psychiatrie avec HTML, CSS, PhP, MySQL sur Raspberry pi
+              en mode WAN. Puis, j'ai appris python3 et j'ai fais une application de soins 
+              infirmiers améliorées sans framework avec python-tkinter, MySQL, SSH, SCP en LAN.
+            </p>
+            <p className={styles.p}>
+              A présent, j'utilise principalement React (Vite, NextJS) avec TypeScript.
             </p>
           </div>
 
           <div className={styles.article2}>
             <h2 className={styles.h2}>Motivation</h2>
             <p className={styles.p}>
-              Au fil du temps, j'ai vu ma motivation croître pour l'informatique,
-              raison pour laquelle, je souhaiterais faire de ma passion un métier.
-            </p>
-            <p className={styles.p}>
-              J'aime comprendre le fonctionnement des applications, des SI et des 
-              communcations internet serveur-client.
+              L'informatique a peu à peu pris place dans ma vie. Dés lors, j'ai réalisé
+              que rien ne m'empêchait de faire de ma passion un métier.
+              Mon expérience dans les soins m'a permis de m'intéresser 
+              à des domaines complexes, tels que la neurologie et la psychiatrie.
+            <br />
+              J'aime démystifier ce qui semble complexe, au premier abord. Quand on
+              dispose des connaissances, il n'y a rien de magique finalement.
             </p>
           </div>
         </div>
@@ -63,9 +69,9 @@ const Evolution:React.FC = () => {
           <div className={styles.article3}>
             <h2 className={styles.h2}>Personnalité</h2>
             <p className={styles.p}>
-              Je suis quelqu'un de rigoureux, structuré et curieux. J'aime me tenir 
-              informé sur les nouvelles technologies, la sécurité ainsi que sur les 
-              bonnes pratiques.
+              Je suis quelqu'un de rigoureux, structuré et consciencieux. Je me tiens 
+              informé sur les technologies, la sécurité ainsi que sur les bonnes 
+              pratiques.
             </p>
           </div>
           
@@ -102,26 +108,26 @@ const Evolution:React.FC = () => {
           <div className={styles.article5}>
             <h2 className={styles.h2}>Objectifs</h2>
             <p className={styles.p}>
-              Devenir un excellent développeur et travailler avec des pros serait
-              pour moi l'idéal. Plusieurs cerveaux valent toujours mieux qu'un ! 
-              Aussi, je pense que pour construire et s'enrichir il faut être plusieurs.
+              Maîtriser les technologies et le code au sein d'une entreprise pour
+              relever des défis sont pour moi l'objectif à atteindre. Apprendre toujours
+              plus et m'enrichir de l'expérience et des conseils, réflexions de mes futurs 
+              collègues seront un atout pour y parvenir.
             </p>
           </div>
           <div className={styles.article6}>
             <h2 className={styles.h2}>Valeurs</h2>
-            <p className={styles.p}>
-              Les métiers d'informaticien et d'infirmier ne sont pas si éloignés... 
-              Leur point commun: la science. L'une traite des divers systèmes du corps humain,
-              l'autre des différents systèmes des système informatique.
-            </p>
             <p className={styles.p}>
               Le domaine des soins m'a appris à réfléchir avant, pendant et après l'action.
               Par conséquent, la remise en question fait partie intégrante de ma personne.
               Paramétrer et trouver des solutions sont 2 points essentiels à mes yeux.
             </p>
             <p className={styles.p}>
-              Les soins m'ont également permis d'exercer cela. Le fait d'identifier une
-              problématique et faire des liens pour résoudre.
+              Les soins m'ont également permis d'exercer l'identification des situations
+              problèmes et de faire des liens pour les résoudre.
+            </p>
+            <p className={styles.p}>
+              Les valeurs que je compte mettre à profit dans une entreprise sont 
+              mes connaissances, mon expérience, ma réflexion et ma créativité.
             </p>
           </div>
         </div>
@@ -136,21 +142,25 @@ const Evolution:React.FC = () => {
               </legend>
               <label>
                 <p className={styles.label}>
-                  Le code, les fonctionnalités et apprendre.
+                  Le code, la sécurité, la maintenabilité,
+                  les reusables components, la refactorisation,
+                  le nommage et le testing.
                 </p>
               </label>
             </fieldset>
+
           </div>
 
-          <div className={styles.imgevolution}>
+          <div className={styles.imgself}>
             <Image
-              src={'/images/super.png'}
+              src={'/images/self.jpg'}
               width="200"
-              height="200"
+              height="300"
               alt="img about"
-              className={styles.img}
+              className={styles.img2}
             />
           </div>
+
         </div>
 
       </div>
