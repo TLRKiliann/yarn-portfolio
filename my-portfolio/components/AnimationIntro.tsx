@@ -17,7 +17,7 @@ const AnimationIntro = () => {
 
       <div className={styles.thirddivanimation}>
         <div className={styles.subdivthirdanimation}>
-          <h2>Enjoy !</h2>
+          <h2>Excellente visite !</h2>
         </div>
       </div>
     </div>
