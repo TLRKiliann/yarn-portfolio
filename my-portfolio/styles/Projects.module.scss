@@ -20,6 +20,12 @@
   margin-top: $marginvalue;
 }
 
+@mixin font-styles($font, $color){
+  font-family: $abhaya_font;
+  font-size: $font;
+  color: $color;
+}
+
 @mixin borders(){
   width: 800px;
   border-top: 1px solid rgba(0,255,255,0.6);
@@ -46,9 +52,7 @@
     @include margintop(20px);
     margin-bottom: 10px;
     padding-left: 20px;
-    font-family: $abhaya_font;
-    font-size: 3.2rem;
-    color: $whitesmoke;
+    @include font-styles(3.2rem, $whitesmoke);
     text-shadow:
       0px 0px 1px $lightgrey_24,
       0px 0px 2px rgba(180,180,180, 1);
@@ -56,9 +60,9 @@
   .maindivofprojects {
     position: absolute;
     top: 20%;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
     margin: auto;
     z-index: 3;
     .h2 {
@@ -66,9 +70,7 @@
       text-align: left;
       margin: auto;
       margin-bottom: 10px;
-      font-family: $abhaya_font;
-      font-size: 2.4rem;
-      color: rgba(0,50,200, 0.6);
+      @include font-styles(2.4rem, rgba(0,50,200, 0.6));
       text-shadow: 2px 0px 2px $cyan;
     }
     .hr {

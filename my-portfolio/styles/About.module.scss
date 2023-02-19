@@ -92,10 +92,10 @@
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
     0px 6px 20px 0px rgba(0, 0, 0, 0.19);
   transition: linear 0.35s;
-  color: #2e73af;
+  color: $dark_blue;
   .h2 {
     font-size: 2.0rem;
-    color: #4283bd;
+    color: $medium_blue;
   }
   .p {
     font-family: $notonewa_font;
@@ -135,7 +135,7 @@
   }
 }
 
-@mixin animation($name){
+@mixin animation-art($name){
   animation-name: $name;
   animation-delay: 0s;
   animation-duration: 2s;
@@ -181,23 +181,23 @@
     .article {
       @include article(35%);
       transform: translateY(0px);
-      @include animation(article-1);
+      @include animation-art(article-1);
     }
     .article2 {
       @include article(45%);
       transform: translateY(0px);
-      @include animation(article-2);
+      @include animation-art(article-2);
     }
     .article3 {
       @include article(45%);
       transform: translateX(0px);
-      @include animation(article-3);
+      @include animation-art(article-3);
     }
     .article4 {
       @include article(35%);
       height: 160px;
       transform: translateX(0px);
-      @include animation(article-4);
+      @include animation-art(article-4);
       .imgabout {
         position: absolute;
         bottom: 0px;
@@ -237,12 +237,12 @@
     .article5 {
       @include article(35%);
       transform: translateY(0px);
-      @include animation(article-5);
+      @include animation-art(article-5);
     }
     .article6 {
       @include article(45%);
       transform: translateY(0px);
-      @include animation(article-6);
+      @include animation-art(article-6);
     }
   }
   .hr {
@@ -277,7 +277,7 @@
       .field {
         display: flex;
         padding: 20px 20px;
-        color: #2e73af;
+        color: $dark_blue;
         border: 1px solid rgba(255, 255, 255, 0.2);
         .legend {
           font-size: 1.8rem;

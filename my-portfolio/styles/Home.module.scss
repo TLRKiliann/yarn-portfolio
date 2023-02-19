@@ -20,12 +20,12 @@
   50% {
     @include anim-style(1, 0px, 0px,
       0px 0px 10px rgba(0, 255, 255, 0.5),
-      #1e90ff);
+      $dodgerblue);
   }
   60% {
-    @include anim-style(1, 0px, 0px,
+    @include anim-style(1, 0px, 2px,
       0px 0px 10px rgba(0, 255, 255, 0.5),
-      #1e90ff);
+      $dodgerblue);
   }
   90% {
     @include anim-style(0, 0px, 4px,
@@ -34,7 +34,7 @@
       
   }
   100% {
-    @include anim-style(0, -600px, 0px,
+    @include anim-style(0, 0px, 0px,
       0px 0px 0px rgba(0, 255, 255, 0),
       rgba(255, 255, 255, 0));
   }
@@ -82,9 +82,7 @@
     justify-content: center;
     @include toprightbottomleft();
     font-family: $akayakanadaka_font;
-    /*color: #2e73af;*/
-    color: #29679D;
-    color: rgba(0,50,100, 0.1);
+    color: $dodgerblue;
     overflow-y: hidden;
     .firstdivanimation {
       @include animation(1s);
@@ -166,19 +164,19 @@
       &:hover:after {
         filter: blur(0px);
         content: "👈";
-        color: rgba(180,180,180, 1);
+        color: $light_180;
       }
       &:hover {
         content: "👈";
         filter: blur(0px);
-        color: rgba(180,180,180, 1);
+        color: $light_180;
       }
     }
     .link2 {
       @include side-text();
       &:hover {
         filter: blur(0px);
-        color: rgba(180,180,180, 1);
+        color: $light_180;
       }
     }
   }
