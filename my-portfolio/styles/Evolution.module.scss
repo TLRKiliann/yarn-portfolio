@@ -1,170 +1,95 @@
 @import 'fonts.scss';
 @import 'colors.scss';
 
-@mixin topbottom-article($opacity, $valueY){
-  opacity: $opacity;
-  transform: translateY($valueY);
-}
-
-@mixin side-article($opacity, $valueX){
-  opacity: $opacity;
-  transform: translateX($valueX);
-}
-
-@keyframes article-1 {
+@keyframes display-link {
   0% {
-    @include topbottom-article(0, -200px);
+    opacity: 0;
+    transform: translateY(-40px);
   }
   100% {
-    @include topbottom-article(1, 0px);
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
-@keyframes article-2 {
+@keyframes revert-tohdide {
   0% {
-    @include topbottom-article(0, -200px);
+    position: relative;
+    right: 0%;
+    left: 0%;
+    opacity: 1;
+    transform: translateY(0px);
   }
   100% {
-    @include topbottom-article(1, 0px);
+    position: relative;
+    right: 0%;
+    left: 0%;
+    opacity: 0;
+    transform: translateY(-40px);
   }
 }
 
-@keyframes article-3 {
-  0% {
-    @include side-article(0, -200px);
-  }
-  100% {
-    @include side-article(1, 0px);
-  }
-}
-
-@keyframes article-4 {
-  0% {
-    @include side-article(0, 200px);
-  }
-  100% {
-    @include side-article(1, 0px);
-  }
-}
-
-@keyframes article-5 {
-  0% {
-    @include topbottom-article(0, 200px);
-  }
-  100% {
-    @include topbottom-article(1, 0px);
-  }
-}
-
-@keyframes article-6 {
-  0% {
-    @include topbottom-article(0, 200px);
-  }
-  100% {
-    @include topbottom-article(1, 0px);
-  }
-}
-
-@mixin width-margin($width){
-  width: $width;
-  margin: auto;
-}
-
-@mixin margin-topbottom($top){
-  margin-top: $top;
-  margin-bottom: 40px;
-}
-
-@mixin top-right(){
+@mixin topright(){
   top: 0px;
   right: 0px;
 }
 
-@mixin article($width){
-  width: $width;
-  height: auto;
-  padding: 10px 40px;
-  text-align: justify;
-  text-justify: inter-word;
-  opacity: 1;
-  background: rgba(255,255,255, 0.1);
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
-    0px 6px 20px 0px rgba(0, 0, 0, 0.19);
-  transition: ease-in-out 0.35s;
-  color: #2e73af;
-  .h2 {
-    font-size: 2.0rem;
-    color: #4283bd;
-  }
-  .p {
-    font-family: $notonewa_font;
-    font-size: 1.0rem;
-    color: rgba(255,255,255, 0.2);
-  }
-  &:hover {
-    transform: scale(1.1);
-    background: rgba(255,255,255, 0.15);
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
-      0px 0px 0px 0px rgba(0, 0, 0, 0.19);
-    .h2 {
-      font-size: 2.0rem;
-      color: rgba(255,255,255, 0.3);
-    }
-    .p {
-      font-size: 1.0rem;
-      color: rgba(255,255,255, 0.5);
-    }
-  }
+@mixin rotationlogostyle(){
+  margin-bottom: -3px;
+  color: rgba(255,255,255, 0.8);
 }
 
-@mixin link-style($deg){
-  position: relative;
-  text-decoration: none;
-  font-family: $abhaya_font;
-  font-size: 2.6rem;
-  font-weight: bold;
-  color: $lightgrey_24;
-  text-shadow: 0px 0px 3px $cyan;
-  transform: rotateZ($deg);
-  z-index: 2;
-  &:hover {
-    color: $yellow;
-    text-shadow: 0px 0px 0px $cyan;
-  }
-  &:active {
-    color: $cyan;
-  }
+@mixin logohover(){
+  cursor: pointer;
+  color: rgba(255,255,255, 0.5);
 }
 
-@mixin animation($name){
+@mixin animation-paragraph($name, $duration) {
   animation-name: $name;
   animation-delay: 0s;
-  animation-duration: 2s;
+  animation-duration: $duration;
   animation-iteration-count: 1;
   animation-timing-function: ease;
+  transform: translateY(0px);
+}
+
+@mixin transitionparagraph(){
+  width: 76%;
+  margin: auto;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: justify;
+  font-family: $abhaya_font;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 12px 12px;
+  box-shadow: 0px 0px 3px rgba(255,255,255,0.1);
+}
+
+@mixin linkstyle(){
+  margin-left: -14px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .evolution {
   position: absolute;
-  @include top-right();
+  @include topright();
   left: 0px;
-  min-height: 100vh;
-  .mainclassvideo {
+  min-height: 100%;
+  background: $bg_color;
+  z-index: -1;
+  .imgabout {
     position: fixed;
-    @include top-right();
-    bottom: 0px;
-    left: 0px;
-    background: $custom_purple;
-    z-index: -1;
-    .divvideointro {
-      filter: opacity(20%);
-      opacity: 1;
+    opacity: 0.2;
+    z-index: -2;
+    .img {
       object-fit: cover;
     }
   }
-  .evolutionmaintitle {
-    @include margin-topbottom(20px);
+  .mainheaderevolution {
+    margin-top: 20px;
+    margin-bottom: 10px;
     padding-left: 20px;
     font-family: $abhaya_font;
     font-size: 3.2rem;
@@ -173,163 +98,91 @@
       0px 0px 1px $lightgrey_24,
       0px 0px 2px rgba(180,180,180, 1);
   }
-  .articlecontainer {
-    @include width-margin(90%);
-    @include margin-topbottom(40px);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    .article {
-      @include article(35%);
-      transform: translateY(0px);
-      @include animation(article-1);
-    }
-    .article2 {
-      @include article(45%);
-      transform: translateY(0px);
-      @include animation(article-2);
-    }
-    .article3 {
-      @include article(45%);
-      transform: translateX(0px);
-      @include animation(article-3);
-    }
-    .article4 {
-      @include article(35%);
-      height: 160px;
-      transform: translateX(0px);
-      @include animation(article-4);
-      .imgevolution {
-        position: absolute;
-        bottom: 0px;
-        margin-left: -40px;
-        display: flex;
-        justify-content: center;
-        opacity: 0.1;
-        transition: 1s;
-        z-index: 1;
-
-        boder: 1px solid white;
-        .img {
-          width: 40%;
-          height: 30%;
-          object-fit: cover;
+  .article {
+    margin-top: 3%;
+    .button {
+      margin-left: -10px;
+      background: transparent;
+      border: none;
+      outline: none;
+      .logoreact {
+        @include rotationlogostyle();
+        &:hover {
+          @include logohover();
         }
-      }
-      .lilink {
-        width: 100%;
-        height: auto;
-        display: flex;
-        align-items: center;
-        .li {
-          margin-top: -40px;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          .linksoft {
-            @include link-style(-45deg);
-          }
-          .linkhard {
-            @include link-style(45deg);
-          }
+        &:active {
+          color: $cyan;
         }
       }
     }
-    .article5 {
-      @include article(35%);
-      transform: translateY(0px);
-      @include animation(article-5);
-    }
-    .article6 {
-      @include article(45%);
-      transform: translateY(0px);
-      @include animation(article-6);
-    }
-  }
-  .hr {
-    @include width-margin(80%);
-    margin-top: 40px;
-    border-radius: 50% 50%;
-    border-top: 1px solid rgba(0, 200, 200, 0.5);
-    border-bottom: 1px solid rgba(0, 200, 200, 0.5);
-  }
-  .fieldcontainer {
-    @include width-margin(600px);
-    @include margin-topbottom(40px);
-    display: flex;
-    justify-content: center;
-    background: rgba(255,255,255, 0.1);
-    border-radius: 5px 0px 0px 5px;
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2),
-      0px 6px 20px 0px rgba(0, 0, 0, 0.19);
-    transform: scale(1.0);
-    transition: 0.75s;
-    &:hover {
-      transform: scale(1.1);
-      color: rgba(255,255,255, 0.8);
-      background: rgba(255,255,255, 0.15);
-      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2),
-        0px 0px 0px 0px rgba(0, 0, 0, 0.19);
-    }
-    .bgfieldset{
-      width: 100%;
-      padding: 30px 40px;
-      display: flex;
-      .field {
-        display: flex;
-        font-size: 1.4rem;
-        padding: 20px 20px;
-        color: #2e73af;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        .legend {
-          font-size: 1.8rem;
-          font-weight: bold;
-          color: rgba(255,255,255, 0.2);
-        }
-        .label {
-          display: flex;
-          text-align: justify;
-          text-justify: inter-word;
-          font-family: $notonewa_font;
-          font-size: 1.0rem;
-          color: rgba(255,255,255, 0.2);
-        }
+    .rotationlogo {
+      @include rotationlogostyle();
+      transform: rotateZ(90deg);
+      &:hover {
+        @include logohover();
+      }
+      &:active {
+        color: $cyan;
       }
     }
-    .imgself {
+    .listevolution {
       position: relative;
-      @include top-right();
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0.25;
-      transition: 1s;
-      .img2 {
-        width: 150px;
-        height: 260px;
-        object-fit: cover;
+      width: 76.5%;
+      margin: auto;
+      padding: 10px 20px;
+      list-style: none;
+      font-family: $abhaya_font;
+      font-size: 2rem;
+      color: $whitesmoke;
+      text-shadow: 0px 0px 2px $blue;
+      background: $bg_color;
+      border-radius: 3px;
+      z-index: 2;
+      .evolution_a {
+        padding: 3px 10px;
+      }
+    }  
+    .paragraphevofirst {
+      position: relative;
+      @include transitionparagraph();
+      opacity: 1;
+      z-index: 1;
+      @include animation-paragraph(display-link, 2s);
+      .li {
+        color: rgba(255, 255, 255, 0.6);
+        &:hover {
+          color: rgba(0, 255, 255, 1);
+        }
+        .link {
+          @include linkstyle();
+          &:hover {
+            color: rgba(0, 255, 255, 1);
+          }
+        }
       }
     }
-    &:hover {
-      .field {
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        .legend {
-          color: rgba(255,255,255, 0.3);
-        }
-        .label {
-          color: rgba(255,255,255, 0.5);
-        }
-      }
-      .imgself {
-        opacity: 1;
-        .img2 {
-          width: 150px;
-          height: 260px;
-          object-fit: cover;
+    .paragraphevorevert {
+      position: fixed;
+      right: 10%;
+      left: 10%;
+      @include transitionparagraph();
+      opacity: 0;
+      z-index: 1;
+      @include animation-paragraph(revert-tohdide, 1s);
+      .li {
+        color: rgba(255, 255, 255, 0.6);
+        .link {
+          @include linkstyle();
         }
       }
+    }
+    .hr_evolution {
+      width: 50%;
+      margin-top: 20px;
+      margin-bottom: 0px;
+      border-radius: 50%;
+      border-top: 1px solid rgba(255,255,255,0.4);
+      border-bottom: 1px solid rgba(255,255,255,0.4);
     }
   }
 }
-

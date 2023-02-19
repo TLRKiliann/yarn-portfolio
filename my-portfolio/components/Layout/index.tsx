@@ -13,9 +13,3 @@ const Layout = ({ children }:any) => (
   </motion.div>
 );
 export default Layout;
-
-/*
-      type: "spring",
-      stiffness: 260,
-      damping: 20,
-*/

@@ -1,5 +1,5 @@
-import {BsFillArrowRightCircleFill} from 'react-icons/bs'
-import styles from '@/styles/About.module.scss'
+import { BsFillArrowRightCircleFill } from 'react-icons/bs'
+import styles from '@/styles/Evolution.module.scss'
 
 interface handleChangeFuncProps {
   boolChange: boolean

@@ -1,11 +1,11 @@
 import { handleChangeTransition } from '../../functions/handleChangeTransition'
-import styles from '@/styles/About.module.scss'
+import styles from '@/styles/Evolution.module.scss'
 
 interface boolStylesProps {
   boolStyles: boolean
 }
 
-const AboutThirdParagraph = ({ boolStyles }: boolStylesProps) => {
+const ThirdParagraph = ({ boolStyles }: boolStylesProps) => {
 
   const newFunction = handleChangeTransition({boolStyles})
   
@@ -67,4 +67,4 @@ const AboutThirdParagraph = ({ boolStyles }: boolStylesProps) => {
     </>
   )
 }
-export default AboutThirdParagraph
+export default ThirdParagraph

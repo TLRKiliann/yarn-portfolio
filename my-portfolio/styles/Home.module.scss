@@ -20,17 +20,18 @@
   50% {
     @include anim-style(1, 0px, 0px,
       0px 0px 10px rgba(0, 255, 255, 0.5),
-      $dodgerblue);
+      #1e90ff);
   }
   60% {
     @include anim-style(1, 0px, 0px,
       0px 0px 10px rgba(0, 255, 255, 0.5),
-      $dodgerblue);
+      #1e90ff);
   }
   90% {
     @include anim-style(0, 0px, 4px,
       0px 0px 10px rgba(0, 255, 255, 0),
       rgba(255, 255, 255, 0));
+      
   }
   100% {
     @include anim-style(0, -600px, 0px,
@@ -71,7 +72,7 @@
   font-size: 20px;
   filter: blur(1.4px);
   color: $whitesmoke;
-  transition: 1s;
+  transition: linear 0.75s;
 }
 
 .main {
@@ -81,7 +82,9 @@
     justify-content: center;
     @include toprightbottomleft();
     font-family: $akayakanadaka_font;
-    color: #2e73af;
+    /*color: #2e73af;*/
+    color: #29679D;
+    color: rgba(0,50,100, 0.1);
     overflow-y: hidden;
     .firstdivanimation {
       @include animation(1s);
@@ -202,7 +205,7 @@
       left: 30px;
       width: 10px;
       height: calc(100% - 130px);
-      border-left: 1px solid rgba(255,255,255,0.35); 
+      border-left: 1px solid rgba(255,255,255,0.30); 
     }
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '@/styles/About.module.scss'
+import styles from '@/styles/Evolution.module.scss'
 
 interface BoolStylesProps {
   boolStyles: boolean
@@ -7,8 +7,8 @@ interface BoolStylesProps {
 
 export const handleChangeTransition = ({ boolStyles }: BoolStylesProps) => {
   if (boolStyles === true) {
-    return `${styles.paragraphaboutfirst}`
+    return `${styles.paragraphevofirst}`
   } else {
-    return `${styles.paragraphaboutrevert}`
+    return `${styles.paragraphevorevert}`
   }
 }
